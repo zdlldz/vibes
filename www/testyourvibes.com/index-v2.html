@@ -3,11 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TestYourVibes.com</title>
+  <title>TestYourVibes.com — Official VIBE Screening Portal</title>
   <meta name="description" content="A playful VIBE screening portal for measuring Vibrations, Intimacy, Bureaucracy, and Entropy.">
 </head>
 <body>
-    <div class="vibe-disclaimer-banner">
+
+  <!-- ═══════════════════════════════════════════════════
+       DISCLAIMER BANNER — DO NOT MODIFY
+  ═══════════════════════════════════════════════════ -->
+  <div class="vibe-disclaimer-banner">
     <div class="vibe-disclaimer-inner">
       <span title="Deployed at 22h20 24 Feb 2026" class="vibe-disclaimer-text">Updated v0.2 is below.<a href="./index.html">View v0.1 from TASK2 submission here →</a></span>
       <details class="vibe-sites-menu">
@@ -17,11 +21,18 @@
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════ -->
   <header class="hero">
-    <p class="eyebrow">TRENDING QUIZ ALERT</p>
-    <h1>Test Your VIBEs in 30 Seconds</h1>
-    <p>People magazine readers are calling this the most suspiciously accurate personality test online.</p>
+    <p class="eyebrow">⚡ Official VIBE Screening Portal ⚡</p>
+    <h1>What's Your VIBE Score?</h1>
+    <p class="hero-sub">The only quiz backed by peer-reviewed thermodynamics. <em>People</em> magazine calls it "suspiciously accurate."</p>
   </header>
+
+  <!-- ═══════════════════════════════════════════════════
+       LANDSCAPE ADS (unchanged)
+  ═══════════════════════════════════════════════════ -->
   <section class="landscape-ad-row" aria-label="featured-promotions">
     <article class="landscape-ad-bar">
       <img src="./media/shot-news-01b.webp" alt="Landscape ad for aura unlock pass">
@@ -43,8 +54,15 @@
     </article>
   </section>
 
+  <!-- confetti container -->
+  <div id="confetti-field" aria-hidden="true"></div>
 
+  <!-- ═══════════════════════════════════════════════════
+       MAIN LAYOUT
+  ═══════════════════════════════════════════════════ -->
   <main class="page">
+
+    <!-- LEFT AD COLUMN (unchanged) -->
     <aside class="ad-stack">
       <article class="landscape-ad-lite">
         <img src="./media/shot-official-04.webp" alt="Landscape ad for instant score export">
@@ -68,64 +86,114 @@
       </article>
     </aside>
 
+    <!-- ─────────────────────────────────────────────
+         CENTER PANEL — gamified
+    ───────────────────────────────────────────── -->
     <section class="panel">
-      <section>
-        <h2>Instant VIBE Scan</h2>
-        <p>Slide your four mood metrics and discover whether your vibe is immaculate or critically cursed.</p>
-      </section>
 
+      <!-- LIVE GAUGE -->
+      <div class="gauge-zone">
+        <div class="gauge-wrap">
+          <svg class="gauge-svg" viewBox="0 0 100 100" role="img" aria-label="Live VIBE score gauge">
+            <defs>
+              <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"   stop-color="#ff2f92" id="grad-stop-1"/>
+                <stop offset="100%" stop-color="#7f39fb" id="grad-stop-2"/>
+              </linearGradient>
+            </defs>
+            <circle class="gauge-track" cx="50" cy="50" r="38" fill="none" stroke-width="9" transform="rotate(-90 50 50)"/>
+            <circle class="gauge-arc"   cx="50" cy="50" r="38" fill="none" stroke-width="9"
+              stroke="url(#gaugeGrad)"
+              stroke-linecap="round"
+              stroke-dasharray="238.76"
+              stroke-dashoffset="238.76"
+              transform="rotate(-90 50 50)"
+              id="gauge-arc"/>
+          </svg>
+          <div class="gauge-inner">
+            <span class="gauge-num" id="gauge-num">?</span>
+            <span class="gauge-live-label">live</span>
+          </div>
+        </div>
+        <div class="gauge-tier-preview" id="gauge-tier-preview">&nbsp;</div>
+      </div>
+
+      <!-- PANEL HEADER -->
+      <div class="panel-intro">
+        <h2>Calibrate Your VIBE</h2>
+        <p>Set all four dimensions, then lock in your score.</p>
+      </div>
+
+      <!-- FORM -->
       <form id="vibe-form" class="vibe-form">
-        <label>
-          Ambient resonance (0-10) 🎵
-          <input type="range" name="v" min="0" max="10" value="6">
-          <output data-for="v">6</output>
+
+        <label class="slider-label">
+          <span class="label-text">🎵 Vibrations — Ambient resonance</span>
+          <div class="slider-row">
+            <input type="range" name="v" min="0" max="10" value="6">
+            <output data-for="v">6</output>
+          </div>
           <div class="pick-row" data-target="v">
             <button type="button" data-val="2">🔕 Flatline</button>
             <button type="button" data-val="6">🪩 Steady</button>
             <button type="button" data-val="10">🚀 Rapture</button>
           </div>
         </label>
-        <label>
-          Social warmth (0-10) 💗
-          <input type="range" name="i" min="0" max="10" value="7">
-          <output data-for="i">7</output>
+
+        <label class="slider-label">
+          <span class="label-text">💗 Intimacy — Social warmth</span>
+          <div class="slider-row">
+            <input type="range" name="i" min="0" max="10" value="7">
+            <output data-for="i">7</output>
+          </div>
           <div class="pick-row" data-target="i">
             <button type="button" data-val="1">🧊 Cold</button>
             <button type="button" data-val="6">🙂 Polite</button>
             <button type="button" data-val="10">💞 Soulmate</button>
           </div>
         </label>
-        <label>
-          Bureaucracy freedom (0-10) 📋
-          <input type="range" name="b" min="0" max="10" value="7">
-          <output data-for="b">7</output>
+
+        <label class="slider-label">
+          <span class="label-text">📋 Bureaucracy — Freedom from forms</span>
+          <div class="slider-row">
+            <input type="range" name="b" min="0" max="10" value="7">
+            <output data-for="b">7</output>
+          </div>
           <div class="pick-row" data-target="b">
             <button type="button" data-val="1">📄 Forms Forever</button>
             <button type="button" data-val="5">🗂️ Manageable</button>
             <button type="button" data-val="10">🪽 No Clipboard</button>
           </div>
         </label>
-        <label>
-          Chaotic drift (0-10) 🌀
-          <input type="range" name="e" min="0" max="10" value="5">
-          <output data-for="e">5</output>
+
+        <label class="slider-label">
+          <span class="label-text">🌀 Entropy — Chaotic drift</span>
+          <div class="slider-row">
+            <input type="range" name="e" min="0" max="10" value="5">
+            <output data-for="e">5</output>
+          </div>
           <div class="pick-row" data-target="e">
             <button type="button" data-val="2">🫧 Predictable</button>
             <button type="button" data-val="6">🌶️ Spicy</button>
             <button type="button" data-val="10">🤯 Unhinged</button>
           </div>
         </label>
+
         <div class="control-row">
           <button type="button" id="chaos-spin">🎲 Chaos Spin</button>
-          <button type="submit">✨ Calculate My VIBE</button>
+          <button type="submit" class="btn-lock">🔒 Lock In My VIBE</button>
         </div>
+
       </form>
 
+      <!-- RESULT (populated by JS on submit) -->
       <section id="result" class="result" aria-live="polite">
-        <h3>Your score</h3>
-        <p>Awaiting calibration...</p>
+        <div class="result-waiting">
+          <p>Awaiting calibration…</p>
+        </div>
       </section>
 
+      <!-- MEDIA SHOWCASE (unchanged) -->
       <section class="media-showcase">
         <video controls playsinline preload="metadata" poster="./media/shot-news-02.webp">
           <source src="https://edge.vibetube.art/src/TASK2_vibes-news.mp4" type="video/mp4">
@@ -139,8 +207,10 @@
       <p class="details-link">
         Method details: <a href="./methodology-v2.html">How this "works"</a>
       </p>
-    </section>
 
+    </section><!-- /panel -->
+
+    <!-- RIGHT AD COLUMN (unchanged) -->
     <aside class="ad-stack">
       <article class="ad-card">
         <p class="ad-tag">Sponsored</p>
@@ -159,38 +229,88 @@
         <button type="button">Start Matching</button>
       </article>
     </aside>
+
   </main>
 
+  <!-- FOOTER (unchanged) -->
   <footer>
     <p>Cross-check with peer-reviewed evidence at <a href="https://arxivz.org/index-v2.html">arxivz.org</a>.</p>
   </footer>
 
+  <!-- ═══════════════════════════════════════════════════
+       STYLES
+  ═══════════════════════════════════════════════════ -->
   <style>
+    /* === ROOT === */
     :root {
-      --bg: #fff0f7;
-      --ink: #2a093a;
-      --muted: #6d3e78;
-      --panel: #ffffff;
-      --line: #ffd0eb;
-      --accent: #ff2f92;
+      --bg:       #fff0f7;
+      --ink:      #2a093a;
+      --muted:    #6d3e78;
+      --line:     #ffd0eb;
+      --accent:   #ff2f92;
       --accent-2: #7f39fb;
     }
-    * { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       color: var(--ink);
       background: radial-gradient(circle at top, #ffe4f3, var(--bg) 52%);
       line-height: 1.45;
     }
+
+    /* === CONFETTI FIELD === */
+    #confetti-field {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9000;
+      overflow: hidden;
+    }
+    .cp {
+      position: absolute;
+      width: 9px; height: 9px;
+      border-radius: 2px;
+      background: var(--c, #ff2f92);
+      animation: cp-fly 1.9s var(--d, 0s) cubic-bezier(.2,.6,.35,1) forwards;
+    }
+    @keyframes cp-fly {
+      0%   { transform: translate(0,0) rotate(0deg); opacity: 1; }
+      80%  { opacity: 1; }
+      100% { transform: translate(var(--tx), var(--ty)) rotate(var(--r)); opacity: 0; }
+    }
+
+    /* === PAGE LAYOUT === */
     .hero, .page, footer, .landscape-ad-row {
       width: min(1240px, 94vw);
       margin: 0 auto;
     }
+
+    /* === HERO === */
     .hero {
       padding: 28px 0 14px;
       text-align: center;
     }
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 900;
+      line-height: 1.08;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub { color: var(--muted); font-size: 15px; }
+
+    /* === LANDSCAPE ADS === */
     .landscape-ad-row {
       margin: 0 auto 12px;
       display: grid;
@@ -201,386 +321,589 @@
       grid-template-columns: 220px 1fr auto;
       gap: 10px;
       align-items: center;
-      border: 1px solid #ffd0eb;
+      border: 1px solid var(--line);
       background: #fff8fd;
       border-radius: 12px;
       padding: 8px;
-      box-shadow: 0 8px 18px rgba(255, 47, 146, 0.12);
+      box-shadow: 0 8px 18px rgba(255,47,146,.12);
     }
     .landscape-ad-bar img,
     .landscape-ad-bar video {
-      width: 100%;
-      min-height: 84px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid #ffd0eb;
-      display: block;
-      background: #111;
+      width: 100%; min-height: 84px; object-fit: cover;
+      border-radius: 8px; border: 1px solid var(--line); display: block; background: #111;
     }
-    .landscape-ad-bar h3 { margin: 0; font-size: 16px; line-height: 1.25; }
+    .landscape-ad-bar h3 { font-size: 16px; line-height: 1.25; }
     .landscape-ad-lite {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 8px;
-      align-items: center;
-      border: 1px solid #ffd0eb;
-      border-radius: 10px;
-      padding: 8px;
-      background: #fff8fd;
+      display: grid; grid-template-columns: 120px 1fr; gap: 8px;
+      align-items: center; border: 1px solid var(--line); border-radius: 10px;
+      padding: 8px; background: #fff8fd;
     }
     .landscape-ad-lite img {
-      width: 100%;
-      min-height: 66px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid #ffd0eb;
-      display: block;
+      width: 100%; min-height: 66px; object-fit: cover;
+      border-radius: 8px; border: 1px solid var(--line); display: block;
     }
-    .eyebrow {
-      margin: 0 0 6px;
-      color: var(--accent);
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-    h1 {
-      margin: 0 0 8px;
-      font-size: 42px;
-      line-height: 1.12;
-    }
-    .hero p { margin: 0; color: var(--muted); }
+
+    /* === MAIN GRID === */
     .page {
       display: grid;
       grid-template-columns: 260px 1fr 260px;
       gap: 14px;
       align-items: start;
-      padding-bottom: 12px;
+      padding-bottom: 16px;
     }
+
+    /* === PANEL === */
     .panel {
       position: relative;
       background: linear-gradient(165deg, #fff9ff 0%, #fff1fa 38%, #ffe9f7 100%);
       border: 2px solid #ff9fce;
-      border-radius: 14px;
-      padding: 18px;
+      border-radius: 20px;
+      padding: 20px;
       display: grid;
-      gap: 13px;
-      box-shadow: 0 18px 34px rgba(255, 47, 146, 0.2), 0 0 0 2px rgba(127, 57, 251, 0.08);
+      gap: 16px;
+      box-shadow: 0 20px 44px rgba(255,47,146,.18), 0 0 0 1px rgba(127,57,251,.06);
     }
     .panel::before {
       content: "";
-      position: absolute;
-      inset: -12px;
-      border-radius: 20px;
-      background: radial-gradient(circle at top, rgba(255, 47, 146, 0.2), rgba(127, 57, 251, 0.08) 42%, transparent 70%);
-      z-index: -1;
+      position: absolute; inset: -14px;
+      border-radius: 26px;
+      background: radial-gradient(circle at top, rgba(255,47,146,.15), rgba(127,57,251,.06) 44%, transparent 72%);
+      z-index: -1; pointer-events: none;
     }
+
+    /* === GAUGE === */
+    .gauge-zone {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 6px;
+    }
+    .gauge-wrap { position: relative; width: 148px; height: 148px; }
+    .gauge-svg {
+      width: 100%; height: 100%;
+      filter: drop-shadow(0 0 12px rgba(255,47,146,.22));
+    }
+    .gauge-track { stroke: #ffd0eb; }
+    .gauge-arc   { transition: stroke-dashoffset .55s cubic-bezier(.4,0,.2,1); }
+    .gauge-inner {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+    }
+    .gauge-num {
+      font-size: 30px; font-weight: 900; line-height: 1;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .gauge-live-label {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .12em; color: var(--muted); margin-top: 3px;
+      animation: pulse-label 2.2s ease-in-out infinite;
+    }
+    @keyframes pulse-label {
+      0%, 100% { opacity: 1; } 50% { opacity: .45; }
+    }
+    .gauge-tier-preview {
+      font-size: 13px; font-weight: 800;
+      letter-spacing: .04em; min-height: 20px;
+      transition: color .3s;
+    }
+
+    /* === PANEL INTRO === */
+    .panel-intro h2 { font-size: 20px; font-weight: 800; margin-bottom: 2px; }
+    .panel-intro p  { font-size: 13px; color: var(--muted); }
+
+    /* === FORM === */
     .vibe-form { display: grid; gap: 10px; }
-    .vibe-form label {
-      display: grid;
-      gap: 6px;
-      font-weight: 700;
-      font-size: 0.93rem;
+    .slider-label {
+      display: grid; gap: 7px; font-weight: 700;
       background: linear-gradient(180deg, #fffdfd, #fff6fb);
-      border: 1px solid #ffc5e3;
-      border-radius: 10px;
-      padding: 10px;
-      box-shadow: 0 4px 10px rgba(255, 47, 146, 0.09);
+      border: 1px solid #ffc5e3; border-radius: 13px; padding: 12px;
+      box-shadow: 0 3px 10px rgba(255,47,146,.08);
     }
-    .vibe-form input[type="range"] { width: 100%; }
-    .vibe-form output {
-      justify-self: end;
-      font-weight: 800;
-      color: var(--accent-2);
+    .label-text { font-size: 0.88rem; }
+    .slider-row {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 10px; align-items: center;
     }
+
+    /* custom range slider */
+    input[type="range"] {
+      -webkit-appearance: none; appearance: none;
+      width: 100%; height: 7px; border-radius: 99px; outline: none; cursor: pointer;
+      background: linear-gradient(
+        to right,
+        var(--accent) 0%,
+        var(--accent-2) var(--pct, 60%),
+        #ffd0eb var(--pct, 60%),
+        #ffd0eb 100%
+      );
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      cursor: grab; border: 2.5px solid #fff;
+      box-shadow: 0 2px 8px rgba(127,57,251,.45);
+      transition: transform .13s, box-shadow .13s;
+    }
+    input[type="range"]::-webkit-slider-thumb:active {
+      cursor: grabbing; transform: scale(1.3);
+      box-shadow: 0 4px 18px rgba(127,57,251,.6);
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      cursor: grab; border: 2.5px solid #fff;
+      box-shadow: 0 2px 8px rgba(127,57,251,.45);
+    }
+    output {
+      font-weight: 900; font-size: 1.05rem;
+      color: var(--accent-2); min-width: 24px; text-align: right;
+    }
+
+    /* pick-row */
     .pick-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 6px;
+      display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 6px;
     }
     .pick-row button {
-      font-size: 12px;
-      padding: 8px 6px;
-      background: linear-gradient(180deg, #ffffff, #ffeafd);
-      color: #5f2570;
-      border: 1px solid #ffbfe2;
-      box-shadow: 0 2px 7px rgba(127, 57, 251, 0.11);
-      letter-spacing: 0.01em;
+      font-size: 11.5px; padding: 8px 4px;
+      background: linear-gradient(180deg, #fff, #ffeafd);
+      color: #5f2570; border: 1px solid #ffbfe2;
+      box-shadow: 0 2px 6px rgba(127,57,251,.1);
+      letter-spacing: .01em; border-radius: 999px;
+      transition: transform .12s, box-shadow .12s, background .12s;
+    }
+    .pick-row button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 12px rgba(127,57,251,.22);
     }
     .pick-row button.is-active {
       color: #fff;
-      background: linear-gradient(135deg, #ff6db6, #7f39fb);
+      background: linear-gradient(135deg, #ff6db6, var(--accent-2));
       border-color: transparent;
-      box-shadow: 0 7px 14px rgba(127, 57, 251, 0.28);
+      box-shadow: 0 6px 16px rgba(127,57,251,.34);
+      transform: translateY(-1px);
     }
-    .control-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
+
+    /* control row */
+    .control-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+    /* global button base */
     button {
-      border-radius: 999px;
-      border: 0;
-      padding: 11px 14px;
-      font: inherit;
-      color: #fff;
+      border-radius: 999px; border: 0;
+      padding: 12px 14px; font: inherit; color: #fff;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      font-weight: 800;
-      cursor: pointer;
+      font-weight: 800; cursor: pointer; font-size: 14px;
+      transition: transform .14s, box-shadow .14s;
     }
-    .result {
-      border: 1px dashed #ffc9e8;
-      border-radius: 10px;
-      padding: 10px;
-      background: #fff7fc;
+    button:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(127,57,251,.32); }
+    button:active { transform: translateY(0); }
+
+    .btn-lock {
+      background: linear-gradient(135deg, #2d0066, var(--accent-2) 55%, var(--accent));
+      box-shadow: 0 6px 20px rgba(127,57,251,.4);
+      letter-spacing: .02em;
     }
+
+    /* chaos spin animation */
+    @keyframes chaos-burst {
+      0%   { transform: rotate(0)    scale(1); }
+      30%  { transform: rotate(200deg) scale(1.18); }
+      70%  { transform: rotate(620deg) scale(1.07); }
+      100% { transform: rotate(720deg) scale(1); }
+    }
+    #chaos-spin.spinning { animation: chaos-burst .65s cubic-bezier(.4,0,.2,1) both; }
+
+    /* === RESULT === */
+    .result { position: relative; border-radius: 16px; overflow: visible; }
+    .result-waiting {
+      border: 1px dashed #ffc9e8; border-radius: 12px;
+      padding: 18px; background: #fff7fc;
+      text-align: center; color: var(--muted); font-size: 14px;
+    }
+    .result-card {
+      border-radius: 16px; padding: 20px;
+      display: grid; gap: 14px;
+      border: 2px solid var(--rc, var(--accent));
+      background: var(--rb, #fff7fc);
+      box-shadow: 0 14px 36px rgba(0,0,0,.13);
+      animation: card-appear .48s cubic-bezier(.2,0,.2,1) both;
+    }
+    @keyframes card-appear {
+      from { opacity: 0; transform: translateY(18px) scale(.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .result-tier-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 13px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase;
+      background: var(--rc, var(--accent)); color: #fff;
+      padding: 4px 14px; border-radius: 999px;
+    }
+    .result-score-display { text-align: center; }
+    .result-score-big {
+      font-size: clamp(58px, 10vw, 80px); font-weight: 900; line-height: 1;
+      color: var(--rc, var(--accent));
+      text-shadow: 0 0 28px color-mix(in srgb, var(--rc, var(--accent)) 50%, transparent);
+      font-variant-numeric: tabular-nums;
+    }
+    .result-score-big.glow-gold {
+      text-shadow: 0 0 40px rgba(245,158,11,.7), 0 0 80px rgba(245,158,11,.3);
+    }
+    .result-verdict {
+      font-size: 14px; font-weight: 700; color: var(--ink);
+      text-align: center; line-height: 1.45; margin-top: 6px;
+    }
+
+    /* sub-index bars */
+    .sub-bars { display: grid; gap: 6px; }
+    .sub-bar {
+      display: grid; grid-template-columns: auto 1fr auto;
+      gap: 8px; align-items: center;
+    }
+    .sub-bar-label { font-size: 11px; font-weight: 700; color: var(--muted); min-width: 96px; }
+    .sub-bar-track { height: 8px; background: #ffd0eb; border-radius: 99px; overflow: hidden; }
+    .sub-bar-fill {
+      height: 100%; border-radius: 99px;
+      background: linear-gradient(to right, var(--accent), var(--accent-2));
+      width: 0%; transition: width .85s cubic-bezier(.2,0,.2,1);
+    }
+    .sub-bar-val { font-size: 11px; font-weight: 800; color: var(--accent-2); min-width: 28px; text-align: right; }
+
+    /* context comparison */
+    .result-context {
+      font-size: 13px; color: var(--muted); text-align: center;
+      padding: 10px 12px; background: rgba(255,255,255,.65);
+      border-radius: 10px; border: 1px solid var(--line); line-height: 1.5;
+    }
+    .result-context strong { color: var(--ink); }
+
+    /* result action buttons */
+    .result-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .btn-share { background: linear-gradient(135deg, #22d3ee, #3b82f6); }
+    .btn-retry { background: linear-gradient(135deg, #a855f7, #ec4899); }
+
+    /* === MEDIA SHOWCASE === */
     .media-showcase video {
-      width: 100%;
-      min-height: 240px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid #ffd0eb;
-      background: #111;
-      display: block;
-      margin-bottom: 8px;
+      width: 100%; min-height: 200px; object-fit: cover;
+      border-radius: 10px; border: 1px solid var(--line);
+      background: #111; display: block; margin-bottom: 8px;
     }
     .media-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px;
     }
     .media-grid img {
-      width: 100%;
-      min-height: 110px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid #ffd0eb;
-      display: block;
+      width: 100%; min-height: 100px; object-fit: cover;
+      border-radius: 8px; border: 1px solid var(--line); display: block;
     }
+    .details-link { font-size: 13px; color: var(--muted); }
+    .details-link a, footer a { color: var(--accent-2); font-weight: 700; }
+
+    /* === AD STACK === */
     .ad-stack { display: grid; gap: 10px; }
     .ad-card {
-      background: #fffdfd;
-      border: 1px solid #ffd0eb;
-      border-radius: 12px;
-      padding: 10px;
-      box-shadow: 0 8px 18px rgba(127, 57, 251, 0.08);
+      background: #fffdfd; border: 1px solid var(--line);
+      border-radius: 12px; padding: 10px;
+      box-shadow: 0 8px 18px rgba(127,57,251,.08);
     }
     .ad-tag {
-      margin: 0 0 6px;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--accent-2);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+      font-size: 11px; font-weight: 700; color: var(--accent-2);
+      text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px;
     }
     .ad-card img,
     .ad-card video {
-      width: 100%;
-      min-height: 110px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid #ffd0eb;
-      display: block;
-      margin-bottom: 6px;
+      width: 100%; min-height: 110px; object-fit: cover;
+      border-radius: 8px; border: 1px solid var(--line); display: block; margin-bottom: 6px;
     }
-    .ad-card h3 { margin: 0 0 4px; font-size: 15px; line-height: 1.3; }
-    .ad-card p { margin: 0 0 8px; color: var(--muted); font-size: 13px; }
-    .details-link a, footer a { color: #7f39fb; font-weight: 700; }
+    .ad-card h3 { font-size: 15px; line-height: 1.3; margin-bottom: 4px; }
+    .ad-card p  { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+
+    /* === FOOTER === */
     footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.92rem;
-      padding: 12px 0 24px;
+      text-align: center; color: var(--muted);
+      font-size: .92rem; padding: 14px 0 28px;
     }
+
+    /* === RESPONSIVE === */
     @media (max-width: 1080px) {
       .page { grid-template-columns: 1fr; }
-      .ad-stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .ad-stack { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .landscape-ad-bar { grid-template-columns: 1fr; }
     }
     @media (max-width: 680px) {
-      h1 { font-size: 32px; }
       .ad-stack { grid-template-columns: 1fr; }
+      .result-actions { grid-template-columns: 1fr; }
     }
 
-  /* vibe-disclaimer:start */
-  .vibe-disclaimer-banner {
-    position: relative;
-    z-index: 9999;
-    margin: 0;
-    padding: 12px 12px;
-    border-bottom: 1px solid #bcc8da;
-    background: #e6ebf4;
-    color: #1f2a3a;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
-    font-size: 12px;
-    line-height: 1.35;
-    letter-spacing: 0.01em;
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.55);
-  }
-  .vibe-disclaimer-inner {
-    width: min(1280px, 98vw);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  .vibe-disclaimer-text {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    align-items: baseline;
-  }
-  .vibe-disclaimer-text a {
-    color: #153f92;
-    text-decoration: underline;
-    font-weight: 700;
-    margin: 0;
-  }
-  .vibe-sites-menu {
-    position: relative;
-    margin: 0;
-    flex: 0 0 auto;
-  }
-  .vibe-sites-menu summary {
-    list-style: none;
-    cursor: pointer;
-    border: 1px solid #b9c7dc;
-    border-radius: 999px;
-    background: #f7f9fd;
-    color: #23395f;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 3px 9px;
-    user-select: none;
-  }
-  .vibe-sites-menu summary::-webkit-details-marker {
-    display: none;
-  }
-  .vibe-sites-list {
-    position: absolute;
-    right: 0;
-    top: calc(100% + 6px);
-    min-width: 190px;
-    display: grid;
-    gap: 5px;
-    padding: 8px;
-    background: #ffffff;
-    border: 1px solid #c5cfdd;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
-  }
-  .vibe-sites-list a {
-    color: #1f4eb1;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.3;
-    white-space: nowrap;
-  }
-  .vibe-sites-list a:hover {
-    text-decoration: underline;
-  }
-  @media (max-width: 760px) {
-    .vibe-disclaimer-inner {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 6px;
-    }
-    .vibe-sites-menu {
-      align-self: flex-end;
-    }
-  }
-  /* vibe-disclaimer:end */
+    /* === DISCLAIMER CSS (verbatim from source) === */
+    /* vibe-disclaimer:start */
+    .vibe-disclaimer-banner { position: relative; z-index: 9999; margin: 0; padding: 12px 12px; border-bottom: 1px solid #bcc8da; background: #e6ebf4; color: #1f2a3a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif; font-size: 12px; line-height: 1.35; letter-spacing: 0.01em; box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.55); }
+    .vibe-disclaimer-inner { width: min(1280px, 98vw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .vibe-disclaimer-text { display: inline-flex; flex-wrap: wrap; gap: 4px; align-items: baseline; }
+    .vibe-disclaimer-text a { color: #153f92; text-decoration: underline; font-weight: 700; margin: 0; }
+    .vibe-sites-menu { position: relative; margin: 0; flex: 0 0 auto; }
+    .vibe-sites-menu summary { list-style: none; cursor: pointer; border: 1px solid #b9c7dc; border-radius: 999px; background: #f7f9fd; color: #23395f; font-size: 11px; font-weight: 700; padding: 3px 9px; user-select: none; }
+    .vibe-sites-menu summary::-webkit-details-marker { display: none; }
+    .vibe-sites-list { position: absolute; right: 0; top: calc(100% + 6px); min-width: 190px; display: grid; gap: 5px; padding: 8px; background: #ffffff; border: 1px solid #c5cfdd; border-radius: 8px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14); }
+    .vibe-sites-list a { color: #1f4eb1; text-decoration: none; font-weight: 600; font-size: 11px; line-height: 1.3; white-space: nowrap; }
+    .vibe-sites-list a:hover { text-decoration: underline; }
+    @media (max-width: 760px) { .vibe-disclaimer-inner { flex-direction: column; align-items: flex-start; gap: 6px; } .vibe-sites-menu { align-self: flex-end; } }
+    /* vibe-disclaimer:end */
 
-</style>
+  </style>
+
+  <!-- ═══════════════════════════════════════════════════
+       SCRIPTS
+  ═══════════════════════════════════════════════════ -->
   <script>
-    const form = document.getElementById("vibe-form");
-    const result = document.getElementById("result").querySelector("p");
+    // === TIER DEFINITIONS ===
+    const TIERS = [
+      {
+        min: 0.81, id: 'icon',
+        badge: '✨ ICON ✨',
+        color: '#d97706', bg: '#fffbeb',
+        verdict: 'Immaculate. You are the vibe. Goodvibe et al. (2026) would like to cite this result in the next edition.'
+      },
+      {
+        min: 0.61, id: 'trending',
+        badge: '📈 TRENDING',
+        color: '#ff2f92', bg: '#fff0f7',
+        verdict: 'Main character energy confirmed. You may experience unprompted eye contact from strangers.'
+      },
+      {
+        min: 0.26, id: 'risk',
+        badge: '⚠️ CHAOTIC',
+        color: '#ea580c', bg: '#fff7ed',
+        verdict: 'Non-zero but volatile. Your vibe is technically alive — just not entirely in control of itself.'
+      },
+      {
+        min: 0, id: 'alert',
+        badge: '🚨 CRITICAL',
+        color: '#dc2626', bg: '#fff1f2',
+        verdict: 'Vibe collapse detected. At least one dimension is near zero. May coincide with unprocessed paperwork.'
+      },
+    ];
 
-    document.querySelectorAll("input[type=range]").forEach((input) => {
-      const out = document.querySelector(`output[data-for="${input.name}"]`);
+    // === REFERENCE CONTEXTS (Goodvibe et al. 2026, Table 1) ===
+    const CONTEXTS = [
+      { name: 'Rave, 3:00am',                    score: 0.866 },
+      { name: 'Dog park on a Sunday',             score: 0.797 },
+      { name: 'Christmas dinner',                 score: 0.740 },
+      { name: 'First date (restaurant)',          score: 0.677 },
+      { name: 'Funeral reception',                score: 0.534 },
+      { name: 'Conference keynote (1 attendee)',  score: 0.343 },
+      { name: 'Monday morning remote standup',    score: 0.272 },
+      { name: 'University library reading room',  score: 0.242 },
+      { name: 'Government waiting room',          score: 0.178 },
+    ];
+
+    const CONFETTI_COLORS = ['#FF2F92','#7F39FB','#FFD700','#00D4FF','#FF6B35','#22d3ee','#f472b6'];
+    const CIRC = 238.76; // 2π × 38
+
+    // === DOM REFS ===
+    const form         = document.getElementById('vibe-form');
+    const resultEl     = document.getElementById('result');
+    const gaugeArc     = document.getElementById('gauge-arc');
+    const gaugeNum     = document.getElementById('gauge-num');
+    const gaugeTierPv  = document.getElementById('gauge-tier-preview');
+    const confField    = document.getElementById('confetti-field');
+
+    // === HELPERS ===
+    function getTier(s)  { return TIERS.find(t => s >= t.min) || TIERS[TIERS.length - 1]; }
+    function getCtx(s)   { return CONTEXTS.reduce((a, b) => Math.abs(b.score - s) < Math.abs(a.score - s) ? b : a); }
+
+    function calcScore() {
+      const fd = new FormData(form);
+      const v = Number(fd.get('v')) / 10;
+      const i = Number(fd.get('i')) / 10;
+      const b = Number(fd.get('b')) / 10;
+      const e = Number(fd.get('e')) / 10;
+      const p = v * i * b * e;
+      return p <= 0 ? 0 : Math.pow(p, 0.25);
+    }
+
+    // === GAUGE UPDATE ===
+    function setGauge(score, tierColor) {
+      gaugeArc.style.strokeDashoffset = (CIRC * (1 - score)).toFixed(2);
+      gaugeNum.textContent = score.toFixed(2);
+      if (tierColor) {
+        const s1 = document.getElementById('grad-stop-1');
+        const s2 = document.getElementById('grad-stop-2');
+        if (s1) s1.setAttribute('stop-color', tierColor);
+        if (s2) s2.setAttribute('stop-color', tierColor);
+      }
+    }
+
+    function liveUpdate() {
+      const s = calcScore();
+      const t = getTier(s);
+      setGauge(s, null);
+      gaugeTierPv.textContent = t.badge;
+      gaugeTierPv.style.color = t.color;
+    }
+
+    // === SLIDER INIT + SYNC ===
+    function syncSlider(input) {
+      const out = form.querySelector(`output[data-for="${input.name}"]`);
       if (out) out.value = input.value;
-      input.addEventListener("input", () => {
-        if (out) out.value = input.value;
-      });
-    });
-
-    function normalize(value) {
-      return Number.isFinite(value) ? Math.max(0, Math.min(10, value)) : 0;
+      const pct = (input.value / 10 * 100).toFixed(1) + '%';
+      input.style.setProperty('--pct', pct);
+      syncPickBtns(input.name, input.value);
+      liveUpdate();
     }
 
-    function syncPickButtons(targetName, value) {
-      const row = form.querySelector(`.pick-row[data-target="${targetName}"]`);
+    document.querySelectorAll('input[type=range]').forEach(inp => {
+      syncSlider(inp);
+      inp.addEventListener('input', () => syncSlider(inp));
+    });
+
+    function syncPickBtns(name, val) {
+      const row = form.querySelector(`.pick-row[data-target="${name}"]`);
       if (!row) return;
-      row.querySelectorAll("button").forEach((button) => {
-        const isActive = String(button.getAttribute("data-val")) === String(value);
-        button.classList.toggle("is-active", isActive);
-      });
+      row.querySelectorAll('button').forEach(b =>
+        b.classList.toggle('is-active', String(b.dataset.val) === String(val))
+      );
     }
 
-    document.querySelectorAll(".pick-row button").forEach((button) => {
-      button.addEventListener("click", () => {
-        const row = button.closest(".pick-row");
-        const target = row ? row.getAttribute("data-target") : "";
-        const input = form.querySelector(`input[name="${target}"]`);
+    document.querySelectorAll('.pick-row button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const row   = btn.closest('.pick-row');
+        const input = form.querySelector(`input[name="${row.dataset.target}"]`);
         if (!input) return;
-        input.value = button.getAttribute("data-val") || input.value;
-        input.dispatchEvent(new Event("input", { bubbles: true }));
-        syncPickButtons(target, input.value);
+        input.value = btn.dataset.val;
+        input.dispatchEvent(new Event('input', { bubbles: true }));
       });
     });
 
-    document.querySelectorAll("input[type=range]").forEach((input) => {
-      syncPickButtons(input.name, input.value);
-      input.addEventListener("input", () => {
-        syncPickButtons(input.name, input.value);
+    // === CHAOS SPIN ===
+    document.getElementById('chaos-spin').addEventListener('click', function () {
+      this.classList.remove('spinning');
+      void this.offsetWidth;
+      this.classList.add('spinning');
+      ['v','i','b','e'].forEach(name => {
+        const inp = form.querySelector(`input[name="${name}"]`);
+        if (!inp) return;
+        inp.value = String(Math.floor(Math.random() * 11));
+        inp.dispatchEvent(new Event('input', { bubbles: true }));
       });
+      if (resultEl.querySelector('.result-card')) {
+        resultEl.innerHTML = '<div class="result-waiting"><p>Recalibrating… hit Lock In to reveal your new VIBE™</p></div>';
+      }
     });
 
-    const chaosButton = document.getElementById("chaos-spin");
-    if (chaosButton) {
-      chaosButton.addEventListener("click", () => {
-        ["v", "i", "b", "e"].forEach((name) => {
-          const input = form.querySelector(`input[name="${name}"]`);
-          if (!input) return;
-          input.value = String(Math.floor(Math.random() * 11));
-          input.dispatchEvent(new Event("input", { bubbles: true }));
-        });
-        result.textContent = "Randomized. Hit Calculate before the vibes collapse.";
-      });
+    // === COUNT-UP ===
+    function countUp(el, target, ms) {
+      const t0 = performance.now();
+      (function frame(now) {
+        const p = Math.min((now - t0) / ms, 1);
+        const e = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
+        el.textContent = (e * target).toFixed(2);
+        if (p < 1) requestAnimationFrame(frame);
+      })(t0);
     }
 
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
+    // === CONFETTI ===
+    function burst(n) {
+      for (let k = 0; k < n; k++) {
+        const el = document.createElement('span');
+        el.className = 'cp';
+        el.style.setProperty('--c',  CONFETTI_COLORS[k % CONFETTI_COLORS.length]);
+        el.style.setProperty('--tx', (Math.random() * 340 - 170) + 'px');
+        el.style.setProperty('--ty', (-100 - Math.random() * 260) + 'px');
+        el.style.setProperty('--r',  (Math.random() * 720 - 360)  + 'deg');
+        el.style.setProperty('--d',  (Math.random() * 0.5) + 's');
+        el.style.left = (15 + Math.random() * 70) + '%';
+        el.style.top  = (20 + Math.random() * 40) + '%';
+        confField.appendChild(el);
+        setTimeout(() => el.remove(), 2500);
+      }
+    }
 
-      const data = new FormData(form);
-      const v = normalize(Number(data.get("v")));
-      const i = normalize(Number(data.get("i")));
-      const b = normalize(Number(data.get("b")));
-      const e = normalize(Number(data.get("e")));
+    // === SUBMIT / REVEAL ===
+    form.addEventListener('submit', ev => {
+      ev.preventDefault();
 
-      const vNorm = v / 10;
-      const iNorm = i / 10;
-      const bNorm = b / 10;
-      const eNorm = e / 10;
-      const score = Math.pow(vNorm * iNorm * bNorm * eNorm, 0.25).toFixed(2);
-      const numeric = Number(score);
-      let verdict = "critically cursed";
-      if (numeric >= 0.81) verdict = "immaculate icon energy";
-      else if (numeric >= 0.61) verdict = "coherent main-character vibe";
-      else if (numeric >= 0.26) verdict = "chaotic but salvageable";
-      let badge = "[ALERT]";
-      if (numeric >= 0.81) badge = "[ICON]";
-      else if (numeric >= 0.61) badge = "[TRENDING]";
-      else if (numeric >= 0.26) badge = "[RISK]";
-      result.textContent = `${badge} VIBE score: ${score} - ${verdict}`;
+      const score   = calcScore();
+      const numeric = Number(score.toFixed(2));
+      const tier    = getTier(numeric);
+      const ctx     = getCtx(numeric);
+      const fd      = new FormData(form);
+      const vals    = { v: Number(fd.get('v')), i: Number(fd.get('i')), b: Number(fd.get('b')), e: Number(fd.get('e')) };
+      const labels  = { v: '🎵 Vibrations', i: '💗 Intimacy', b: '📋 Bureaucracy', e: '🌀 Entropy' };
 
-      // Canonical log line for lightweight debugging during content QA.
-      console.info("[vibes][testyourvibes] score", { v, i, b, e, vNorm, iNorm, bNorm, eNorm, score });
+      // Update gauge to tier color
+      setGauge(numeric, tier.color);
+      gaugeTierPv.textContent = tier.badge;
+      gaugeTierPv.style.color = tier.color;
+
+      // Build result card
+      resultEl.innerHTML = `
+        <div class="result-card" style="--rc:${tier.color};--rb:${tier.bg};">
+          <div><span class="result-tier-badge">${tier.badge}</span></div>
+          <div class="result-score-display">
+            <div class="result-score-big${tier.id === 'icon' ? ' glow-gold' : ''}" id="score-big">0.00</div>
+            <div class="result-verdict">${tier.verdict}</div>
+          </div>
+          <div class="sub-bars">
+            ${['v','i','b','e'].map(k => `
+              <div class="sub-bar">
+                <span class="sub-bar-label">${labels[k]}</span>
+                <div class="sub-bar-track"><div class="sub-bar-fill" id="fill-${k}" style="background:linear-gradient(to right,${tier.color},${tier.color}bb)"></div></div>
+                <span class="sub-bar-val">${vals[k]}/10</span>
+              </div>`).join('')}
+          </div>
+          <div class="result-context">
+            Peer-reviewed closest match: <strong>${ctx.name}</strong><br>
+            (Goodvibe et al. 2026, mean VIBE = ${ctx.score.toFixed(3)})
+          </div>
+          <div class="result-actions">
+            <button type="button" class="btn-share" id="share-btn">📋 Copy Score</button>
+            <button type="button" class="btn-retry" id="retry-btn">🔄 Try Again</button>
+          </div>
+        </div>`;
+
+      // Animate score number
+      countUp(document.getElementById('score-big'), numeric, 920);
+
+      // Animate sub-index bars (next frame so transition fires)
+      requestAnimationFrame(() => {
+        ['v','i','b','e'].forEach(k => {
+          const fill = document.getElementById(`fill-${k}`);
+          if (fill) fill.style.width = (vals[k] * 10) + '%';
+        });
+      });
+
+      // Confetti for icon tier
+      if (tier.id === 'icon') {
+        setTimeout(() => burst(90), 250);
+        setTimeout(() => burst(55), 800);
+      }
+
+      // Share button
+      document.getElementById('share-btn').addEventListener('click', function () {
+        const txt = `My VIBE Score: ${numeric.toFixed(2)} ${tier.badge}\n"${tier.verdict.split('.')[0]}."\nClosest match: ${ctx.name} (${ctx.score.toFixed(3)})\n→ testyourvibes.com`;
+        navigator.clipboard.writeText(txt).then(() => {
+          this.textContent = '✅ Copied!';
+          setTimeout(() => { this.textContent = '📋 Copy Score'; }, 2200);
+        }).catch(() => { this.textContent = '→ testyourvibes.com'; });
+      });
+
+      // Retry button
+      document.getElementById('retry-btn').addEventListener('click', () => {
+        resultEl.innerHTML = '<div class="result-waiting"><p>Awaiting calibration…</p></div>';
+        // Reset gauge gradient to pink-purple
+        const s1 = document.getElementById('grad-stop-1');
+        const s2 = document.getElementById('grad-stop-2');
+        if (s1) s1.setAttribute('stop-color', '#ff2f92');
+        if (s2) s2.setAttribute('stop-color', '#7f39fb');
+        liveUpdate();
+        form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+
+      // Log
+      console.info('[vibes][testyourvibes] score', { ...vals, numeric, tier: tier.id });
     });
 
-    console.info("[vibes][testyourvibes] index rendered");
+    console.info('[vibes][testyourvibes] index rendered');
   </script>
 
   <!-- vibe-link-resolver:start -->
@@ -588,31 +911,21 @@
     (function () {
       var links = document.querySelectorAll('[data-vibe-domain][data-vibe-path]');
       if (!links.length) return;
-
       var host = window.location.hostname || '';
       var isLocalHost = host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local');
       var isFileProtocol = window.location.protocol === 'file:';
-
       links.forEach(function (link) {
         var domain = link.getAttribute('data-vibe-domain');
         var localDomain = link.getAttribute('data-vibe-local') || domain;
         var path = link.getAttribute('data-vibe-path') || '/';
         if (!domain) return;
-
-        if (isFileProtocol) {
-          link.href = '../' + localDomain + path;
-          return;
-        }
-
-        if (isLocalHost) {
-          link.href = '/' + localDomain + path;
-          return;
-        }
-
+        if (isFileProtocol) { link.href = '../' + localDomain + path; return; }
+        if (isLocalHost) { link.href = '/' + localDomain + path; return; }
         link.href = 'https://' + domain + path;
       });
     })();
   </script>
   <!-- vibe-link-resolver:end -->
+
 </body>
 </html>
