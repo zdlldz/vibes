@@ -108,23 +108,23 @@ cd "workers/vibetube.com" && wrangler dev
 
 Routes are already configured in each `workers/<domain>/wrangler.toml`.
 
-If your token can access multiple Cloudflare accounts, pick one account ID first:
+Confirm your Cloudflare auth context first:
 
 ```bash
-export CLOUDFLARE_ACCOUNT_ID="<your-account-id>"
+wrangler whoami
 ```
 
-Then deploy with `--account-id "$CLOUDFLARE_ACCOUNT_ID"` (recommended).
+Note: with Wrangler `4.58.0` in this repo, `wrangler deploy` does **not** accept `--account-id`.
 
 Deploy each site:
 
 ```bash
-cd "workers/arxivz.org" && wrangler deploy --account-id "$CLOUDFLARE_ACCOUNT_ID"
-cd "workers/nytimez.art" && wrangler deploy --account-id "$CLOUDFLARE_ACCOUNT_ID"
-cd "workers/testyourvibes.com" && wrangler deploy --account-id "$CLOUDFLARE_ACCOUNT_ID"
-cd "workers/vibe-con.org" && wrangler deploy --account-id "$CLOUDFLARE_ACCOUNT_ID"
-cd "workers/vibe-standards.org" && wrangler deploy --account-id "$CLOUDFLARE_ACCOUNT_ID"
-cd "workers/vibetube.com" && wrangler deploy --account-id "$CLOUDFLARE_ACCOUNT_ID"
+cd "workers/arxivz.org" && wrangler deploy
+cd "workers/nytimez.art" && wrangler deploy
+cd "workers/testyourvibes.com" && wrangler deploy
+cd "workers/vibe-con.org" && wrangler deploy
+cd "workers/vibe-standards.org" && wrangler deploy
+cd "workers/vibetube.com" && wrangler deploy
 ```
 
 ### 4) Verify deployed workers
@@ -145,7 +145,7 @@ From repo root:
 ```bash
 for d in arxivz.org nytimez.art testyourvibes.com vibe-con.org vibe-standards.org vibetube.com; do
   echo "Deploying $d"
-  (cd "workers/$d" && wrangler deploy --account-id "$CLOUDFLARE_ACCOUNT_ID") || exit 1
+  (cd "workers/$d" && wrangler deploy) || exit 1
 done
 ```
 
