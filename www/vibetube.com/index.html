@@ -36,6 +36,12 @@
     </aside>
 
     <section class="feed">
+      <div class="chip-row" aria-label="topic-chips">
+        <span>Live</span>
+        <span>Field Footage</span>
+        <span>Explainers</span>
+        <span>Conference Clips</span>
+      </div>
       <article class="video-card">
         <a class="thumb" href="./watch-vibecon-keynote.html">
           <img src="./media/vt-thumb-1.webp" alt="Video thumbnail for Geneva VIBE explainer">
@@ -115,8 +121,9 @@
     }
     h1 {
       margin: 0;
-      font-size: 22px;
+      font-size: 23px;
       font-weight: 700;
+      letter-spacing: -0.01em;
     }
     .mark {
       color: var(--accent);
@@ -174,6 +181,21 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
     }
+    .chip-row {
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .chip-row span {
+      border: 1px solid #3c3c3c;
+      background: #212121;
+      color: #d0d0d0;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 600;
+    }
     .video-card {
       background: transparent;
       border: 0;
@@ -211,7 +233,7 @@
     }
     .video-card h2 {
       margin: 0 0 5px;
-      font-size: 16px;
+      font-size: 17px;
       line-height: 1.35;
       font-weight: 500;
     }

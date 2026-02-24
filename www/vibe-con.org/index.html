@@ -3,94 +3,123 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VIBE-CON 2026</title>
-  <meta name="description" content="Official conference site for VIBE-CON, the premier summit on measurable vibes.">
+  <title>VIBE-CON 2026 | Festival of Measurable Feeling</title>
+  <meta name="description" content="Official event site for VIBE-CON 2026, a high-energy live summit on quantified vibes.">
 </head>
 <body>
-  <header class="hero">
-    <p class="eyebrow">VIBE-CON 2026</p>
-    <h1>The First International Congress of Quantified Vibes</h1>
-    <p class="subhead">March 12-14 | Remote + In Situ | Registration now open</p>
+  <header class="hero wrap">
+    <p class="eyebrow">VIBE-CON 2026 · LIVE IN GENEVA + GLOBAL STREAM</p>
+    <h1>Festival of Measurable Feeling</h1>
+    <p class="subhead">March 12-14 · 3 stages · 27 sessions · 1 very calibrated dance floor</p>
+    <p class="cta-row">
+      <a class="cta" href="./program.html">See Full Program</a>
+      <a class="cta ghost" href="https://testyourvibes.com">Run Pre-Event VIBE Check</a>
+    </p>
   </header>
 
-  <main class="container">
+  <main class="wrap container">
     <section>
-      <h2>About the Congress</h2>
+      <h2>What This Is</h2>
       <p>
-        VIBE-CON convenes researchers, skeptics, standards bodies, editors, and instrument builders to
-        debate the first large-scale empirical evidence for measurable vibes.
+        VIBE-CON is not a standards hearing and not a newspaper desk. It is an event format:
+        part conference, part performance, part measurement lab with live instrumentation.
       </p>
       <p>
-        2026 featured publication: <em>VIBE: A Novel Quantitative Framework for the Measurement of
-        Vibrational-Intimate-Bureaucratic-Entropic Phenomena</em> (arXivz:2502.VIBE01).
+        Featured anchor publication:
+        <em>VIBE: A Novel Quantitative Framework for the Measurement of Vibrational-Intimate-Bureaucratic-Entropic Phenomena</em>
+        (<a href="https://arxivz.org/abs/2502.VIBE01">arXivz:2502.VIBE01</a>).
       </p>
     </section>
 
-    <section>
-      <h2>Featured Track</h2>
-      <p>
-        This year tracks standards alignment between field measurements, IOVS normative language,
-        and media translation for public understanding.
-      </p>
-      <p><a href="./program.html">View Program Highlights</a></p>
+    <section class="stats">
+      <h2>Event Snapshot</h2>
+      <ul>
+        <li><strong>Stage A:</strong> Methods + Instruments</li>
+        <li><strong>Stage B:</strong> Evidence + Media</li>
+        <li><strong>Stage C:</strong> Public Policy + Anti-VIBE Futures</li>
+      </ul>
     </section>
 
     <section class="media-placeholder">
-      <h2>Conference media placeholder</h2>
+      <h2>Hero Reel</h2>
       <img src="./media/vc-hero.webp" alt="Conference visual banner">
-      <p>Keynote banner and speaker package media seeded from source footage.</p>
+      <p>Poster frame from the 2026 opening montage.</p>
     </section>
   </main>
 
-  <footer>
+  <footer class="wrap">
     <p>
-      Need your baseline first?
-      <a href="https://testyourvibes.com">Run a VIBE scan</a> before attending.
+      On-site resources: <a href="https://vibetube.art">VibeTube live stream</a> ·
+      <a href="https://nytimez.art">Nytimez coverage</a> ·
+      <a href="https://vibe-standards.org">IOVS reference desk</a>
     </p>
   </footer>
 
   <style>
     :root {
-      --bg: #faf7ef;
-      --ink: #1f1b16;
-      --muted: #665f55;
-      --line: #d9d1c5;
-      --card: #fffdf8;
-      --accent: #7c3aed;
+      --bg: #0d0518;
+      --ink: #f9f2ff;
+      --muted: #c6b3db;
+      --line: #4e3568;
+      --card: #1a0f2d;
+      --accent: #ff4db8;
+      --accent2: #64e3ff;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
       color: var(--ink);
-      background: linear-gradient(180deg, #f4efe3, var(--bg) 45%);
+      background: radial-gradient(circle at 20% 0%, #2f1650 0%, var(--bg) 42%);
       line-height: 1.45;
     }
-    .hero, .container, footer {
+    .wrap {
       width: min(920px, 92vw);
       margin: 0 auto;
     }
     .hero {
-      padding: 34px 0 16px;
-      text-align: center;
+      padding: 34px 0 18px;
     }
     .eyebrow {
       margin: 0;
-      color: var(--accent);
-      letter-spacing: 0.08em;
+      color: var(--accent2);
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       font-weight: 700;
       font-size: 0.85rem;
     }
     h1 {
       margin: 8px 0;
-      font-size: 2.1rem;
+      font-size: 2.55rem;
       line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }
     .subhead {
       margin: 0;
       color: var(--muted);
       font-size: 1rem;
+    }
+    .cta-row {
+      margin: 14px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(180deg, #ff67c4, #d61a89);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.92rem;
+    }
+    .cta.ghost {
+      background: transparent;
+      border: 1px solid #8c6bb3;
+      color: var(--accent2);
     }
     .container {
       display: grid;
@@ -99,22 +128,33 @@
       border: 1px solid var(--line);
       border-radius: 10px;
       padding: 18px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
     }
     h2 {
       margin: 0 0 6px;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
+      color: #ffd4f3;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }
     p {
       margin: 0 0 8px;
     }
     a {
-      color: var(--accent);
+      color: #7fe9ff;
       font-weight: 700;
     }
+    .stats ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .stats li {
+      margin-bottom: 8px;
+    }
     .media-placeholder {
-      border: 1px dashed #ccbfa8;
+      border: 1px dashed #74529b;
       border-radius: 8px;
-      background: #faf4e8;
+      background: #27163f;
       padding: 12px;
     }
     .media-placeholder h2 {
@@ -133,7 +173,6 @@
       padding: 14px 0 24px;
       color: var(--muted);
       font-size: 0.92rem;
-      text-align: center;
     }
     @media (max-width: 680px) {
       h1 { font-size: 1.75rem; }

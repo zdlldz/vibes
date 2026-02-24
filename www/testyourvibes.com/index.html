@@ -84,12 +84,14 @@
     }
     .hero h1 {
       margin: 0 0 6px;
-      font-size: 2.1rem;
-      letter-spacing: 0.02em;
+      font-size: 2.25rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
     }
     .hero p {
       margin: 0;
       color: var(--muted);
+      font-size: 1.02rem;
     }
     .panel {
       background: color-mix(in srgb, var(--panel) 92%, #000 8%);
@@ -139,6 +141,7 @@
     }
     h2, h3 {
       margin: 0 0 6px;
+      letter-spacing: 0.01em;
     }
     p {
       margin: 0;
@@ -187,7 +190,12 @@
       const bNorm = b / 10;
       const eNorm = e / 10;
       const score = Math.pow(vNorm * iNorm * bNorm * eNorm, 0.25).toFixed(2);
-      result.textContent = `VIBE score: ${score} (geometric composite)`;
+      const numericScore = Number(score);
+      let band = "unstable";
+      if (numericScore >= 0.81) band = "immaculate";
+      else if (numericScore >= 0.61) band = "coherent";
+      else if (numericScore <= 0.25) band = "critically misaligned";
+      result.textContent = `VIBE score: ${score} (${band}, geometric composite)`;
 
       // Canonical log line for lightweight debugging during content QA.
       console.info("[vibes][testyourvibes] score", { v, i, b, e, vNorm, iNorm, bNorm, eNorm, score });
