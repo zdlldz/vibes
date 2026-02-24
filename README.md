@@ -156,14 +156,23 @@ cd "workers/vibetube.art" && wrangler deployments list
 
 ### 5) Optional batch deploy helper
 
-From repo root:
+Use the repo-root helper script:
 
 ```bash
-for d in arxivz.org nytimez.art testyourvibes.com vibe-con.org vibe-standards.org vibetube.art; do
-  echo "Deploying $d"
-  (cd "workers/$d" && wrangler deploy) || exit 1
-done
+chmod +x deploy-all.sh
+./deploy-all.sh
 ```
+
+`deploy-all.sh` sources root `.env` before entering `workers/<domain>/` so Wrangler keeps a consistent account context for every deploy in a multi-account setup.
+
+Expected root `.env` keys:
+
+```bash
+CLOUDFLARE_ACCOUNT_ID=...
+CLOUDFLARE_API_TOKEN=...
+```
+
+If you deploy from per-domain folders directly, Wrangler may not load root `.env` automatically and can prompt for account selection per deploy.
 
 ## Optional Fast Integrity Checks
 

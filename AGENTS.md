@@ -78,6 +78,12 @@ Any component approaching `0` drives the composite score toward `0` ("vibes were
 
 Note: `vibetube.art` deploys from matching `.art` folder paths (`workers/vibetube.art/`, `www/vibetube.art/`). DNS/routes are configured for `.art`.
 
+## Deploy DX (Multi-Account Cloudflare)
+
+- Prefer repo-root `deploy-all.sh` for production batch deploys.
+- The script should source root `.env` (`set -a; source ".env"; set +a`) before looping into `workers/<domain>/`.
+- This ensures `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` remain available after `cd`, preventing Wrangler from prompting for account selection on each domain deploy.
+
 ## Media Ingestion Rule
 
 Workers only serve assets from each domain's own `www/<domain>/` directory. Media staged in `www/src/` must be copied into per-domain media folders before use (for example `www/nytimez.art/media/`, `www/vibetube.art/media/`).
