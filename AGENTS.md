@@ -101,11 +101,25 @@ Workers only serve assets from each domain's own `www/<domain>/` directory. Medi
 2. Match interaction affordances second (search shells, metadata, article/watch layouts)
 3. If source sites block fetch, use known conventions and document assumptions
 
+## testyourvibes.com — Gamified Quiz (v0.3, Feb 2026)
+
+`www/testyourvibes.com/index-v2.html` is the primary interactive deliverable. Key patterns:
+
+- **Live SVG gauge** — `stroke-dashoffset` on a circle arc; updated on every slider input via `liveUpdate()`. Circumference = `2π × 38 = 238.76`. Gradient stops updated via JS on reveal.
+- **Custom range sliders** — cross-browser (`-webkit-slider-thumb`, `-moz-range-thumb`); `--pct` CSS custom property drives two-tone gradient fill track.
+- **Pick-row preset buttons** — dispatch `input` events onto the range input; `.is-active` class tracks state.
+- **Tier system** — ICON ≥ 0.81, TRENDING ≥ 0.61, CHAOTIC ≥ 0.26, CRITICAL < 0.26. Each tier carries `color`, `glow` (rgba, browser-safe), `bg`, `badge`, `verdict`.
+- **easeOutExpo count-up** — `requestAnimationFrame` loop with `1 - Math.pow(2, -10 * t)`.
+- **Confetti** — fixed-position overlay; CSS custom properties `--tx`, `--ty`, `--r`, `--c`, `--d` on `<span>` elements; ICON tier only.
+- **Spam-site elements** — scrolling news ticker (JS-duplicated segment for seamless CSS loop), live user count drift, mid-form ad, countdown timer, sticky footer bar, pop-up modal (4.5s delay), social proof toasts (9-13s cadence). **All three interactive overlays (toast container, sticky bar, modal) must appear in the HTML BEFORE the main `<script>` block** — they are referenced synchronously on script execution.
+- **Gauge label** — transitions from pulsing "live" → static "✓ locked" on submit; restored to "live" on retry/chaos spin.
+
 ## Quality Bar Before PR
 
 - Route-to-file parity is correct for all workers
 - No broken local links or broken local media references
 - All HTML files include doctype, inline style, inline script
+- Interactive overlay HTML elements (modal, sticky bar, toast container) must appear before inline `<script>` tags that reference them
 - Core docs (`README.md`, `AGENTS.md`) are current
 
 
