@@ -9,58 +9,156 @@
 <body>
     <div class="vibe-disclaimer-banner">
     <div class="vibe-disclaimer-inner">
-      <span class="vibe-disclaimer-text">The site shown below is v0.1, which was submitted for TASK2. Please see the newest work here: <a href="./index-v2.html">v0.2</a></span>
+      <span class="vibe-disclaimer-text">The site shown below is v0.2. Please see v0.1, which was submitted for Task 2 <a href="./index.html">here</a>.</span>
       <details class="vibe-sites-menu">
         <summary>All sites</summary>
-        <div class="vibe-sites-list"><a href="https://arxivz.org/index-v2.html" target="_self" rel="noopener">arxivz.org</a><a href="https://nytimez.art/index-v2.html" target="_self" rel="noopener">nytimez.art</a><a href="https://testyourvibes.com/index-v2.html" target="_self" rel="noopener">testyourvibes.com</a><a href="https://vibe-con.org/index-v2.html" target="_self" rel="noopener">vibe-con.org</a><a href="https://vibe-standards.org/index-v2.html" target="_self" rel="noopener">vibe-standards.org</a><a href="https://vibetube.art/index-v2.html" target="_self" rel="noopener">vibetube.art</a></div>
+        <div class="vibe-sites-list"><a data-vibe-domain="arxivz.org" data-vibe-path="/index-v2.html" href="https://arxivz.org/index-v2.html" target="_self" rel="noopener">arxivz.org</a><a data-vibe-domain="nytimez.art" data-vibe-path="/index-v2.html" href="https://nytimez.art/index-v2.html" target="_self" rel="noopener">nytimez.art</a><a data-vibe-domain="testyourvibes.com" data-vibe-path="/index-v2.html" href="https://testyourvibes.com/index-v2.html" target="_self" rel="noopener">testyourvibes.com</a><a data-vibe-domain="vibe-con.org" data-vibe-path="/index-v2.html" href="https://vibe-con.org/index-v2.html" target="_self" rel="noopener">vibe-con.org</a><a data-vibe-domain="vibe-standards.org" data-vibe-path="/index-v2.html" href="https://vibe-standards.org/index-v2.html" target="_self" rel="noopener">vibe-standards.org</a><a data-vibe-domain="vibetube.art" data-vibe-path="/index-v2.html" href="https://vibetube.art/index-v2.html" target="_self" rel="noopener">vibetube.art</a></div>
       </details>
     </div>
   </div>
 
   <header class="hero">
-    <h1>Test Your VIBEs</h1>
-    <p>Because your gut feeling deserves a number.</p>
+    <p class="eyebrow">TRENDING QUIZ ALERT</p>
+    <h1>Test Your VIBEs in 30 Seconds</h1>
+    <p>People magazine readers are calling this the most suspiciously accurate personality test online.</p>
   </header>
+  <section class="landscape-ad-row" aria-label="featured-promotions">
+    <article class="landscape-ad-bar">
+      <img src="./media/shot-news-01b.webp" alt="Landscape ad for aura unlock pass">
+      <div>
+        <p class="ad-tag">Sponsored</p>
+        <h3>EXCLUSIVE: The 60-Second Aura Audit Celebs Use Before Interviews</h3>
+      </div>
+      <button type="button">Unlock Pass</button>
+    </article>
+    <article class="landscape-ad-bar video-ad-bar">
+      <video autoplay loop muted playsinline preload="metadata" poster="./media/shot-news-02b.webp">
+        <source src="./media/core-news.mp4" type="video/mp4">
+      </video>
+      <div>
+        <p class="ad-tag">Ad</p>
+        <h3>Live Feed: VIBE Panic Meter Is Spiking In Your ZIP Code</h3>
+      </div>
+      <button type="button">Watch Alert</button>
+    </article>
+  </section>
 
-  <main class="panel">
-    <section>
-      <h2>Instant VIBE Scan</h2>
-      <p>Answer four microscopically scientific prompts and receive your VIBE profile.</p>
+
+  <main class="page">
+    <aside class="ad-stack">
+      <article class="landscape-ad-lite">
+        <img src="./media/shot-official-04.webp" alt="Landscape ad for instant score export">
+        <div><p class="ad-tag">Sponsored</p><p>Download your VIBE receipt as a legal document.</p></div>
+      </article>
+      <article class="ad-card">
+        <p class="ad-tag">Sponsored</p>
+        <img src="./media/shot-news-01.webp" alt="Promo still for premium vibe report">
+        <h3>UNLOCK: Your Hidden Vibe Aura</h3>
+        <p>Only 9,841 people left today.</p>
+        <button type="button">Reveal My Aura</button>
+      </article>
+      <article class="ad-card ad-video">
+        <p class="ad-tag">Ad</p>
+        <video autoplay loop muted playsinline preload="metadata" poster="./media/shot-official-05.webp">
+          <source src="./media/core-news.mp4" type="video/mp4">
+        </video>
+        <h3>7 Bureaucracy Hacks They Don't Want You To Know</h3>
+        <p>Clinically unverified. Socially essential.</p>
+        <button type="button">Get The Cheat Sheet</button>
+      </article>
+    </aside>
+
+    <section class="panel">
+      <section>
+        <h2>Instant VIBE Scan</h2>
+        <p>Slide your four mood metrics and discover whether your vibe is immaculate or critically cursed.</p>
+      </section>
+
+      <form id="vibe-form" class="vibe-form">
+        <label>
+          Ambient resonance (0-10) 🎵
+          <input type="range" name="v" min="0" max="10" value="6">
+          <output data-for="v">6</output>
+          <div class="pick-row" data-target="v">
+            <button type="button" data-val="2">🔕 Flatline</button>
+            <button type="button" data-val="6">🪩 Steady</button>
+            <button type="button" data-val="10">🚀 Rapture</button>
+          </div>
+        </label>
+        <label>
+          Social warmth (0-10) 💗
+          <input type="range" name="i" min="0" max="10" value="7">
+          <output data-for="i">7</output>
+          <div class="pick-row" data-target="i">
+            <button type="button" data-val="1">🧊 Cold</button>
+            <button type="button" data-val="6">🙂 Polite</button>
+            <button type="button" data-val="10">💞 Soulmate</button>
+          </div>
+        </label>
+        <label>
+          Bureaucracy freedom (0-10) 📋
+          <input type="range" name="b" min="0" max="10" value="7">
+          <output data-for="b">7</output>
+          <div class="pick-row" data-target="b">
+            <button type="button" data-val="1">📄 Forms Forever</button>
+            <button type="button" data-val="5">🗂️ Manageable</button>
+            <button type="button" data-val="10">🪽 No Clipboard</button>
+          </div>
+        </label>
+        <label>
+          Chaotic drift (0-10) 🌀
+          <input type="range" name="e" min="0" max="10" value="5">
+          <output data-for="e">5</output>
+          <div class="pick-row" data-target="e">
+            <button type="button" data-val="2">🫧 Predictable</button>
+            <button type="button" data-val="6">🌶️ Spicy</button>
+            <button type="button" data-val="10">🤯 Unhinged</button>
+          </div>
+        </label>
+        <div class="control-row">
+          <button type="button" id="chaos-spin">🎲 Chaos Spin</button>
+          <button type="submit">✨ Calculate My VIBE</button>
+        </div>
+      </form>
+
+      <section id="result" class="result" aria-live="polite">
+        <h3>Your score</h3>
+        <p>Awaiting calibration...</p>
+      </section>
+
+      <section class="media-showcase">
+        <video controls playsinline preload="metadata" poster="./media/shot-news-02.webp">
+          <source src="./media/core-news.mp4" type="video/mp4">
+        </video>
+        <div class="media-grid">
+          <img src="./media/shot-official-04.webp" alt="Vibe dataset still one">
+          <img src="./media/shot-official-06.webp" alt="Vibe dataset still two">
+        </div>
+      </section>
+
+      <p class="details-link">
+        Method details: <a href="./methodology-v2.html">How this "works"</a>
+      </p>
     </section>
 
-    <form id="vibe-form" class="vibe-form">
-      <label>
-        Ambient resonance (0-10)
-        <input type="number" name="v" min="0" max="10" value="6" required>
-      </label>
-      <label>
-        Social warmth (0-10)
-        <input type="number" name="i" min="0" max="10" value="7" required>
-      </label>
-      <label>
-        Bureaucracy freedom (0-10)
-        <input type="number" name="b" min="0" max="10" value="7" required>
-      </label>
-      <label>
-        Chaotic drift (0-10)
-        <input type="number" name="e" min="0" max="10" value="5" required>
-      </label>
-      <button type="submit">Calculate My VIBE</button>
-    </form>
-
-    <section id="result" class="result" aria-live="polite">
-      <h3>Your score</h3>
-      <p>Awaiting calibration...</p>
-    </section>
-
-    <section class="media-placeholder">
-      <h3>Live dashboard placeholder</h3>
-      <p>Reserved for score trend chart, cohort comparison, and export previews.</p>
-    </section>
-
-    <p class="details-link">
-      Method details: <a href="./methodology-v2.html">How this "works"</a>
-    </p>
+    <aside class="ad-stack">
+      <article class="ad-card">
+        <p class="ad-tag">Sponsored</p>
+        <img src="./media/shot-news-02b.webp" alt="Promo still for celebrity vibe list">
+        <h3>Celeb Vibe Rankings 2026</h3>
+        <p>#11 will emotionally surprise you.</p>
+        <button type="button">See The Rankings</button>
+      </article>
+      <article class="ad-card ad-video">
+        <p class="ad-tag">Ad</p>
+        <video autoplay loop muted playsinline preload="metadata" poster="./media/shot-news-01b.webp">
+          <source src="./media/core-news.mp4" type="video/mp4">
+        </video>
+        <h3>Relationship Vibe Compatibility</h3>
+        <p>Compare scores with your situationship.</p>
+        <button type="button">Start Matching</button>
+      </article>
+    </aside>
   </main>
 
   <footer>
@@ -69,130 +167,255 @@
 
   <style>
     :root {
-      --bg: #0f172a;
-      --panel: #111827;
-      --ink: #e5e7eb;
-      --muted: #9ca3af;
-      --line: #273042;
-      --accent: #38bdf8;
+      --bg: #fff0f7;
+      --ink: #2a093a;
+      --muted: #6d3e78;
+      --panel: #ffffff;
+      --line: #ffd0eb;
+      --accent: #ff2f92;
+      --accent-2: #7f39fb;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background: radial-gradient(circle at top, #1f2937, var(--bg) 52%);
       color: var(--ink);
+      background: radial-gradient(circle at top, #ffe4f3, var(--bg) 52%);
       line-height: 1.45;
     }
-    .hero, .panel, footer {
-      width: min(760px, 92vw);
+    .hero, .page, footer, .landscape-ad-row {
+      width: min(1240px, 94vw);
       margin: 0 auto;
     }
     .hero {
-      padding: 30px 0 16px;
+      padding: 28px 0 14px;
       text-align: center;
     }
-    .hero h1 {
-      margin: 0 0 6px;
-      font-size: 2.1rem;
-      letter-spacing: 0.02em;
+    .landscape-ad-row {
+      margin: 0 auto 12px;
+      display: grid;
+      gap: 8px;
     }
-    .hero p {
-      margin: 0;
-      color: var(--muted);
+    .landscape-ad-bar {
+      display: grid;
+      grid-template-columns: 220px 1fr auto;
+      gap: 10px;
+      align-items: center;
+      border: 1px solid #ffd0eb;
+      background: #fff8fd;
+      border-radius: 12px;
+      padding: 8px;
+      box-shadow: 0 8px 18px rgba(255, 47, 146, 0.12);
+    }
+    .landscape-ad-bar img,
+    .landscape-ad-bar video {
+      width: 100%;
+      min-height: 84px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #ffd0eb;
+      display: block;
+      background: #111;
+    }
+    .landscape-ad-bar h3 { margin: 0; font-size: 16px; line-height: 1.25; }
+    .landscape-ad-lite {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px;
+      align-items: center;
+      border: 1px solid #ffd0eb;
+      border-radius: 10px;
+      padding: 8px;
+      background: #fff8fd;
+    }
+    .landscape-ad-lite img {
+      width: 100%;
+      min-height: 66px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #ffd0eb;
+      display: block;
+    }
+    .eyebrow {
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 42px;
+      line-height: 1.12;
+    }
+    .hero p { margin: 0; color: var(--muted); }
+    .page {
+      display: grid;
+      grid-template-columns: 260px 1fr 260px;
+      gap: 14px;
+      align-items: start;
+      padding-bottom: 12px;
     }
     .panel {
-      background: color-mix(in srgb, var(--panel) 92%, #000 8%);
-      border: 1px solid var(--line);
-      border-radius: 10px;
+      position: relative;
+      background: linear-gradient(165deg, #fff9ff 0%, #fff1fa 38%, #ffe9f7 100%);
+      border: 2px solid #ff9fce;
+      border-radius: 14px;
       padding: 18px;
       display: grid;
-      gap: 14px;
+      gap: 13px;
+      box-shadow: 0 18px 34px rgba(255, 47, 146, 0.2), 0 0 0 2px rgba(127, 57, 251, 0.08);
     }
-    .vibe-form {
-      display: grid;
-      gap: 10px;
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: -12px;
+      border-radius: 20px;
+      background: radial-gradient(circle at top, rgba(255, 47, 146, 0.2), rgba(127, 57, 251, 0.08) 42%, transparent 70%);
+      z-index: -1;
     }
+    .vibe-form { display: grid; gap: 10px; }
     .vibe-form label {
       display: grid;
-      gap: 4px;
-      font-weight: 600;
-      font-size: 0.92rem;
-    }
-    input, button {
-      border-radius: 6px;
-      border: 1px solid var(--line);
+      gap: 6px;
+      font-weight: 700;
+      font-size: 0.93rem;
+      background: linear-gradient(180deg, #fffdfd, #fff6fb);
+      border: 1px solid #ffc5e3;
+      border-radius: 10px;
       padding: 10px;
-      font: inherit;
-      color: inherit;
-      background: #0b1220;
+      box-shadow: 0 4px 10px rgba(255, 47, 146, 0.09);
+    }
+    .vibe-form input[type="range"] { width: 100%; }
+    .vibe-form output {
+      justify-self: end;
+      font-weight: 800;
+      color: var(--accent-2);
+    }
+    .pick-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+    }
+    .pick-row button {
+      font-size: 12px;
+      padding: 8px 6px;
+      background: linear-gradient(180deg, #ffffff, #ffeafd);
+      color: #5f2570;
+      border: 1px solid #ffbfe2;
+      box-shadow: 0 2px 7px rgba(127, 57, 251, 0.11);
+      letter-spacing: 0.01em;
+    }
+    .pick-row button.is-active {
+      color: #fff;
+      background: linear-gradient(135deg, #ff6db6, #7f39fb);
+      border-color: transparent;
+      box-shadow: 0 7px 14px rgba(127, 57, 251, 0.28);
+    }
+    .control-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
     }
     button {
+      border-radius: 999px;
+      border: 0;
+      padding: 11px 14px;
+      font: inherit;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      font-weight: 800;
       cursor: pointer;
-      background: linear-gradient(180deg, #0ea5e9, #0284c7);
-      border-color: #0ea5e9;
-      font-weight: 700;
     }
     .result {
-      border-top: 1px dashed var(--line);
-      padding-top: 10px;
+      border: 1px dashed #ffc9e8;
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff7fc;
     }
-    .media-placeholder {
-      border: 1px dashed var(--line);
+    .media-showcase video {
+      width: 100%;
+      min-height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #ffd0eb;
+      background: #111;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .media-grid img {
+      width: 100%;
+      min-height: 110px;
+      object-fit: cover;
       border-radius: 8px;
-      padding: 12px;
-      background: #0e1626;
+      border: 1px solid #ffd0eb;
+      display: block;
     }
-    .media-placeholder h3 {
+    .ad-stack { display: grid; gap: 10px; }
+    .ad-card {
+      background: #fffdfd;
+      border: 1px solid #ffd0eb;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 8px 18px rgba(127, 57, 251, 0.08);
+    }
+    .ad-tag {
       margin: 0 0 6px;
-      font-size: 1rem;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-2);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
-    h2, h3 {
-      margin: 0 0 6px;
+    .ad-card img,
+    .ad-card video {
+      width: 100%;
+      min-height: 110px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #ffd0eb;
+      display: block;
+      margin-bottom: 6px;
     }
-    p {
-      margin: 0;
-    }
-    .details-link a,
-    footer a {
-      color: var(--accent);
-    }
+    .ad-card h3 { margin: 0 0 4px; font-size: 15px; line-height: 1.3; }
+    .ad-card p { margin: 0 0 8px; color: var(--muted); font-size: 13px; }
+    .details-link a, footer a { color: #7f39fb; font-weight: 700; }
     footer {
+      text-align: center;
       color: var(--muted);
       font-size: 0.92rem;
-      padding: 14px 0 24px;
-      text-align: center;
+      padding: 12px 0 24px;
     }
-    @media (max-width: 640px) {
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-      .panel {
-        padding: 14px;
-      }
-      input, button {
-        padding: 9px;
-      }
+    @media (max-width: 1080px) {
+      .page { grid-template-columns: 1fr; }
+      .ad-stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .landscape-ad-bar { grid-template-columns: 1fr; }
     }
-      .vibe-sites-menu {
-        align-self: flex-end;
-      }
+    @media (max-width: 680px) {
+      h1 { font-size: 32px; }
+      .ad-stack { grid-template-columns: 1fr; }
     }
 
-  
   /* vibe-disclaimer:start */
   .vibe-disclaimer-banner {
     position: relative;
     z-index: 9999;
     margin: 0;
-    padding: 7px 12px;
-    border-bottom: 1px solid #d7dbe3;
-    background: #f7f9fc;
-    color: #313846;
+    padding: 12px 12px;
+    border-bottom: 1px solid #bcc8da;
+    background: #e6ebf4;
+    color: #1f2a3a;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
     font-size: 12px;
     line-height: 1.35;
     letter-spacing: 0.01em;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.55);
   }
   .vibe-disclaimer-inner {
     width: min(1280px, 98vw);
@@ -209,9 +432,9 @@
     align-items: baseline;
   }
   .vibe-disclaimer-text a {
-    color: #1f4eb1;
+    color: #153f92;
     text-decoration: underline;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0;
   }
   .vibe-sites-menu {
@@ -222,12 +445,12 @@
   .vibe-sites-menu summary {
     list-style: none;
     cursor: pointer;
-    border: 1px solid #c9d3e6;
+    border: 1px solid #b9c7dc;
     border-radius: 999px;
-    background: #ffffff;
-    color: #274068;
+    background: #f7f9fd;
+    color: #23395f;
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 3px 9px;
     user-select: none;
   }
@@ -243,9 +466,9 @@
     gap: 5px;
     padding: 8px;
     background: #ffffff;
-    border: 1px solid #d7dbe3;
+    border: 1px solid #c5cfdd;
     border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
   }
   .vibe-sites-list a {
     color: #1f4eb1;
@@ -275,8 +498,57 @@
     const form = document.getElementById("vibe-form");
     const result = document.getElementById("result").querySelector("p");
 
+    document.querySelectorAll("input[type=range]").forEach((input) => {
+      const out = document.querySelector(`output[data-for="${input.name}"]`);
+      if (out) out.value = input.value;
+      input.addEventListener("input", () => {
+        if (out) out.value = input.value;
+      });
+    });
+
     function normalize(value) {
       return Number.isFinite(value) ? Math.max(0, Math.min(10, value)) : 0;
+    }
+
+    function syncPickButtons(targetName, value) {
+      const row = form.querySelector(`.pick-row[data-target="${targetName}"]`);
+      if (!row) return;
+      row.querySelectorAll("button").forEach((button) => {
+        const isActive = String(button.getAttribute("data-val")) === String(value);
+        button.classList.toggle("is-active", isActive);
+      });
+    }
+
+    document.querySelectorAll(".pick-row button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const row = button.closest(".pick-row");
+        const target = row ? row.getAttribute("data-target") : "";
+        const input = form.querySelector(`input[name="${target}"]`);
+        if (!input) return;
+        input.value = button.getAttribute("data-val") || input.value;
+        input.dispatchEvent(new Event("input", { bubbles: true }));
+        syncPickButtons(target, input.value);
+      });
+    });
+
+    document.querySelectorAll("input[type=range]").forEach((input) => {
+      syncPickButtons(input.name, input.value);
+      input.addEventListener("input", () => {
+        syncPickButtons(input.name, input.value);
+      });
+    });
+
+    const chaosButton = document.getElementById("chaos-spin");
+    if (chaosButton) {
+      chaosButton.addEventListener("click", () => {
+        ["v", "i", "b", "e"].forEach((name) => {
+          const input = form.querySelector(`input[name="${name}"]`);
+          if (!input) return;
+          input.value = String(Math.floor(Math.random() * 11));
+          input.dispatchEvent(new Event("input", { bubbles: true }));
+        });
+        result.textContent = "Randomized. Hit Calculate before the vibes collapse.";
+      });
     }
 
     form.addEventListener("submit", (event) => {
@@ -293,7 +565,16 @@
       const bNorm = b / 10;
       const eNorm = e / 10;
       const score = Math.pow(vNorm * iNorm * bNorm * eNorm, 0.25).toFixed(2);
-      result.textContent = `VIBE score: ${score} (geometric composite)`;
+      const numeric = Number(score);
+      let verdict = "critically cursed";
+      if (numeric >= 0.81) verdict = "immaculate icon energy";
+      else if (numeric >= 0.61) verdict = "coherent main-character vibe";
+      else if (numeric >= 0.26) verdict = "chaotic but salvageable";
+      let badge = "[ALERT]";
+      if (numeric >= 0.81) badge = "[ICON]";
+      else if (numeric >= 0.61) badge = "[TRENDING]";
+      else if (numeric >= 0.26) badge = "[RISK]";
+      result.textContent = `${badge} VIBE score: ${score} - ${verdict}`;
 
       // Canonical log line for lightweight debugging during content QA.
       console.info("[vibes][testyourvibes] score", { v, i, b, e, vNorm, iNorm, bNorm, eNorm, score });

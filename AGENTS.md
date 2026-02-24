@@ -101,3 +101,14 @@ Workers only serve assets from each domain's own `www/<domain>/` directory. Medi
 - No broken local links or broken local media references
 - All HTML files include doctype, inline style, inline script
 - Core docs (`README.md`, `AGENTS.md`) are current
+
+
+## Canonical Media + Video Policy
+
+- Keep `www/src/` as staging only; production references must use domain-local `www/<domain>/media/` copies.
+- Core news hero video is `core-news.mp4`, sourced from `www/src/video/(WIP) TASK2_lieberman_zack_vibes-news.mp4`.
+- “Videos within video” clips in `www/src/video/` are approved as standalone news assets and can be published as flat clip pages (especially in `vibetube` v2).
+- Video behavior rule: `<video controls playsinline preload="metadata">` by default.
+- Do not set `muted` by default. Do not use autoplay unless explicitly requested for a page.
+- Exception path (only when explicitly requested): ad-only video units may use autoplay + loop with no controls to intentionally create an intrusive tabloid experience.
+- Prefer core video for primary article/watch hero context; use other clips as secondary or related coverage.

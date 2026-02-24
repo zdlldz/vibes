@@ -16,11 +16,29 @@
       </details>
     </div>
   </div>
-  <div class="topbar">
+    <div class="brandbar">
+    <div class="wrap brandbar-inner">
+      <a class="brandmark" href="./index.html" aria-label="arXivz home">arXivz</a>
+      <div class="brand-tools">
+        <a class="login" href="#">Login</a>
+        <form class="searchbar" role="search" aria-label="archive-search">
+          <input type="search" placeholder="Search...">
+          <select aria-label="search-domain">
+            <option>all fields</option>
+            <option>title</option>
+            <option>author</option>
+          </select>
+          <button type="button">Search</button>
+        </form>
+        <p class="tool-links"><a href="#">Help</a> | <a href="#">Advanced Search</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quicknav">
     <div class="wrap">
-      <span>arXivz.org</span>
-      <span class="sep">|</span>
       <a href="./index.html">home</a>
+      <span class="sep">|</span>
       <a href="./abs-2506-10953.html">featured preprint</a>
     </div>
   </div>
@@ -28,9 +46,10 @@
   <header class="header wrap">
     <h1>arXivz.org e-Print archive</h1>
     <p>
-      arXivz is a free distribution service and open-access archive for papers in
-      vibe science, socio-thermodynamics, and applied intuition engineering.
-      Materials are not peer-reviewed.
+      arXivz is a free distribution service and open-access archive for nearly 2.4 million
+      not-yet-peer-reviewed vibe manuscripts in physics, mathematics, computer science,
+      quantitative bureaucracy, and adjacent feelings. Materials on this site are not certified
+      by reality, but they are very confidently formatted.
     </p>
   </header>
 
@@ -47,16 +66,25 @@
 
     <section class="right">
       <h2>New submissions</h2>
-      <dl class="listing">
-        <dt><a href="./abs-2506-10953.html">arXivz:2502.VIBE01</a> [q-soc.TH]</dt>
-        <dd>VIBE: A Novel Quantitative Framework for the Measurement of Vibrational-Intimate-Bureaucratic-Entropic Phenomena</dd>
-        <dd class="meta">A. Goodvibe, C.I. Bration, E. DuPont, R. Onance, B.R. Ocratic [published 24 Feb 2026]</dd>
-      </dl>
+      <a class="submission-card" href="./abs-2506-10953.html">
+        <p class="idline">arXivz:2502.VIBE01 [q-soc.TH]</p>
+        <p class="titleline">VIBE: A Novel Quantitative Framework for the Measurement of Vibrational-Intimate-Bureaucratic-Entropic Phenomena</p>
+        <p class="meta">A. Goodvibe, C.I. Bration, E. DuPont, R. Onance, B.R. Ocratic [published 24 Feb 2026]</p>
+      </a>
 
-      <h2>Media attachments (placeholder)</h2>
+            <h2>Media attachments</h2>
       <div class="media-placeholder">
-        <p>Table 1 chart package placeholder</p>
-        <p class="small">Reserved for ranked context bars (0.178 to 0.866), BIIS anomaly callouts, and field-image plate assets.</p>
+        <a class="media-link" href="./abs-2506-10953.html">
+          <video controls playsinline preload="metadata" poster="./media/shot-news-01.webp">
+            <source src="./media/core-news.mp4" type="video/mp4">
+          </video>
+        </a>
+        <div class="media-grid">
+          <a class="media-link" href="./abs-2506-10953.html"><img src="./media/shot-news-02.webp" alt="News still from field acquisition"></a>
+          <a class="media-link" href="./abs-2506-10953.html"><img src="./media/shot-official-04.webp" alt="Official still from conference footage"></a>
+          <a class="media-link" href="./abs-2506-10953.html"><img src="./media/shot-official-05.webp" alt="Official still from standards package"></a>
+        </div>
+        <p class="small">Click any media item to open the featured preprint record.</p>
       </div>
 
       <h2>Archive statistics</h2>
@@ -90,20 +118,81 @@
       width: min(1050px, 95vw);
       margin: 0 auto;
     }
-    .topbar {
-      background: #4b4b4b;
-      color: #f6f6f6;
+    .brandbar {
+      background: #b31b1b;
+      color: #fff;
+      border-top: 1px solid #8f1414;
+      border-bottom: 1px solid #8f1414;
+    }
+    .brandbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 0;
+    }
+    .brandmark {
+      color: #fff;
+      text-decoration: none;
+      font-size: 52px;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      font-family: "Courier New", ui-monospace, monospace;
+      font-weight: 700;
+    }
+    .brand-tools {
+      margin-left: auto;
+      display: grid;
+      gap: 4px;
+      justify-items: end;
+      width: min(420px, 100%);
+    }
+    .brand-tools .login {
+      color: #fff;
+      font-size: 12px;
+      text-decoration: underline;
+    }
+    .searchbar {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 4px;
+      width: 100%;
+    }
+    .searchbar input,
+    .searchbar select,
+    .searchbar button {
+      border: 1px solid #922;
+      font: inherit;
+      font-size: 12px;
+      padding: 4px 6px;
+      background: #fff;
+      color: #111;
+    }
+    .searchbar button {
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .tool-links {
+      margin: 0;
       font-size: 12px;
     }
-    .topbar .wrap {
+    .tool-links a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .quicknav {
+      background: #eeeeee;
+      border-bottom: 1px solid #d2d2d2;
+      font-size: 12px;
+    }
+    .quicknav .wrap {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       align-items: center;
-      flex-wrap: wrap;
       padding: 6px 0;
     }
-    .topbar a {
-      color: #fff;
+    .quicknav a {
+      color: #1f4a8a;
       text-decoration: none;
     }
     .sep { opacity: 0.6; }
@@ -145,15 +234,28 @@
     .subject-list li {
       margin-bottom: 8px;
     }
-    .listing {
+    .submission-card {
+      display: grid;
+      gap: 5px;
+      padding: 10px;
+      border: 1px solid #cfd7e6;
+      background: #fbfdff;
+      text-decoration: none;
+      color: inherit;
       margin: 0 0 14px;
     }
-    .listing dt {
-      margin: 0 0 4px;
+    .submission-card .idline {
+      margin: 0;
       font-weight: 700;
+      color: #1b4ea2;
+      font-size: 13px;
     }
-    .listing dd {
-      margin: 0 0 4px 0;
+    .submission-card .titleline {
+      margin: 0;
+      color: #111;
+    }
+    .submission-card .meta {
+      margin: 0;
     }
     .meta {
       color: var(--muted);
@@ -166,6 +268,11 @@
     }
     .media-placeholder p {
       margin: 0;
+    }
+    .media-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
     }
     .small {
       color: var(--muted);
@@ -202,14 +309,15 @@
     position: relative;
     z-index: 9999;
     margin: 0;
-    padding: 7px 12px;
-    border-bottom: 1px solid #d7dbe3;
-    background: #f7f9fc;
-    color: #313846;
+    padding: 12px 12px;
+    border-bottom: 1px solid #bcc8da;
+    background: #e6ebf4;
+    color: #1f2a3a;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
     font-size: 12px;
     line-height: 1.35;
     letter-spacing: 0.01em;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.55);
   }
   .vibe-disclaimer-inner {
     width: min(1280px, 98vw);
@@ -226,9 +334,9 @@
     align-items: baseline;
   }
   .vibe-disclaimer-text a {
-    color: #1f4eb1;
+    color: #153f92;
     text-decoration: underline;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0;
   }
   .vibe-sites-menu {
@@ -239,12 +347,12 @@
   .vibe-sites-menu summary {
     list-style: none;
     cursor: pointer;
-    border: 1px solid #c9d3e6;
+    border: 1px solid #b9c7dc;
     border-radius: 999px;
-    background: #ffffff;
-    color: #274068;
+    background: #f7f9fd;
+    color: #23395f;
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 3px 9px;
     user-select: none;
   }
@@ -260,9 +368,9 @@
     gap: 5px;
     padding: 8px;
     background: #ffffff;
-    border: 1px solid #d7dbe3;
+    border: 1px solid #c5cfdd;
     border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
   }
   .vibe-sites-list a {
     color: #1f4eb1;

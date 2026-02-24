@@ -16,24 +16,41 @@
       </details>
     </div>
   </div>
-  <div class="topbar">
-    <div class="wrap">
-      <a href="./index.html">arXivz home</a>
-      <span>|</span>
-      <a href="#">search</a>
-      <a href="#">help</a>
+    <div class="brandbar">
+    <div class="wrap brandbar-inner">
+      <a class="brandmark" href="./index.html" aria-label="arXivz home">arXivz</a>
+      <div class="brand-tools">
+        <form class="searchbar" role="search" aria-label="archive-search">
+          <input type="search" placeholder="Search...">
+          <select aria-label="search-domain">
+            <option>all fields</option>
+            <option>title</option>
+            <option>author</option>
+          </select>
+          <button type="button">Search</button>
+        </form>
+        <p class="tool-links"><a href="#">Help</a> | <a href="#">Advanced Search</a></p>
+      </div>
     </div>
   </div>
 
-  <header class="paper-header wrap">
-    <p class="context">Quantitative Social Thermodynamics &gt; Theory</p>
-    <p class="idline">arXivz:2502.VIBE01 [q-soc.TH]</p>
-    <h1>Title: VIBE: A Novel Quantitative Framework for the Measurement of Vibrational-Intimate-Bureaucratic-Entropic Phenomena</h1>
-    <p class="authors">Authors: Anita Goodvibe, Cal I. Bration, Ennui DuPont, Rex Onance, B.R. Ocratic</p>
-    <p class="pdfline"><a href="#">View PDF</a> | <a href="#">HTML (experimental)</a></p>
+  <div class="crumbbar">
+    <div class="wrap">
+      <a href="./index.html">arXivz</a> &gt; q-soc.TH &gt; arXivz:2502.VIBE01
+    </div>
+  </div>
+  </div>
+
+    <header class="paper-header wrap">
+    <p class="subjectline">Quantitative Social Thermodynamics &gt; Theory</p>
+    <p class="submitted">[Submitted on 24 Feb 2026]</p>
+    <h1>VIBE: A Novel Quantitative Framework for the Measurement of Vibrational-Intimate-Bureaucratic-Entropic Phenomena</h1>
+    <p class="authors">A. Goodvibe, C.I. Bration, E. DuPont, R. Onance, B.R. Ocratic</p>
+    <p class="idline">Cite as: arXivz:2502.VIBE01 [q-soc.TH]</p>
   </header>
 
-  <main class="wrap">
+  <main class="wrap paper-grid">
+    <article class="paper-main">
     <section>
       <h2>Abstract</h2>
       <p>
@@ -95,7 +112,7 @@
       <div class="media-placeholder">
         <p>Figure 1: VIBEMETER Mark II architecture and channel map</p>
         <img src="./media/ax-fig-1.webp" alt="Supplemental figure panel from field media">
-        <video controls muted playsinline preload="metadata" poster="./media/ax-fig-1.webp">
+        <video controls playsinline preload="metadata" poster="./media/ax-fig-1.webp">
           <source src="./media/ax-fig-2.mp4" type="video/mp4">
         </video>
         <p>Figure 2: context ranking sequence and BIIS anomaly motion panel</p>
@@ -250,6 +267,30 @@ The authors thank the 270 study participants across Geneva, London, Tokyo, and S
       </details>
     </section>
 
+      </article>
+    <aside class="paper-side">
+      <section class="side-card">
+        <h2>Access Paper:</h2>
+        <ul>
+          <li><a href="./vibe-article.pdf">View PDF</a></li>
+          <li><a href="./vibe-article.html">HTML (experimental)</a></li>
+          <li><a href="#arxiv-full-artifact">Text Source</a></li>
+        </ul>
+      </section>
+      <section class="side-card">
+        <h3>Current browse context:</h3>
+        <p>q-soc.TH</p>
+        <p><a href="#">new</a> | <a href="#">recent</a> | <a href="#">2026-02</a></p>
+      </section>
+      <section class="side-card">
+        <h3>References &amp; Citations</h3>
+        <ul>
+          <li><a href="#">NASA ADS</a></li>
+          <li><a href="#">Google Scholar</a></li>
+          <li><a href="#">Semantic Scholar</a></li>
+        </ul>
+      </section>
+    </aside>
   </main>
 
   <footer class="wrap">
@@ -299,6 +340,137 @@ The authors thank the 270 study participants across Geneva, London, Tokyo, and S
       color: #fff;
       text-decoration: none;
     }
+    
+    .brandbar {
+      background: #b31b1b;
+      color: #fff;
+      border-top: 1px solid #8f1414;
+      border-bottom: 1px solid #8f1414;
+    }
+    .brandbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 0;
+    }
+    .brandmark {
+      color: #fff;
+      text-decoration: none;
+      font-size: 52px;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      font-family: "Courier New", ui-monospace, monospace;
+      font-weight: 700;
+    }
+    .brand-tools {
+      margin-left: auto;
+      display: grid;
+      gap: 4px;
+      justify-items: end;
+      width: min(420px, 100%);
+    }
+    .searchbar {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 4px;
+      width: 100%;
+    }
+    .searchbar input,
+    .searchbar select,
+    .searchbar button {
+      border: 1px solid #922;
+      font: inherit;
+      font-size: 12px;
+      padding: 4px 6px;
+      background: #fff;
+      color: #111;
+    }
+    .searchbar button {
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .tool-links {
+      margin: 0;
+      font-size: 12px;
+    }
+    .tool-links a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .crumbbar {
+      background: #efefef;
+      border-bottom: 1px solid #d6d6d6;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 6px 0;
+    }
+    .crumbbar .wrap {
+      font-size: 18px;
+      color: #1e1e1e;
+    }
+    .crumbbar a {
+      color: #1f4a8a;
+      text-decoration: none;
+    }
+    .paper-header {
+      padding: 10px 0 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    .subjectline {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #222;
+    }
+    .submitted {
+      margin: 5px 0 3px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .paper-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 16px;
+      margin-top: 12px;
+      align-items: start;
+    }
+    .paper-main {
+      padding: 14px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      display: grid;
+      gap: 14px;
+    }
+    .paper-side {
+      display: grid;
+      gap: 10px;
+      position: sticky;
+      top: 12px;
+    }
+    .side-card {
+      border: 1px solid var(--line);
+      background: #f8f9fb;
+      padding: 10px;
+      font-size: 13px;
+    }
+    .side-card h2,
+    .side-card h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+    .side-card p,
+    .side-card ul {
+      margin: 0;
+    }
+    .side-card ul {
+      padding-left: 16px;
+      display: grid;
+      gap: 4px;
+    }
+
     .paper-header {
       padding: 14px 0 8px;
       border-bottom: 1px solid var(--line);
@@ -314,15 +486,7 @@ The authors thank the 270 study participants across Geneva, London, Tokyo, and S
       font-weight: 600;
       letter-spacing: -0.01em;
     }
-    main {
-      margin-top: 12px;
-      padding: 14px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      display: grid;
-      gap: 14px;
-    }
-    h2 {
+        h2 {
       margin: 0 0 8px;
       font-size: 20px;
       font-weight: 500;
@@ -376,10 +540,23 @@ The authors thank the 270 study participants across Geneva, London, Tokyo, and S
       font-size: 12px;
       color: var(--muted);
     }
+    @media (max-width: 900px) {
+      .paper-grid { grid-template-columns: 1fr; }
+      .paper-side { position: static; }
+    }
     @media (max-width: 760px) {
       h1 { font-size: 22px; }
+      .subjectline { font-size: 24px; }
       .meta-table th { width: 100px; }
-      main { padding: 12px; }
+      .paper-main { padding: 12px; }
+      .brandmark { font-size: 40px; }
+      .brandbar-inner {
+        display: grid;
+        align-items: start;
+      }
+      .brand-tools {
+        justify-items: start;
+      }
     }
   
     .artifact-appendix {
@@ -423,14 +600,15 @@ The authors thank the 270 study participants across Geneva, London, Tokyo, and S
     position: relative;
     z-index: 9999;
     margin: 0;
-    padding: 7px 12px;
-    border-bottom: 1px solid #d7dbe3;
-    background: #f7f9fc;
-    color: #313846;
+    padding: 12px 12px;
+    border-bottom: 1px solid #bcc8da;
+    background: #e6ebf4;
+    color: #1f2a3a;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
     font-size: 12px;
     line-height: 1.35;
     letter-spacing: 0.01em;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.55);
   }
   .vibe-disclaimer-inner {
     width: min(1280px, 98vw);
@@ -447,9 +625,9 @@ The authors thank the 270 study participants across Geneva, London, Tokyo, and S
     align-items: baseline;
   }
   .vibe-disclaimer-text a {
-    color: #1f4eb1;
+    color: #153f92;
     text-decoration: underline;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0;
   }
   .vibe-sites-menu {
@@ -460,12 +638,12 @@ The authors thank the 270 study participants across Geneva, London, Tokyo, and S
   .vibe-sites-menu summary {
     list-style: none;
     cursor: pointer;
-    border: 1px solid #c9d3e6;
+    border: 1px solid #b9c7dc;
     border-radius: 999px;
-    background: #ffffff;
-    color: #274068;
+    background: #f7f9fd;
+    color: #23395f;
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 3px 9px;
     user-select: none;
   }
@@ -481,9 +659,9 @@ The authors thank the 270 study participants across Geneva, London, Tokyo, and S
     gap: 5px;
     padding: 8px;
     background: #ffffff;
-    border: 1px solid #d7dbe3;
+    border: 1px solid #c5cfdd;
     border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
   }
   .vibe-sites-list a {
     color: #1f4eb1;

@@ -37,7 +37,7 @@ description: QA evidence for docs scaffolding and initial site/worker baseline.
 | Domain | HTML files | Worker files | Pretty route | Static contract | Result |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `arxivz.org` | `index.html`, `abs-2506-10953.html` | `worker.js`, `wrangler.toml` | `/abs/2506.10953` -> `abs-2506-10953.html` | doctype/style/script present | PASS |
-| `nytimez.art` | `index.html`, `2026-02-23-style-pickle-app-clothing-rental.html` | `worker.js`, `wrangler.toml` | `/2026/02/23/style/pickle-app-clothing-rental` -> flat file | doctype/style/script present | PASS |
+| `nytimez.art` | `index.html`, `2026-02-23-style-pickle-app-clothing-rental.html` | `worker.js`, `wrangler.toml` | `/2026/02/24/world/europe/russia-war-economy` -> flat file (`301` from legacy slugs) | doctype/style/script present | PASS |
 | `testyourvibes.com` | `index.html`, `methodology.html` | `worker.js`, `wrangler.toml` | `/methodology` -> `methodology.html` | doctype/style/script present | PASS |
 | `vibe-con.org` | `index.html`, `program.html` | `worker.js`, `wrangler.toml` | `/program` -> `program.html` | doctype/style/script present | PASS |
 | `vibe-standards.org` | `index.html`, `vsc-0001.html` | `worker.js`, `wrangler.toml` | `/vsc/0001` -> `vsc-0001.html` | doctype/style/script present | PASS |

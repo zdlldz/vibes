@@ -62,6 +62,16 @@ The point is not fantasy art, but plausible fabricated evidence rendered with hi
 
 Workers only serve files from each domain's own `www/<domain>/` directory. If new media is dropped into `www/src/`, copy selected files into per-domain folders (for example `www/nytimez.art/media/` and `www/vibetube.com/media/`) before referencing them in HTML.
 
+
+### Canonical Media and Video Policy
+
+- Source staging remains `www/src/` (`video/` + `images/` trees).
+- Before referencing assets in HTML, copy them into the target domain folder: `www/<domain>/media/`.
+- Canonical hero news video filename in domain media folders: `core-news.mp4` (from `www/src/video/(WIP) TASK2_lieberman_zack_vibes-news.mp4`).
+- Additional source clips are valid as reusable “news pieces” and may have dedicated flat watch pages (for example under `www/vibetube.com/`).
+- Video embed contract for this project: use `controls` + `playsinline`, do not use `autoplay`, and do **not** use `muted` by default.
+- Exception path (only when explicitly requested): ad-only video units may use autoplay + loop with no controls to intentionally create an intrusive tabloid experience.
+
 ### Domain Path Note
 
 `vibetube.art` is currently deployed from the existing folder paths:
@@ -222,6 +232,6 @@ Current primary task trail:
 
 ## Next Priority
 
-1. Curate final hero/video selections per page (replace random placements with art-directed picks).
+1. Expand clip watch pages for additional source videos in `vibetube` v2.
 2. Run local worker smoke checks before/after each deploy.
 3. QA typography, poster frames, and mobile crop behavior for each embedded media block.

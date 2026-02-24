@@ -57,7 +57,7 @@ This document lists creative assets that would improve realism and fidelity acro
    - "Most Read" supporting thumb set
    - Headline kicker chips/badges
 
-### `2026-02-23-style-pickle-app-clothing-rental.html`
+### `/2026/02/24/world/europe/russia-war-economy`
 
 - **Article assets**
    - Lead photograph + alternate crops (desktop/mobile)

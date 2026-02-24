@@ -9,18 +9,29 @@
 <body>
     <div class="vibe-disclaimer-banner">
     <div class="vibe-disclaimer-inner">
-      <span class="vibe-disclaimer-text">The site shown below is v0.1, which was submitted for TASK2. Please see the newest work here: <a href="./methodology-v2.html">v0.2</a></span>
+      <span class="vibe-disclaimer-text">The site shown below is v0.2. Please see v0.1, which was submitted for Task 2 <a href="./index.html">here</a>.</span>
       <details class="vibe-sites-menu">
         <summary>All sites</summary>
-        <div class="vibe-sites-list"><a href="https://arxivz.org/index-v2.html" target="_self" rel="noopener">arxivz.org</a><a href="https://nytimez.art/index-v2.html" target="_self" rel="noopener">nytimez.art</a><a href="https://testyourvibes.com/index-v2.html" target="_self" rel="noopener">testyourvibes.com</a><a href="https://vibe-con.org/index-v2.html" target="_self" rel="noopener">vibe-con.org</a><a href="https://vibe-standards.org/index-v2.html" target="_self" rel="noopener">vibe-standards.org</a><a href="https://vibetube.art/index-v2.html" target="_self" rel="noopener">vibetube.art</a></div>
+        <div class="vibe-sites-list"><a data-vibe-domain="arxivz.org" data-vibe-path="/index-v2.html" href="https://arxivz.org/index-v2.html" target="_self" rel="noopener">arxivz.org</a><a data-vibe-domain="nytimez.art" data-vibe-path="/index-v2.html" href="https://nytimez.art/index-v2.html" target="_self" rel="noopener">nytimez.art</a><a data-vibe-domain="testyourvibes.com" data-vibe-path="/index-v2.html" href="https://testyourvibes.com/index-v2.html" target="_self" rel="noopener">testyourvibes.com</a><a data-vibe-domain="vibe-con.org" data-vibe-path="/index-v2.html" href="https://vibe-con.org/index-v2.html" target="_self" rel="noopener">vibe-con.org</a><a data-vibe-domain="vibe-standards.org" data-vibe-path="/index-v2.html" href="https://vibe-standards.org/index-v2.html" target="_self" rel="noopener">vibe-standards.org</a><a data-vibe-domain="vibetube.art" data-vibe-path="/index-v2.html" href="https://vibetube.art/index-v2.html" target="_self" rel="noopener">vibetube.art</a></div>
       </details>
     </div>
   </div>
 
   <header>
     <p class="crumb"><a href="./index-v2.html">TestYourVibes.com</a> / Methodology</p>
-    <h1>VIBE Scoring Methodology (Aligned to arXivz:2502.VIBE01)</h1>
+    <h1>VIBE Scoring Methodology (Tabloid Edition)</h1>
   </header>
+
+  <section class="promo-strip">
+    <article class="promo-card">
+      <img src="./media/shot-news-01.webp" alt="Promo visual for vibe methodology">
+      <p><strong>Limited offer:</strong> Unlock your printable VIBE certificate in 14 glossy colors.</p>
+    </article>
+    <article class="promo-card">
+      <img src="./media/shot-official-06.webp" alt="Promo visual for anti-bad-vibes guide">
+      <p><strong>Trending now:</strong> 11 signs your bureaucracy score is ruining brunch.</p>
+    </article>
+  </section>
 
   <main>
     <section>
@@ -50,8 +61,11 @@
     </section>
 
     <section class="media-placeholder">
-      <h2>Evidence Visualization Placeholder</h2>
-      <p>Reserved for calibration scatter plot and confidence interval ribbons.</p>
+      <h2>Evidence Visualization</h2>
+      <video controls playsinline preload="metadata" poster="./media/shot-news-02.webp">
+        <source src="./media/core-news.mp4" type="video/mp4">
+      </video>
+      <p>Calibration clip from the updated source package plus official still references.</p>
     </section>
   </main>
 
@@ -134,14 +148,47 @@
     a {
       color: var(--link);
     }
+    .promo-strip {
+      width: min(780px, 92vw);
+      margin: 0 auto 10px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .promo-card {
+      border: 1px solid #c7d3e5;
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 8px;
+    }
+    .promo-card img {
+      width: 100%;
+      min-height: 120px;
+      object-fit: cover;
+      display: block;
+      border-radius: 6px;
+      margin-bottom: 6px;
+    }
+    .promo-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #334155;
+    }
+    .media-placeholder video {
+      width: 100%;
+      min-height: 230px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #c7d3e5;
+      display: block;
+      margin-bottom: 8px;
+      background: #111;
+    }
     @media (max-width: 640px) {
+      .promo-strip { grid-template-columns: 1fr; }
       h1 { font-size: 1.6rem; }
       main { padding: 14px; }
       .crumb { font-size: 0.84rem; }
-    }
-      .vibe-sites-menu {
-        align-self: flex-end;
-      }
     }
 
   
@@ -150,14 +197,15 @@
     position: relative;
     z-index: 9999;
     margin: 0;
-    padding: 7px 12px;
-    border-bottom: 1px solid #d7dbe3;
-    background: #f7f9fc;
-    color: #313846;
+    padding: 12px 12px;
+    border-bottom: 1px solid #bcc8da;
+    background: #e6ebf4;
+    color: #1f2a3a;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
     font-size: 12px;
     line-height: 1.35;
     letter-spacing: 0.01em;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.55);
   }
   .vibe-disclaimer-inner {
     width: min(1280px, 98vw);
@@ -174,9 +222,9 @@
     align-items: baseline;
   }
   .vibe-disclaimer-text a {
-    color: #1f4eb1;
+    color: #153f92;
     text-decoration: underline;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0;
   }
   .vibe-sites-menu {
@@ -187,12 +235,12 @@
   .vibe-sites-menu summary {
     list-style: none;
     cursor: pointer;
-    border: 1px solid #c9d3e6;
+    border: 1px solid #b9c7dc;
     border-radius: 999px;
-    background: #ffffff;
-    color: #274068;
+    background: #f7f9fd;
+    color: #23395f;
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 3px 9px;
     user-select: none;
   }
@@ -208,9 +256,9 @@
     gap: 5px;
     padding: 8px;
     background: #ffffff;
-    border: 1px solid #d7dbe3;
+    border: 1px solid #c5cfdd;
     border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
   }
   .vibe-sites-list a {
     color: #1f4eb1;
