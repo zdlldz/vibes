@@ -54,20 +54,65 @@ E = Entropy
 
 ---
 
+## Canonical VIBE Model
+
+The VIBE index is formally defined and measured as follows. All sub-indices normalised to [0, 1]. Composite score is the geometric mean: `VIBE = (V × I × B × E)^(1/4)` — any component = 0 drives VIBE to 0 ("vibes were off"). Full analytical derivation uses the Gibbs-Boltzmann partition-function formulation; see the journal article for the complete expression.
+
+### Sub-index directions
+- **V, I, E:** higher = more vibe-positive
+- **B:** operationalised as the **inverse regulatory burden coefficient** — B = 1 means no bureaucracy; B = 0 means total bureaucratic saturation
+
+### Scale anchors
+- "It's a vibe" = 1.0
+- "Vibes were off" = 0.0
+- "Bad vibes" = < 0 (anti-VIBE extension, in preparation)
+
+### Instrument
+The **VIBEMETER Mark II** — sixteen sensor channels across V, I, B, E sub-indices. Patent-pending **X-Factor Receptor™ (XFR)** contributes to V. **Ennui Quotient™ (EQ)** ("How bleh do you feel right now?", 1–5) contributes to E. Full spec: Bration (2024) [fake citation].
+
+### Fake author team
+All affiliated with the **Centre for Atmospheric and Social Energetics (CASE), University of Geneva**:
+- Dr. Anita Goodvibe (lead)
+- Prof. Cal I. Bration
+- Dr. Ennui DuPont
+- Prof. Rex Onance
+- Dr. B.R. Ocratic
+- *(user slot — to be added)*
+
+### Publication venue
+*Journal of Emergent Social Thermodynamics* (**JEST**). arXiv preprint: `arxivz:2502.VIBE01`.
+
+---
+
+## Completed Artifacts
+
+| Artifact | File | Status |
+|----------|------|--------|
+| Journal article draft (Markdown) | `artifacts/vibe-article-draft.md` | ✅ Complete |
+| Synthetic dataset (CSV, n=270) | `artifacts/vibe-dataset.csv` | ✅ Complete |
+| NYT-style news article + media brief | `artifacts/nytimez-article-draft.md` | ✅ Complete |
+| IOVS standards body website (vibe-standards.org) | `artifacts/vibe-standards-site-draft.md` | ✅ Complete |
+| Process document | `artifacts/process/journal-article-process.md` | ✅ Complete |
+| Article plan / section beats | `artifacts/process/journal-article-plan.md` | ✅ Complete |
+
+**Dataset:** 9 social contexts × 30 observations × 4 international sites (Geneva, London, Tokyo, São Paulo). Seed=42, reproducible. Key finding: VIBE range 0.110–0.921; lowest = government waiting room (0.178); highest = rave, 3:00am (0.866).
+
+---
+
 ## Structure
 
-The v0.1 project will consist of several layers of web-based media, conveyed as a small network of interconnected fake websites (each built to mimic the "real" version of each)
+The v0.1 project will consist of several layers of web-based media, conveyed as a small network of interconnected fake websites (each built to mimic the "real" version of each).
 
-1. arxivz.org
-   1. mimic
-      1. https://arxiv.org/
-      2. https://arxiv.org/abs/2506.10953
-2. nytimez.art
-   1. mimic
-      1. https://nytimes.com
-      2. https://www.nytimes.com/2026/02/23/style/pickle-app-clothing-rental.html
-3. testyourvibes.com
-4. vibe-con.org
-5. vibe-standards.org
-6. vibetube.com
-   1. mimic youtube.com
+| Site | Mimics | Content Draft | Build Status |
+|------|--------|--------------|--------------|
+| arxivz.org | arxiv.org | `artifacts/vibe-article-draft.md` | Draft ready |
+| nytimez.art | nytimes.com | `artifacts/nytimez-article-draft.md` | Draft ready |
+| vibe-standards.org | iso.org / ietf.org | `artifacts/vibe-standards-site-draft.md` | Draft ready |
+| testyourvibes.com | consumer quiz tool | — | Not yet started |
+| vibe-con.org | conference website | — | Not yet started |
+| vibetube.com | youtube.com | — | Not yet started |
+
+**Cross-site wiring (seeded in existing drafts):**
+- `nytimez-article-draft.md` → links to `arxivz.org/abs/2502.VIBE01` and `testyourvibes.com`
+- `vibe-standards-site-draft.md` → references `testyourvibes.com` (consumer estimator)
+- `vibe-article-draft.md` → references `arxivz:2502.VIBE01`, VIBE-CON I (Geneva, 2019) as precursor to `vibe-con.org`

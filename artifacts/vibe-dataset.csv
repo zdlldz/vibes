@@ -1,0 +1,271 @@
+context_id,context_name,site,V,I,B,E,VIBE
+1,"Rave, 3:00am",Geneva,0.9574,0.8288,0.8526,0.9104,0.8859
+1,"Rave, 3:00am",Geneva,0.9716,0.688,0.9126,0.8454,0.8474
+1,"Rave, 3:00am",Geneva,0.8611,0.8555,0.8595,0.9311,0.8763
+1,"Rave, 3:00am",Geneva,0.9139,0.9353,0.8471,0.8858,0.8949
+1,"Rave, 3:00am",Geneva,0.964,0.7176,0.8475,0.8659,0.8441
+1,"Rave, 3:00am",Geneva,0.9521,0.7805,0.8821,0.8713,0.8693
+1,"Rave, 3:00am",Geneva,0.8949,0.8348,0.9449,0.854,0.8812
+1,"Rave, 3:00am",Geneva,0.9102,0.7132,0.8654,0.8684,0.8357
+1,"Rave, 3:00am",London,0.9238,0.9277,0.8616,0.9726,0.9206
+1,"Rave, 3:00am",London,0.9119,0.759,0.8496,0.8917,0.851
+1,"Rave, 3:00am",London,0.9166,0.8681,0.883,0.8865,0.8884
+1,"Rave, 3:00am",London,0.8615,0.7678,0.7836,0.8857,0.8231
+1,"Rave, 3:00am",London,0.9262,0.7717,0.8274,0.8386,0.8392
+1,"Rave, 3:00am",London,0.8432,0.8943,0.8678,0.9155,0.8798
+1,"Rave, 3:00am",London,0.9317,0.7401,0.8985,0.8543,0.853
+1,"Rave, 3:00am",London,0.8922,0.6885,0.9966,0.9025,0.8622
+1,"Rave, 3:00am",Tokyo,0.9774,0.8437,0.7596,0.8977,0.866
+1,"Rave, 3:00am",Tokyo,0.9402,0.7288,0.9267,0.9056,0.8708
+1,"Rave, 3:00am",Tokyo,0.9144,0.7626,0.8671,0.8262,0.8407
+1,"Rave, 3:00am",Tokyo,0.933,0.7224,0.8859,0.8119,0.8344
+1,"Rave, 3:00am",Tokyo,0.9769,0.8447,0.8287,0.9491,0.8976
+1,"Rave, 3:00am",Tokyo,0.9068,0.8285,0.882,0.792,0.8511
+1,"Rave, 3:00am",Tokyo,0.8687,0.7842,0.8773,0.8541,0.8453
+1,"Rave, 3:00am",São Paulo,0.9202,0.6891,0.8583,0.9638,0.851
+1,"Rave, 3:00am",São Paulo,0.9529,0.8827,0.871,0.9012,0.9014
+1,"Rave, 3:00am",São Paulo,0.9315,0.829,0.9331,0.9594,0.9118
+1,"Rave, 3:00am",São Paulo,0.9338,0.7322,0.8848,0.8793,0.854
+1,"Rave, 3:00am",São Paulo,0.8976,0.7945,0.8693,0.7867,0.8357
+1,"Rave, 3:00am",São Paulo,0.9482,0.9405,0.9141,0.8669,0.9169
+1,"Rave, 3:00am",São Paulo,0.9696,0.8108,0.8327,0.833,0.8593
+2,Monday morning remote standup,Geneva,0.2931,0.1675,0.2192,0.3824,0.2533
+2,Monday morning remote standup,Geneva,0.2212,0.0573,0.345,0.4625,0.2121
+2,Monday morning remote standup,Geneva,0.3242,0.2119,0.4096,0.3926,0.3242
+2,Monday morning remote standup,Geneva,0.2892,0.2452,0.3225,0.494,0.326
+2,Monday morning remote standup,Geneva,0.325,0.0702,0.2252,0.4334,0.2172
+2,Monday morning remote standup,Geneva,0.2141,0.2495,0.3835,0.3881,0.2986
+2,Monday morning remote standup,Geneva,0.2511,0.1857,0.274,0.5401,0.2882
+2,Monday morning remote standup,Geneva,0.3382,0.1641,0.293,0.5461,0.307
+2,Monday morning remote standup,London,0.3065,0.216,0.3503,0.5431,0.335
+2,Monday morning remote standup,London,0.2568,0.1315,0.4973,0.4633,0.297
+2,Monday morning remote standup,London,0.2533,0.1762,0.4612,0.4536,0.3108
+2,Monday morning remote standup,London,0.2152,0.2223,0.3697,0.4804,0.3036
+2,Monday morning remote standup,London,0.1904,0.1957,0.4261,0.5083,0.2997
+2,Monday morning remote standup,London,0.2167,0.1443,0.3229,0.4365,0.2577
+2,Monday morning remote standup,London,0.2274,0.1884,0.1661,0.379,0.2279
+2,Monday morning remote standup,London,0.1501,0.1165,0.3019,0.7289,0.2491
+2,Monday morning remote standup,Tokyo,0.2051,0.1678,0.4557,0.3663,0.2753
+2,Monday morning remote standup,Tokyo,0.2816,0.1749,0.2243,0.3718,0.2532
+2,Monday morning remote standup,Tokyo,0.0953,0.1807,0.3096,0.262,0.1933
+2,Monday morning remote standup,Tokyo,0.1564,0.1217,0.2592,0.4389,0.2157
+2,Monday morning remote standup,Tokyo,0.2897,0.2096,0.141,0.3612,0.2358
+2,Monday morning remote standup,Tokyo,0.2203,0.1985,0.4998,0.2443,0.2703
+2,Monday morning remote standup,Tokyo,0.2558,0.1354,0.2861,0.4145,0.2532
+2,Monday morning remote standup,São Paulo,0.2842,0.1957,0.1702,0.59,0.2734
+2,Monday morning remote standup,São Paulo,0.2963,0.2479,0.3758,0.4996,0.3427
+2,Monday morning remote standup,São Paulo,0.2878,0.1681,0.267,0.3518,0.2596
+2,Monday morning remote standup,São Paulo,0.2187,0.1858,0.2424,0.3376,0.2401
+2,Monday morning remote standup,São Paulo,0.2096,0.1598,0.2784,0.4816,0.2589
+2,Monday morning remote standup,São Paulo,0.1787,0.236,0.2237,0.4455,0.2546
+2,Monday morning remote standup,São Paulo,0.2962,0.1691,0.3449,0.5489,0.3121
+3,First date (restaurant),Geneva,0.6128,0.8439,0.8288,0.4436,0.6603
+3,First date (restaurant),Geneva,0.6399,0.9167,0.7918,0.6153,0.7312
+3,First date (restaurant),Geneva,0.6872,0.886,0.7547,0.3556,0.6358
+3,First date (restaurant),Geneva,0.4353,0.6127,0.7809,0.4811,0.5626
+3,First date (restaurant),Geneva,0.6435,0.9345,0.6666,0.5391,0.6818
+3,First date (restaurant),Geneva,0.6263,0.7925,0.836,0.7167,0.7385
+3,First date (restaurant),Geneva,0.5212,0.8114,0.8354,0.3776,0.6044
+3,First date (restaurant),Geneva,0.6616,0.8516,0.9549,0.466,0.7076
+3,First date (restaurant),London,0.589,0.8627,0.794,0.5731,0.6934
+3,First date (restaurant),London,0.5686,0.9944,0.8059,0.4416,0.6698
+3,First date (restaurant),London,0.553,0.8151,0.9534,0.5897,0.7095
+3,First date (restaurant),London,0.5412,0.8668,0.8647,0.4182,0.6418
+3,First date (restaurant),London,0.5962,0.8867,0.8613,0.5421,0.7049
+3,First date (restaurant),London,0.5243,0.927,0.8442,0.5973,0.7036
+3,First date (restaurant),London,0.7065,0.7762,0.8051,0.5468,0.701
+3,First date (restaurant),London,0.5629,0.8218,0.8532,0.5073,0.6689
+3,First date (restaurant),Tokyo,0.5176,0.6896,0.8077,0.5279,0.6246
+3,First date (restaurant),Tokyo,0.7186,0.9227,0.8351,0.5824,0.7536
+3,First date (restaurant),Tokyo,0.5928,0.7685,0.9069,0.5681,0.696
+3,First date (restaurant),Tokyo,0.7762,0.773,0.8171,0.6055,0.7381
+3,First date (restaurant),Tokyo,0.5623,0.7434,0.7613,0.7318,0.6947
+3,First date (restaurant),Tokyo,0.5789,0.7392,0.7359,0.6975,0.6846
+3,First date (restaurant),Tokyo,0.578,0.7981,0.7955,0.5515,0.6707
+3,First date (restaurant),São Paulo,0.5124,0.8715,0.8271,0.4571,0.641
+3,First date (restaurant),São Paulo,0.6761,0.833,0.8601,0.7233,0.7694
+3,First date (restaurant),São Paulo,0.3151,0.7638,0.8026,0.4515,0.5434
+3,First date (restaurant),São Paulo,0.6792,0.7412,0.8799,0.4017,0.6495
+3,First date (restaurant),São Paulo,0.6804,0.8456,0.7897,0.4641,0.6776
+3,First date (restaurant),São Paulo,0.7107,0.7632,0.8094,0.6543,0.7321
+3,First date (restaurant),São Paulo,0.402,0.7897,0.9575,0.4814,0.6185
+4,Government waiting room,Geneva,0.1959,0.1556,0.083,0.3759,0.1756
+4,Government waiting room,Geneva,0.1887,0.1326,0.11,0.3746,0.1792
+4,Government waiting room,Geneva,0.208,0.1394,0.1245,0.385,0.1931
+4,Government waiting room,Geneva,0.1552,0.2191,0.0398,0.4324,0.1555
+4,Government waiting room,Geneva,0.1327,0.1127,0.0642,0.4592,0.1449
+4,Government waiting room,Geneva,0.2292,0.1436,0.1407,0.446,0.2132
+4,Government waiting room,Geneva,0.0889,0.1963,0.0832,0.5228,0.166
+4,Government waiting room,Geneva,0.1497,0.1274,0.1045,0.4407,0.1722
+4,Government waiting room,London,0.1394,0.1439,0.09,0.4759,0.1712
+4,Government waiting room,London,0.2407,0.18,0.0657,0.5329,0.1974
+4,Government waiting room,London,0.2155,0.135,0.0485,0.3908,0.1532
+4,Government waiting room,London,0.1504,0.1644,0.1006,0.4208,0.1799
+4,Government waiting room,London,0.1556,0.1756,0.0741,0.2089,0.1434
+4,Government waiting room,London,0.2151,0.1407,0.0472,0.3787,0.1525
+4,Government waiting room,London,0.206,0.2083,0.0644,0.4899,0.1918
+4,Government waiting room,London,0.1979,0.1374,0.0814,0.4858,0.1811
+4,Government waiting room,Tokyo,0.1013,0.1762,0.059,0.3107,0.1345
+4,Government waiting room,Tokyo,0.1555,0.1881,0.1013,0.3404,0.1782
+4,Government waiting room,Tokyo,0.0837,0.1713,0.1297,0.4054,0.1657
+4,Government waiting room,Tokyo,0.252,0.0835,0.0783,0.5325,0.1721
+4,Government waiting room,Tokyo,0.17,0.5324,0.0427,0.3643,0.1937
+4,Government waiting room,Tokyo,0.2269,0.5593,0.0829,0.3552,0.2472
+4,Government waiting room,Tokyo,0.1783,0.6331,0.0358,0.4374,0.205
+4,Government waiting room,São Paulo,0.0837,0.6985,0.0943,0.3861,0.2148
+4,Government waiting room,São Paulo,0.1455,0.1536,0.0944,0.5113,0.1812
+4,Government waiting room,São Paulo,0.1631,0.1151,0.1,0.4378,0.1693
+4,Government waiting room,São Paulo,0.2429,0.2037,0.1089,0.4376,0.2204
+4,Government waiting room,São Paulo,0.1492,0.1594,0.1131,0.4557,0.1871
+4,Government waiting room,São Paulo,0.1883,0.1919,0.0826,0.4723,0.1938
+4,Government waiting room,São Paulo,0.0376,0.1366,0.057,0.4924,0.1096
+5,Funeral reception,Geneva,0.325,0.8234,0.7941,0.7801,0.6381
+5,Funeral reception,Geneva,0.3467,0.4243,0.8697,0.4659,0.4941
+5,Funeral reception,Geneva,0.4248,0.3502,0.7169,0.5909,0.501
+5,Funeral reception,Geneva,0.3405,0.7093,0.6399,0.6509,0.5632
+5,Funeral reception,Geneva,0.2175,0.6035,0.6524,0.7292,0.4999
+5,Funeral reception,Geneva,0.2296,0.7374,0.6759,0.5629,0.5038
+5,Funeral reception,Geneva,0.3804,0.5834,0.5704,0.642,0.5339
+5,Funeral reception,Geneva,0.3364,0.55,0.8469,0.8357,0.6016
+5,Funeral reception,London,0.4042,0.6712,0.7918,0.6921,0.621
+5,Funeral reception,London,0.257,0.7923,0.659,0.5442,0.5198
+5,Funeral reception,London,0.2606,0.3275,0.7458,0.6669,0.4539
+5,Funeral reception,London,0.2329,0.6101,0.6409,0.5334,0.4695
+5,Funeral reception,London,0.3373,0.3708,0.6908,0.5288,0.4623
+5,Funeral reception,London,0.4149,0.4506,0.7851,0.6707,0.5601
+5,Funeral reception,London,0.3177,0.6012,0.7336,0.4791,0.509
+5,Funeral reception,London,0.3867,0.5004,0.7844,0.6565,0.5618
+5,Funeral reception,Tokyo,0.3454,0.5617,0.6715,0.5243,0.5112
+5,Funeral reception,Tokyo,0.385,0.4922,0.761,0.6993,0.5635
+5,Funeral reception,Tokyo,0.2679,0.6092,0.7318,0.7389,0.545
+5,Funeral reception,Tokyo,0.3178,0.6245,0.7658,0.5721,0.543
+5,Funeral reception,Tokyo,0.3749,0.602,0.775,0.5896,0.5667
+5,Funeral reception,Tokyo,0.4128,0.5221,0.788,0.7138,0.5901
+5,Funeral reception,Tokyo,0.3216,0.4945,0.7,0.5552,0.4986
+5,Funeral reception,São Paulo,0.457,0.4097,0.7102,0.5295,0.5151
+5,Funeral reception,São Paulo,0.297,0.6479,0.6984,0.5322,0.5171
+5,Funeral reception,São Paulo,0.3704,0.4473,0.6407,0.7347,0.5285
+5,Funeral reception,São Paulo,0.2555,0.573,0.6111,0.5362,0.468
+5,Funeral reception,São Paulo,0.3246,0.7578,0.9198,0.6462,0.6184
+5,Funeral reception,São Paulo,0.2441,0.4936,0.8849,0.6675,0.5165
+5,Funeral reception,São Paulo,0.3438,0.6217,0.722,0.5183,0.5318
+6,"Dog park, Sunday afternoon",Geneva,0.6997,0.7887,0.8346,0.5936,0.7231
+6,"Dog park, Sunday afternoon",Geneva,0.7192,0.8634,0.9122,0.811,0.8233
+6,"Dog park, Sunday afternoon",Geneva,0.7452,0.8684,0.8813,0.7637,0.8124
+6,"Dog park, Sunday afternoon",Geneva,0.83,0.7906,0.9355,0.805,0.8384
+6,"Dog park, Sunday afternoon",Geneva,0.5667,0.8233,0.8141,0.6432,0.703
+6,"Dog park, Sunday afternoon",Geneva,0.8341,0.9443,0.8932,0.6693,0.8284
+6,"Dog park, Sunday afternoon",Geneva,0.7626,0.8088,0.895,0.6409,0.7712
+6,"Dog park, Sunday afternoon",Geneva,0.884,0.9601,0.897,0.8038,0.8845
+6,"Dog park, Sunday afternoon",London,0.6164,0.7511,0.8565,0.6532,0.7134
+6,"Dog park, Sunday afternoon",London,0.6438,0.811,0.9873,0.745,0.7872
+6,"Dog park, Sunday afternoon",London,0.7044,0.8617,0.8585,0.6671,0.7679
+6,"Dog park, Sunday afternoon",London,0.7335,0.7608,0.9048,0.7889,0.7944
+6,"Dog park, Sunday afternoon",London,0.7152,0.837,0.8757,0.6937,0.7766
+6,"Dog park, Sunday afternoon",London,0.6659,0.8689,0.8969,0.8495,0.8148
+6,"Dog park, Sunday afternoon",London,0.8412,0.8596,0.9279,0.6538,0.8138
+6,"Dog park, Sunday afternoon",London,0.7797,0.8912,0.9132,0.7864,0.8405
+6,"Dog park, Sunday afternoon",Tokyo,0.6529,0.8448,0.8989,0.7022,0.7681
+6,"Dog park, Sunday afternoon",Tokyo,0.7073,0.7952,0.8938,0.7862,0.7929
+6,"Dog park, Sunday afternoon",Tokyo,0.7203,0.7443,0.9143,0.7944,0.7899
+6,"Dog park, Sunday afternoon",Tokyo,0.6559,0.8058,0.9584,0.7501,0.7851
+6,"Dog park, Sunday afternoon",Tokyo,0.7316,0.8588,0.9585,0.6277,0.7841
+6,"Dog park, Sunday afternoon",Tokyo,0.8544,0.6705,0.978,0.8703,0.8356
+6,"Dog park, Sunday afternoon",Tokyo,0.7561,0.8567,0.8917,0.7438,0.8096
+6,"Dog park, Sunday afternoon",São Paulo,0.6962,0.9286,0.9066,0.7142,0.8044
+6,"Dog park, Sunday afternoon",São Paulo,0.6771,0.8052,0.9692,0.7887,0.8035
+6,"Dog park, Sunday afternoon",São Paulo,0.8168,0.8143,0.7959,0.8436,0.8175
+6,"Dog park, Sunday afternoon",São Paulo,0.6619,0.7377,0.9411,0.7765,0.7729
+6,"Dog park, Sunday afternoon",São Paulo,0.6494,0.8299,0.8561,0.8356,0.788
+6,"Dog park, Sunday afternoon",São Paulo,0.8718,0.8129,0.8882,0.7546,0.8302
+6,"Dog park, Sunday afternoon",São Paulo,0.8541,0.8699,0.9236,0.7267,0.8403
+7,"University library, silent reading room",Geneva,0.1544,0.2331,0.3863,0.3447,0.2631
+7,"University library, silent reading room",Geneva,0.2321,0.2789,0.4177,0.3091,0.3024
+7,"University library, silent reading room",Geneva,0.1511,0.1941,0.2821,0.2886,0.2211
+7,"University library, silent reading room",Geneva,0.1257,0.1962,0.525,0.3153,0.2528
+7,"University library, silent reading room",Geneva,0.1681,0.2365,0.3724,0.2065,0.2351
+7,"University library, silent reading room",Geneva,0.0908,0.181,0.5595,0.2678,0.2228
+7,"University library, silent reading room",Geneva,0.1396,0.2214,0.2722,0.3214,0.228
+7,"University library, silent reading room",Geneva,0.1736,0.1176,0.4886,0.319,0.2375
+7,"University library, silent reading room",London,0.098,0.1595,0.5035,0.2981,0.2201
+7,"University library, silent reading room",London,0.0986,0.1619,0.546,0.2352,0.2128
+7,"University library, silent reading room",London,0.089,0.2037,0.547,0.3859,0.2487
+7,"University library, silent reading room",London,0.1742,0.1777,0.3765,0.226,0.2265
+7,"University library, silent reading room",London,0.1302,0.2901,0.5058,0.2806,0.2706
+7,"University library, silent reading room",London,0.1299,0.1693,0.4823,0.3249,0.2423
+7,"University library, silent reading room",London,0.0382,0.238,0.3368,0.2336,0.1635
+7,"University library, silent reading room",London,0.1398,0.2182,0.4758,0.2796,0.2524
+7,"University library, silent reading room",Tokyo,0.1185,0.2731,0.375,0.4163,0.2666
+7,"University library, silent reading room",Tokyo,0.1838,0.3126,0.519,0.2634,0.2977
+7,"University library, silent reading room",Tokyo,0.1943,0.226,0.31,0.344,0.2616
+7,"University library, silent reading room",Tokyo,0.0795,0.2444,0.4396,0.2783,0.2208
+7,"University library, silent reading room",Tokyo,0.162,0.2393,0.6761,0.2316,0.2791
+7,"University library, silent reading room",Tokyo,0.1439,0.159,0.3377,0.3961,0.2352
+7,"University library, silent reading room",Tokyo,0.1563,0.1947,0.6328,0.2007,0.2493
+7,"University library, silent reading room",São Paulo,0.0841,0.1919,0.4704,0.3006,0.2186
+7,"University library, silent reading room",São Paulo,0.0878,0.1213,0.4221,0.2522,0.1835
+7,"University library, silent reading room",São Paulo,0.0986,0.2764,0.3304,0.2618,0.2203
+7,"University library, silent reading room",São Paulo,0.1106,0.1409,0.5717,0.2665,0.2207
+7,"University library, silent reading room",São Paulo,0.1423,0.2923,0.5076,0.2266,0.263
+7,"University library, silent reading room",São Paulo,0.1656,0.2676,0.4269,0.2095,0.2509
+7,"University library, silent reading room",São Paulo,0.1544,0.2684,0.4306,0.4015,0.2909
+8,"Conference keynote, one attendee",Geneva,0.5715,0.0847,0.4476,0.7111,0.3523
+8,"Conference keynote, one attendee",Geneva,0.3765,0.1239,0.3906,0.5922,0.3223
+8,"Conference keynote, one attendee",Geneva,0.4403,0.056,0.6513,0.6863,0.324
+8,"Conference keynote, one attendee",Geneva,0.5758,0.0814,0.5361,0.6449,0.3568
+8,"Conference keynote, one attendee",Geneva,0.5061,0.0869,0.5567,0.8295,0.3775
+8,"Conference keynote, one attendee",Geneva,0.5292,0.0844,0.5247,0.6397,0.3499
+8,"Conference keynote, one attendee",Geneva,0.5482,0.1158,0.5026,0.6003,0.372
+8,"Conference keynote, one attendee",Geneva,0.4632,0.0963,0.5055,0.7824,0.3644
+8,"Conference keynote, one attendee",London,0.5622,0.0664,0.4402,0.8694,0.3457
+8,"Conference keynote, one attendee",London,0.4486,0.0861,0.4505,0.7453,0.3375
+8,"Conference keynote, one attendee",London,0.3949,0.1411,0.446,0.6605,0.3579
+8,"Conference keynote, one attendee",London,0.4495,0.0931,0.5845,0.6457,0.3545
+8,"Conference keynote, one attendee",London,0.5267,0.0931,0.4468,0.6633,0.3472
+8,"Conference keynote, one attendee",London,0.5159,0.1008,0.5714,0.7654,0.3883
+8,"Conference keynote, one attendee",London,0.4526,0.0656,0.4145,0.5024,0.2804
+8,"Conference keynote, one attendee",London,0.5726,0.1116,0.5688,0.8331,0.4172
+8,"Conference keynote, one attendee",Tokyo,0.4797,0.1425,0.3975,0.7472,0.3775
+8,"Conference keynote, one attendee",Tokyo,0.4378,0.1123,0.4974,0.7325,0.3658
+8,"Conference keynote, one attendee",Tokyo,0.5527,0.0492,0.5117,0.738,0.3183
+8,"Conference keynote, one attendee",Tokyo,0.2972,0.153,0.6224,0.5996,0.3609
+8,"Conference keynote, one attendee",Tokyo,0.5369,0.103,0.5783,0.7043,0.3874
+8,"Conference keynote, one attendee",Tokyo,0.5077,0.0713,0.5103,0.7545,0.3436
+8,"Conference keynote, one attendee",Tokyo,0.4709,0.0578,0.5849,0.7118,0.3263
+8,"Conference keynote, one attendee",São Paulo,0.5319,0.1116,0.4564,0.5399,0.3478
+8,"Conference keynote, one attendee",São Paulo,0.5834,0.0683,0.3591,0.6965,0.316
+8,"Conference keynote, one attendee",São Paulo,0.6105,0.0865,0.4971,0.8247,0.3836
+8,"Conference keynote, one attendee",São Paulo,0.472,0.0521,0.3726,0.7278,0.2858
+8,"Conference keynote, one attendee",São Paulo,0.524,0.1036,0.4473,0.5023,0.3323
+8,"Conference keynote, one attendee",São Paulo,0.3396,0.0585,0.3973,0.7951,0.2815
+8,"Conference keynote, one attendee",São Paulo,0.3966,0.0244,0.4238,0.5987,0.2226
+9,Christmas dinner,Geneva,0.5578,0.8347,0.6707,0.739,0.6931
+9,Christmas dinner,Geneva,0.6508,0.8967,0.6499,0.8391,0.7511
+9,Christmas dinner,Geneva,0.8624,0.7351,0.6003,0.8729,0.7592
+9,Christmas dinner,Geneva,0.7326,0.7267,0.5515,0.6033,0.6487
+9,Christmas dinner,Geneva,0.7743,0.7348,0.516,0.88,0.7129
+9,Christmas dinner,Geneva,0.6951,0.9352,0.5475,0.8853,0.7492
+9,Christmas dinner,Geneva,0.8686,0.8089,0.5939,0.8359,0.7685
+9,Christmas dinner,Geneva,0.9045,0.5144,0.6796,0.7802,0.7048
+9,Christmas dinner,London,0.7426,0.7825,0.4941,0.7549,0.6823
+9,Christmas dinner,London,0.833,0.7284,0.7384,0.8003,0.7738
+9,Christmas dinner,London,0.7609,0.9597,0.6143,0.9058,0.7984
+9,Christmas dinner,London,0.7492,0.9291,0.7256,0.9064,0.8226
+9,Christmas dinner,London,0.8386,0.9654,0.663,0.8552,0.8231
+9,Christmas dinner,London,0.7152,0.9487,0.6248,0.7301,0.7459
+9,Christmas dinner,London,0.8727,0.8788,0.6068,0.6599,0.7444
+9,Christmas dinner,London,0.9434,0.8744,0.4605,0.8075,0.7442
+9,Christmas dinner,Tokyo,0.6744,0.942,0.578,0.6728,0.705
+9,Christmas dinner,Tokyo,0.8957,0.7229,0.5074,0.9035,0.7381
+9,Christmas dinner,Tokyo,0.7235,0.8444,0.6774,0.7072,0.7355
+9,Christmas dinner,Tokyo,0.8426,0.8011,0.7242,0.7365,0.7746
+9,Christmas dinner,Tokyo,0.8443,0.8613,0.6904,0.7654,0.7873
+9,Christmas dinner,Tokyo,0.4838,0.7049,0.5363,0.6757,0.5929
+9,Christmas dinner,Tokyo,0.4897,0.4401,0.7851,0.9523,0.6336
+9,Christmas dinner,São Paulo,0.8207,0.8976,0.7512,0.605,0.7607
+9,Christmas dinner,São Paulo,0.7831,0.7171,0.4745,0.8225,0.6842
+9,Christmas dinner,São Paulo,0.8403,0.9312,0.6779,0.662,0.7698
+9,Christmas dinner,São Paulo,0.6022,0.8888,0.6837,0.5639,0.674
+9,Christmas dinner,São Paulo,0.8503,0.9066,0.7384,0.7691,0.8134
+9,Christmas dinner,São Paulo,0.9377,0.852,0.5373,0.9621,0.8017
+9,Christmas dinner,São Paulo,0.8756,0.8573,0.8276,0.7236,0.8188
