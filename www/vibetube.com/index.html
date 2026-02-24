@@ -38,7 +38,7 @@
     <section class="feed">
       <article class="video-card">
         <a class="thumb" href="./watch-vibecon-keynote.html">
-          <span>Thumbnail placeholder</span>
+          <img src="./media/vt-thumb-1.webp" alt="Video thumbnail for Geneva VIBE explainer">
           <span class="duration">32:18</span>
         </a>
         <h2>
@@ -51,7 +51,7 @@
 
       <article class="video-card">
         <a class="thumb" href="#">
-          <span>Thumbnail placeholder</span>
+          <img src="./media/vt-thumb-2.webp" alt="Video thumbnail for rave field footage">
           <span class="duration">12:04</span>
         </a>
         <h2><a href="#">Inside the Rave That Scored 0.866</a></h2>
@@ -60,7 +60,7 @@
 
       <article class="video-card">
         <a class="thumb" href="#">
-          <span>Thumbnail placeholder</span>
+          <img src="./media/vt-thumb-3.webp" alt="Video thumbnail for environment rankings">
           <span class="duration">08:22</span>
         </a>
         <h2><a href="#">How Does Your Environment Rank? (0.866 to 0.178)</a></h2>
@@ -191,6 +191,13 @@
       color: #c6c6c6;
       margin-bottom: 8px;
       overflow: hidden;
+    }
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      min-height: 150px;
+      object-fit: cover;
+      display: block;
     }
     .duration {
       position: absolute;

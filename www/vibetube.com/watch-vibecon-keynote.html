@@ -22,8 +22,9 @@
     <section class="primary">
       <section class="player" aria-label="video-player">
         <div class="screen">
-          <p>16:9 video player placeholder</p>
-          <p class="sub">Reserved for embedded video or poster assets in a subsequent step.</p>
+          <video controls muted playsinline preload="metadata" poster="./media/vt-thumb-4.webp">
+            <source src="./media/vt-main.mp4" type="video/mp4">
+          </video>
         </div>
       </section>
 
@@ -54,14 +55,14 @@
     <aside class="secondary">
       <h2>Up next</h2>
       <article class="next-card">
-        <div class="thumb">Thumbnail placeholder</div>
+        <div class="thumb"><img src="./media/vt-thumb-2.webp" alt="Up next rave footage thumbnail"></div>
         <div>
           <h3>Inside the Rave That Scored 0.866</h3>
           <p>The Nytimez · 11K views</p>
         </div>
       </article>
       <article class="next-card">
-        <div class="thumb">Thumbnail placeholder</div>
+        <div class="thumb"><img src="./media/vt-thumb-3.webp" alt="Up next chart thumbnail"></div>
         <div>
           <h3>How Does Your Environment Rank?</h3>
           <p>Nytimez Graphics Desk · 7.4K views</p>
@@ -169,19 +170,18 @@
     }
     .screen {
       min-height: 420px;
-      display: grid;
-      place-content: center;
-      text-align: center;
+      display: block;
       border: 1px dashed #454545;
       background: #1f1f1f;
       border-radius: 10px;
+      overflow: hidden;
     }
-    .screen p {
-      margin: 0 0 8px;
-    }
-    .screen .sub {
-      color: var(--muted);
-      font-size: 0.9rem;
+    .screen video {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+      display: block;
     }
     .channel-row {
       display: flex;
@@ -241,6 +241,14 @@
       place-content: center;
       color: #c6c6c6;
       font-size: 12px;
+    }
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      min-height: 94px;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
     }
     .next-card h3 {
       margin: 0 0 4px;

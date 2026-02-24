@@ -42,7 +42,10 @@
 
     <section class="media-placeholder">
       <h2>Session recording placeholders</h2>
-      <p>Reserved for talk thumbnails, downloadable slides, and highlight reels.</p>
+      <video controls muted playsinline preload="metadata" poster="./media/vc-hero.webp">
+        <source src="./media/vc-loop.mp4" type="video/mp4">
+      </video>
+      <p>Talk thumbnails, slides, and highlight reels now seeded from source media.</p>
     </section>
   </main>
 
@@ -111,6 +114,15 @@
     }
     .media-placeholder h2 {
       margin-bottom: 4px;
+    }
+    .media-placeholder video {
+      width: 100%;
+      min-height: 210px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+      margin-bottom: 8px;
+      background: #111;
     }
     footer {
       padding: 14px 0 24px;

@@ -42,8 +42,7 @@
       </p>
 
       <div class="media-placeholder" aria-label="lead-image-placeholder">
-        <p>Lead image placeholder</p>
-        <p class="small">Editorial photography module reserved for next step.</p>
+        <img src="./media/ny-hero.webp" alt="Field image from VIBE measurement reporting">
       </div>
     </article>
 
@@ -173,6 +172,13 @@
       text-align: center;
     }
     .media-placeholder p { margin: 0; }
+    .media-placeholder img {
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
     .small {
       color: var(--muted);
       font-size: 12px;

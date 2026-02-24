@@ -84,9 +84,12 @@
     <section>
       <h2>Media and supplementary materials (placeholder)</h2>
       <div class="media-placeholder">
-        <p>Figure 1 placeholder: VIBEMETER Mark II architecture and channel map</p>
-        <p>Figure 2 placeholder: context ranking bar chart (n = 270)</p>
-        <p>Figure 3 placeholder: BIIS anomaly cluster in government waiting-room series</p>
+        <p>Figure 1: VIBEMETER Mark II architecture and channel map</p>
+        <img src="./media/ax-fig-1.webp" alt="Supplemental figure panel from field media">
+        <video controls muted playsinline preload="metadata" poster="./media/ax-fig-1.webp">
+          <source src="./media/ax-fig-2.mp4" type="video/mp4">
+        </video>
+        <p>Figure 2: context ranking sequence and BIIS anomaly motion panel</p>
       </div>
     </section>
   </main>
@@ -189,6 +192,17 @@
       padding: 10px;
       display: grid;
       gap: 5px;
+    }
+    .media-placeholder img,
+    .media-placeholder video {
+      width: 100%;
+      height: auto;
+      min-height: 200px;
+      object-fit: cover;
+      display: block;
+      border-radius: 6px;
+      background: #111;
+      border: 1px solid #d0d9eb;
     }
     a {
       color: var(--link);

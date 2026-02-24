@@ -28,10 +28,11 @@ The point is not fantasy art, but plausible fabricated evidence rendered with hi
 ├── AGENTS.md
 ├── SPEC.md
 ├── README.md
-├── todo_assets.md
+├── TODO_assets.md
 ├── www/
 │   ├── arxivz.org/
 │   ├── nytimez.art/
+│   ├── src/                 # shared media staging drop
 │   ├── testyourvibes.com/
 │   ├── vibe-con.org/
 │   ├── vibe-standards.org/
@@ -56,6 +57,10 @@ The point is not fantasy art, but plausible fabricated evidence rendered with hi
 - Every page keeps CSS and JS inline.
 - Every domain has one Cloudflare Worker config.
 - No framework runtime is required to render pages.
+
+### Media Routing Note
+
+Workers only serve files from each domain's own `www/<domain>/` directory. If new media is dropped into `www/src/`, copy selected files into per-domain folders (for example `www/nytimez.art/media/` and `www/vibetube.com/media/`) before referencing them in HTML.
 
 ### Domain Path Note
 
@@ -211,11 +216,12 @@ Current primary task trail:
 - Six domains scaffolded and styled.
 - V2 realism pass completed (desktop-first mimic quality).
 - Basic responsive safety pass completed.
-- Media remains placeholder-only by design.
+- Real article content integrated across `arxivz.org`, `nytimez.art`, and `vibe-standards.org`.
+- Randomized staged media integrated into `nytimez.art`, `vibetube.com`, `vibe-con.org`, and `arxivz.org` from `www/src` via per-domain `media/` folders.
 - All domain routes are configured in wrangler for live DNS zones.
 
 ## Next Priority
 
-1. Replace placeholder content/media with richer fabricated artifacts.
+1. Curate final hero/video selections per page (replace random placements with art-directed picks).
 2. Run local worker smoke checks before/after each deploy.
-3. Replace placeholder media with final creative assets.
+3. QA typography, poster frames, and mobile crop behavior for each embedded media block.
