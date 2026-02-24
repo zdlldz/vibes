@@ -1,0 +1,11 @@
+name = "vibes-vibe-con-org"
+main = "worker.js"
+compatibility_date = "2026-02-24"
+routes = [
+  { pattern = "vibe-con.org/*", zone_name = "vibe-con.org" },
+  { pattern = "www.vibe-con.org/*", zone_name = "vibe-con.org" }
+]
+
+[assets]
+directory = "../../www/vibe-con.org"
+binding = "ASSETS"

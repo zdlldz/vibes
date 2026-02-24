@@ -1,0 +1,11 @@
+name = "vibes-vibetube-art"
+main = "worker.js"
+compatibility_date = "2026-02-24"
+routes = [
+  { pattern = "vibetube.art/*", zone_name = "vibetube.art" },
+  { pattern = "www.vibetube.art/*", zone_name = "vibetube.art" }
+]
+
+[assets]
+directory = "../../www/vibetube.com"
+binding = "ASSETS"

@@ -1,0 +1,11 @@
+name = "vibes-nytimez-art"
+main = "worker.js"
+compatibility_date = "2026-02-24"
+routes = [
+  { pattern = "nytimez.art/*", zone_name = "nytimez.art" },
+  { pattern = "www.nytimez.art/*", zone_name = "nytimez.art" }
+]
+
+[assets]
+directory = "../../www/nytimez.art"
+binding = "ASSETS"

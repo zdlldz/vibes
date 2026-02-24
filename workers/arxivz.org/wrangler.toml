@@ -1,0 +1,11 @@
+name = "vibes-arxivz-org"
+main = "worker.js"
+compatibility_date = "2026-02-24"
+routes = [
+  { pattern = "arxivz.org/*", zone_name = "arxivz.org" },
+  { pattern = "www.arxivz.org/*", zone_name = "arxivz.org" }
+]
+
+[assets]
+directory = "../../www/arxivz.org"
+binding = "ASSETS"
