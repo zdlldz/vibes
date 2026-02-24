@@ -44,41 +44,8 @@ All affiliated with the **Centre for Atmospheric and Social Energetics (CASE), U
 
 ### Key dataset facts
 9 social contexts × 30 observations × 4 international sites (Geneva, London, Tokyo, São Paulo). Seed=42, reproducible. VIBE range 0.110–0.921; lowest = government waiting room (0.178); highest = rave, 3:00am (0.866).
-## Canonical Domains
 
-1. `arxivz.org` (mimic: arXiv)
-2. `nytimez.art` (mimic: NYTimes)
-3. `testyourvibes.com` (utility/testing layer)
-4. `vibe-con.org` (conference layer)
-5. `vibe-standards.org` (standards layer)
-6. `vibetube.art` (mimic: YouTube)
-
-## Technical Contract (Non-Negotiable)
-
-1. Every site ships as plain HTML.
-2. Every site has:
-   - `index.html`
-   - flat subpages (`*.html`)
-3. CSS/JS stay page-local:
-   - inline `<style>`
-   - inline `<script>` near end of `<body>`
-4. One Cloudflare Worker config per domain.
-5. All domains are managed inside this single monorepo.
-
-## Delivery Paths
-
-- Site files: `www/<domain>/`
-- Worker files: `workers/<domain>/`
-- Docs and audit trail: `docs/`
-
-Note: `vibetube.art` currently deploys from `workers/vibetube.com/` and `www/vibetube.com/` path names for continuity. DNS/routes are configured for `.art`.
-
-## Documentation Rules
-
-1. Material work must be tracked under `docs/release/[version]/[category]/[slug]/`.
-2. Use date fallback IDs when no ticket ID exists.
-3. Keep process docs updated during execution.
-4. Reconcile documented intent with implemented behavior before handoff.
+---
 
 ## Canonical Domains
 
@@ -119,6 +86,7 @@ Editorial source files (Markdown) that inform each site's content. All verified 
 | Artifact | File | Target Site | Status |
 |----------|------|-------------|--------|
 | Journal article draft | `artifacts/vibe-article-draft.md` | arxivz.org | ✅ Complete |
+| Journal article PDF | `artifacts/vibe-article.pdf` | arxivz.org | ✅ Complete |
 | Synthetic dataset (n=270) | `artifacts/vibe-dataset.csv` | arxivz.org / testyourvibes.com | ✅ Complete |
 | NYT-style news article + media brief | `artifacts/nytimez-article-draft.md` | nytimez.art | ✅ Complete |
 | IOVS standards body website | `artifacts/vibe-standards-site-draft.md` | vibe-standards.org | ✅ Complete |
@@ -138,27 +106,6 @@ Editorial source files (Markdown) that inform each site's content. All verified 
 2. Use date fallback IDs when no ticket ID exists.
 3. Keep process docs updated during execution.
 4. Reconcile documented intent with implemented behavior before handoff.
-
-## Realism Pass Guidance (v2+)
-
-1. Mimic front-end rhythm first:
-   - masthead/header
-   - nav/utility bars
-   - hierarchy and content rails
-   - card/feed structure
-2. Mimic interaction affordances second:
-   - search shells
-   - metadata placement
-   - article/watch layouts
-3. If source sites block fetch (e.g., 403), use well-known front-end conventions and document assumptions.
-
-## Placeholder Media Policy
-
-1. Include explicit placeholders for image/video/chart modules.
-2. Label placeholders clearly for deterministic later swaps.
-3. Keep placeholders styled in-page (no external dependency required).
-
-## Quality Bar Before PR
 
 ## Realism Pass Guidance (v2+)
 
