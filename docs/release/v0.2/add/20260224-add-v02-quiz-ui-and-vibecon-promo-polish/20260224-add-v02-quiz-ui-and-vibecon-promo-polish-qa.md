@@ -23,4 +23,8 @@ description: QA checks for quiz and VibeCon refinement pass.
 - Relative `href`/`src`/`poster` references in VibeCon pages resolve to existing local files.
 - Disclaimer banner + local/remote resolver script preserved in all modified VibeCon pages.
 - Quiz controls retain submit/randomizer behavior after active-state UI additions.
+- VibeCon micro-interaction checks:
+  - urgency/countdown/inventory fields render without script errors
+  - session-type badges render in schedule rows
+  - hover states apply to cards/slots/CTAs without layout shift
 

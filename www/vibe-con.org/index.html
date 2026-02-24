@@ -34,11 +34,14 @@
           <p><strong>Early Access Ends Soon</strong></p>
           <p class="price">$149</p>
           <p class="note">Includes Day 1 labs, speaker lounge stream, and calibration kit PDF.</p>
+          <p class="countdown" data-countdown="2026-03-12T09:00:00Z">Offer closes in: calculating...</p>
+          <p class="inventory" id="ticket-inventory">Checking live inventory...</p>
           <a href="https://testyourvibes.com/index-v2.html">Reserve Your Spot</a>
         </aside>
       </div>
     </section>
     <p class="edition-note">Now showing the v0.1 edition of the promotional landing page.</p>
+    <p class="urgency">🔥 Early-access pricing is active and keynote seating is trending toward capacity.</p>
   </header>
 
   <main class="wrap">
@@ -112,15 +115,15 @@
 
     <section class="session-grid" aria-label="knockout sessions">
       <article class="session-card">
-        <h4>Knockout Session: Queue Rage Simulator</h4>
+        <h4><span class="session-tag tag-lab">Lab</span> Knockout Session: Queue Rage Simulator</h4>
         <p>Measure bureaucracy drag in real-time while waiting for fake permits.</p>
       </article>
       <article class="session-card">
-        <h4>Workshop: Emotional Entropy Mapping</h4>
+        <h4><span class="session-tag tag-workshop">Workshop</span> Emotional Entropy Mapping</h4>
         <p>Build a vibe heatmap from crowd audio + body-language cues.</p>
       </article>
       <article class="session-card">
-        <h4>Lightning Track: Can a Spreadsheet Have Aura?</h4>
+        <h4><span class="session-tag tag-lightning">Lightning</span> Can a Spreadsheet Have Aura?</h4>
         <p>Six speakers, six minutes each, one aggressively formatted workbook.</p>
       </article>
     </section>
@@ -422,6 +425,64 @@
       justify-content: space-between;
     }
     footer a { color: #3659e3; font-weight: 700; }
+    .urgency {
+      margin: 0;
+      font-size: 13px;
+      color: #6b3656;
+      font-weight: 700;
+    }
+    .countdown {
+      margin: 0;
+      color: #6f2f41;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .inventory {
+      margin: 0;
+      color: #3a4a72;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .session-tag {
+      display: inline-block;
+      margin-right: 6px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      vertical-align: text-top;
+    }
+    .tag-lab { background: #ffe7db; color: #a23810; }
+    .tag-workshop { background: #e7f0ff; color: #2b4ecf; }
+    .tag-lightning { background: #efe7ff; color: #5a2fbe; }
+    .cta,
+    .ticket-tier,
+    .speaker-card,
+    .timeline-item,
+    .session-card,
+    .hero-ticket a,
+    .promo-media-strip img {
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+    .cta:hover,
+    .hero-ticket a:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 20px rgba(54, 89, 227, 0.28);
+    }
+    .ticket-tier:hover,
+    .speaker-card:hover,
+    .timeline-item:hover,
+    .session-card:hover {
+      transform: translateY(-2px);
+      border-color: #cdb997;
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.09);
+    }
+    .promo-media-strip img:hover {
+      transform: translateY(-2px) scale(1.01);
+      border-color: #cdb997;
+    }
+
     @media (max-width: 980px) {
       .hero-overlay { grid-template-columns: 1fr; }
       .hero-ticket { max-width: 320px; }
@@ -535,7 +596,30 @@
 
 </style>
   <script>
-    console.info("[vibes][vibe-con] index rendered");
+    (function () {
+      var countdown = document.querySelector("[data-countdown]");
+      var inventory = document.getElementById("ticket-inventory");
+      if (countdown) {
+        var target = new Date(countdown.getAttribute("data-countdown"));
+        function tick() {
+          var now = new Date();
+          var diff = Math.max(0, target - now);
+          var days = Math.floor(diff / 86400000);
+          var hours = Math.floor((diff % 86400000) / 3600000);
+          var mins = Math.floor((diff % 3600000) / 60000);
+          countdown.textContent = "Offer closes in: " + days + "d " + hours + "h " + mins + "m";
+        }
+        tick();
+        setInterval(tick, 60000);
+      }
+      if (inventory) {
+        var base = 312;
+        var variance = Math.floor((new Date().getMinutes() % 7));
+        var seats = Math.max(148, base - variance);
+        inventory.textContent = "Live inventory: " + seats + " seats left at this price tier";
+      }
+      console.info("[vibes][vibe-con] index rendered");
+    })();
   </script>
 
   <!-- vibe-link-resolver:start -->

@@ -22,5 +22,7 @@ description: Durable knowledge captured from this implementation pass.
   - featured speakers
   - timeline/session previews
   - repeated CTA placement
+- Light urgency cues (countdown + inventory chip) make the landing feel more event-platform-like without introducing checkout complexity.
+- Session-type badges increase schedule scanability and make dense program rows easier to parse.
 - Program pages read as more “real conference” when schedule rows include time, title, and plain-language value proposition.
 

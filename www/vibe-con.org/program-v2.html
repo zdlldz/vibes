@@ -22,6 +22,7 @@
     <h1>Program Highlights and Knockout Sessions</h1>
     <p class="deck">A full conference-style schedule with stage timelines, featured speaker moments, and workshop tracks designed for ticketed attendees.</p>
     <p class="hero-actions"><a class="cta" href="https://testyourvibes.com/index-v2.html">Get Tickets</a><a class="cta alt" href="./index-v2.html">Back to Landing</a></p>
+    <p class="live-chip" id="program-live-chip">Live update: loading keynote seat signal...</p>
   </header>
 
   <main class="wrap">
@@ -39,23 +40,23 @@
       <section class="day-schedule">
         <h2><span class="pill">Day 1</span> Methods + Instruments</h2>
         <ul class="slot-list">
-          <li class="slot"><time>09:00</time><div><h3>Opening Keynote: From Hunch to Histogram</h3><p>Dr. Anita Goodvibe sets the tone with a live baseline scan.</p></div></li>
-          <li class="slot"><time>11:00</time><div><h3>VIBEMETER Mark II Calibration Lab</h3><p>Hands-on setup, signal sanity checks, and audience test readings.</p></div></li>
-          <li class="slot"><time>14:00</time><div><h3>Panel: Bureaucracy as Signal vs. Noise</h3><p>A lively debate on where paperwork ends and data begins.</p></div></li>
+          <li class="slot"><time>09:00</time><div><h3><span class="slot-type keynote">Keynote</span> Opening Keynote: From Hunch to Histogram</h3><p>Dr. Anita Goodvibe sets the tone with a live baseline scan.</p></div></li>
+          <li class="slot"><time>11:00</time><div><h3><span class="slot-type lab">Lab</span> VIBEMETER Mark II Calibration Lab</h3><p>Hands-on setup, signal sanity checks, and audience test readings.</p></div></li>
+          <li class="slot"><time>14:00</time><div><h3><span class="slot-type panel">Panel</span> Bureaucracy as Signal vs. Noise</h3><p>A lively debate on where paperwork ends and data begins.</p></div></li>
         </ul>
 
         <h2><span class="pill">Day 2</span> Evidence + Media</h2>
         <ul class="slot-list">
-          <li class="slot"><time>10:00</time><div><h3>Paper Session: Goodvibe et al. Deep Dive</h3><p>Interpreting n=270 results without losing the human story.</p></div></li>
-          <li class="slot"><time>13:00</time><div><h3>Workshop: BIIS Outlier Handling</h3><p>How to classify strange social spikes before they break your model.</p></div></li>
-          <li class="slot"><time>16:00</time><div><h3>Talk: Entropy, Ennui, and Variance Surfaces</h3><p>A practical map for mood complexity in public environments.</p></div></li>
+          <li class="slot"><time>10:00</time><div><h3><span class="slot-type session">Paper</span> Goodvibe et al. Deep Dive</h3><p>Interpreting n=270 results without losing the human story.</p></div></li>
+          <li class="slot"><time>13:00</time><div><h3><span class="slot-type workshop">Workshop</span> BIIS Outlier Handling</h3><p>How to classify strange social spikes before they break your model.</p></div></li>
+          <li class="slot"><time>16:00</time><div><h3><span class="slot-type talk">Talk</span> Entropy, Ennui, and Variance Surfaces</h3><p>A practical map for mood complexity in public environments.</p></div></li>
         </ul>
 
         <h2><span class="pill">Day 3</span> Public Adoption</h2>
         <ul class="slot-list">
-          <li class="slot"><time>09:30</time><div><h3>Roundtable: Certification Pathways</h3><p>IOVS implementation, compliance tracks, and policy translation.</p></div></li>
-          <li class="slot"><time>12:00</time><div><h3>Editorial Clinic: Data for Humans</h3><p>Making formal findings irresistible to mainstream readers.</p></div></li>
-          <li class="slot"><time>15:30</time><div><h3>Closing Session: Anti-VIBE Roadmap</h3><p>What breaks vibe systems and how to future-proof your methodology.</p></div></li>
+          <li class="slot"><time>09:30</time><div><h3><span class="slot-type panel">Roundtable</span> Certification Pathways</h3><p>IOVS implementation, compliance tracks, and policy translation.</p></div></li>
+          <li class="slot"><time>12:00</time><div><h3><span class="slot-type workshop">Clinic</span> Editorial Clinic: Data for Humans</h3><p>Making formal findings irresistible to mainstream readers.</p></div></li>
+          <li class="slot"><time>15:30</time><div><h3><span class="slot-type keynote">Closing</span> Anti-VIBE Roadmap</h3><p>What breaks vibe systems and how to future-proof your methodology.</p></div></li>
         </ul>
       </section>
 
@@ -347,6 +348,53 @@
       font-size: 13px;
     }
     footer a { color: #3659e3; font-weight: 700; }
+    .live-chip {
+      margin: 0;
+      font-size: 12px;
+      color: #6f3c55;
+      font-weight: 700;
+    }
+    .slot-type {
+      display: inline-block;
+      margin-right: 6px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      vertical-align: text-top;
+    }
+    .slot-type.keynote { background: #ffe7db; color: #a23810; }
+    .slot-type.lab { background: #e7f0ff; color: #2b4ecf; }
+    .slot-type.panel { background: #efe7ff; color: #5a2fbe; }
+    .slot-type.session { background: #e8f7ea; color: #267742; }
+    .slot-type.workshop { background: #fff2d8; color: #9a6410; }
+    .slot-type.talk { background: #eaf3ff; color: #2d5698; }
+    .slot,
+    .workshop,
+    .rail-card,
+    .metric,
+    .speaker-mini img,
+    .cta {
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+    .slot:hover,
+    .workshop:hover,
+    .rail-card:hover,
+    .metric:hover {
+      transform: translateY(-2px);
+      border-color: #cdb997;
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.08);
+    }
+    .speaker-mini img:hover {
+      transform: scale(1.04);
+      border-color: #c9b191;
+    }
+    .cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 16px rgba(54, 89, 227, 0.26);
+    }
+
     @media (max-width: 980px) {
       .metrics,
       .main-grid,
@@ -457,7 +505,15 @@
 
 </style>
   <script>
-    console.info("[vibes][vibe-con][v2] program rendered");
+    (function () {
+      var chip = document.getElementById("program-live-chip");
+      if (chip) {
+        var minute = new Date().getMinutes();
+        var seats = 220 - (minute % 11);
+        chip.textContent = "Live update: keynote hall at " + seats + " open seats in early tier.";
+      }
+      console.info("[vibes][vibe-con][v2] program rendered");
+    })();
   </script>
 
   <!-- vibe-link-resolver:start -->
