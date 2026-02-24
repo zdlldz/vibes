@@ -67,10 +67,11 @@ Workers only serve files from each domain's own `www/<domain>/` directory. If ne
 
 - Source staging remains `www/src/` (`video/` + `images/` trees).
 - Before referencing assets in HTML, copy them into the target domain folder: `www/<domain>/media/`.
-- Canonical hero news video filename in domain media folders: `core-news.mp4` (from `www/src/video/(WIP) TASK2_lieberman_zack_vibes-news.mp4`).
+- Canonical full/editorial hero video URL (external only): `https://edge.vibetube.art/src/TASK2_vibes-news.mp4`.
 - Additional source clips are valid as reusable “news pieces” and may have dedicated flat watch pages (for example under `www/vibetube.art/`).
 - Video embed contract for this project: use `controls` + `playsinline`, do not use `autoplay`, and do **not** use `muted` by default.
-- Exception path (only when explicitly requested): ad-only video units may use autoplay + loop with no controls to intentionally create an intrusive tabloid experience.
+- Exception path (only when explicitly requested): ad-only video units may use autoplay + loop with no controls.
+- Hard rule: never use the full/editorial `TASK2_vibes-news.mp4` file in autoplay contexts; use smaller clips for autoplay units.
 
 ### Domain Path Note
 
