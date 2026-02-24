@@ -26,6 +26,7 @@ description: Reusable patterns and implementation constraints discovered during 
 - A stable worker route pattern (`/` + one thematic pretty route) scales cleanly across all six domains.
 - V2 pass pattern: mimic structural DNA (header/nav/layout rhythm/typography hierarchy) rather than exact content cloning.
 - Rich media placeholders should be explicit, labeled blocks so later asset swaps are deterministic.
+- A light responsive hardening layer (targeted breakpoints, spacing/typography downshifts) is sufficient to prevent mobile breakage while keeping desktop-first fidelity.
 
 ## 2. Gotchas & Pitfalls
 - `AGENTS.md` listed `vibetube.com` but the folder was not created in `www/` (resolved with a placeholder directory).

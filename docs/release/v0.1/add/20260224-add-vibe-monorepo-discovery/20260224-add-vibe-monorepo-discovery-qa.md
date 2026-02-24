@@ -57,3 +57,4 @@ description: QA evidence for docs scaffolding and initial site/worker baseline.
 - `testyourvibes.com`, `vibe-con.org`, `vibe-standards.org`: upgraded with richer editorial/spec structure and explicit media placeholders.
 - Media strategy: each domain now contains at least one clearly labeled placeholder block for future image/video insertion.
 - Note: direct NYTimes fetch was blocked by upstream 403; implementation follows known NYT front-end conventions for structure and typography rhythm.
+- Final polish pass added desktop visual nuance tuning and basic mobile safety breakpoints across all non-mimic support domains.

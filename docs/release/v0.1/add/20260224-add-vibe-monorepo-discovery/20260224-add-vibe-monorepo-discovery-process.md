@@ -52,6 +52,7 @@ V2 pass complete across all six domains with docs, QA, and architecture knowledg
 - [x] Apply v2 content pass to `testyourvibes.com` pages
 - [x] Apply v2 content pass to `vibe-con.org` pages
 - [x] Apply v2 content pass to `vibe-standards.org` pages
+- [x] Run additional polish pass for desktop nuance and basic responsive hardening
 
 ### 3. Polish & Cleanup
 - [x] Validate naming conventions for release, category, and slug
