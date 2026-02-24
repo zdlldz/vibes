@@ -8,7 +8,7 @@ export default {
     }
 
     // Map pretty source-style path to flat static subpage file.
-    if (path === "/abs/2506.10953") {
+    if (path === "/abs/2506.10953" || path === "/abs/2502.VIBE01") {
       return env.ASSETS.fetch(new Request(new URL("/abs-2506-10953.html", url), request));
     }
 

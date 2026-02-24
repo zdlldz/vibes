@@ -28,8 +28,8 @@
         <input type="number" name="i" min="0" max="10" value="7" required>
       </label>
       <label>
-        Administrative friction (0-10)
-        <input type="number" name="b" min="0" max="10" value="3" required>
+        Bureaucracy freedom (0-10)
+        <input type="number" name="b" min="0" max="10" value="7" required>
       </label>
       <label>
         Chaotic drift (0-10)
@@ -182,12 +182,15 @@
       const b = normalize(Number(data.get("b")));
       const e = normalize(Number(data.get("e")));
 
-      // Satirical composite score that penalizes bureaucracy and entropy.
-      const score = ((v + i + (10 - b) + (10 - e)) / 40).toFixed(2);
-      result.textContent = `VIBE score: ${score} (scientifically theatrical)`;
+      const vNorm = v / 10;
+      const iNorm = i / 10;
+      const bNorm = b / 10;
+      const eNorm = e / 10;
+      const score = Math.pow(vNorm * iNorm * bNorm * eNorm, 0.25).toFixed(2);
+      result.textContent = `VIBE score: ${score} (geometric composite)`;
 
       // Canonical log line for lightweight debugging during content QA.
-      console.info("[vibes][testyourvibes] score", { v, i, b, e, score });
+      console.info("[vibes][testyourvibes] score", { v, i, b, e, vNorm, iNorm, bNorm, eNorm, score });
     });
 
     console.info("[vibes][testyourvibes] index rendered");

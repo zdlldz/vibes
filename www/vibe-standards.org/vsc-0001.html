@@ -3,66 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VSC-0001 Draft | VIBE Standards Council</title>
-  <meta name="description" content="Draft standard VSC-0001 for VIBE measurement and reporting.">
+  <title>IOVS 1001:2025 Excerpt | IOVS</title>
+  <meta name="description" content="Selected normative excerpts from IOVS 1001:2025 for VIBE index definitions and scoring.">
 </head>
 <body>
   <header>
-    <p class="crumb"><a href="./index.html">VIBE Standards Council</a> / VSC-0001</p>
-    <h1>VSC-0001 (Draft): Core VIBE Data Contract</h1>
+    <p class="crumb"><a href="./index.html">IOVS</a> / Standards / IOVS 1001:2025</p>
+    <h1>IOVS 1001:2025 (Excerpt): VIBE Index Definitions and Reference Framework</h1>
   </header>
 
   <main>
     <section>
       <h2>1. Scope</h2>
       <p>
-        This draft standard defines baseline structure for exchanging VIBE-related
-        observations among participating tools and institutions.
+        This document specifies the definition of the Vibrational-Intimate-Bureaucratic-Entropic (VIBE)
+        index, sub-index domains, normalisation conventions, and the reference formula for composite scoring.
       </p>
     </section>
 
     <section>
-      <h2>2. Required Fields</h2>
+      <h2>2. Normative References</h2>
       <table class="spec-table" aria-label="required-fields">
         <tr>
-          <th>Field</th>
-          <th>Range</th>
-          <th>Type</th>
+          <th>Document</th>
+          <th>Role</th>
         </tr>
         <tr>
-          <td>vibrations</td>
-          <td>0.0 to 1.0</td>
-          <td>decimal</td>
+          <td>IOVS 1002:2025</td>
+          <td>VIBEMETER performance and calibration requirements</td>
         </tr>
         <tr>
-          <td>intimacy</td>
-          <td>0.0 to 1.0</td>
-          <td>decimal</td>
+          <td>IOVS 1003:2024</td>
+          <td>Field measurement methodology</td>
         </tr>
         <tr>
-          <td>bureaucracy</td>
-          <td>0.0 to 1.0</td>
-          <td>decimal</td>
-        </tr>
-        <tr>
-          <td>entropy</td>
-          <td>0.0 to 1.0</td>
-          <td>decimal</td>
+          <td>IOVS 1004:2024</td>
+          <td>Data format and reporting requirements</td>
         </tr>
       </table>
     </section>
 
     <section>
-      <h2>3. Compliance Note</h2>
+      <h2>3. Core Definitions</h2>
       <p>
-        Conforming systems must document measurement conditions and preserve source
-        context when publishing composite scores.
+        VIBE is the composite scalar quantity representing the aggregate affective-thermodynamic state
+        of a social environment. Under standard conditions VIBE is constrained to [0, 1].
+      </p>
+      <p>
+        The Bureaucracy component is a normative inversion: higher B values indicate greater freedom
+        from institutional constraint, and therefore higher vibe potential in that dimension.
       </p>
     </section>
 
     <section class="media-placeholder">
-      <h2>Conformance test placeholder</h2>
-      <p>Reserved for schema validator UI screenshot and sample payload walkthrough.</p>
+      <h2>4. Composite Scoring</h2>
+      <p><strong>Field approximation:</strong> VIBE = (V x I x B x E)<sup>1/4</sup></p>
+      <p><strong>Analytical form:</strong> VIBE = Z<sup>-1</sup> . exp(-beta . H<sub>VIBE</sub>)</p>
+      <p>Reserved for equation figure, dimensional notes, and conformance examples.</p>
     </section>
   </main>
 

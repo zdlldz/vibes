@@ -8,7 +8,10 @@ export default {
     }
 
     // Pretty-route mapping to flat static file.
-    if (path === "/2026/02/23/style/pickle-app-clothing-rental") {
+    if (
+      path === "/2026/02/23/style/pickle-app-clothing-rental" ||
+      path === "/2026/02/24/style/vibes-science-measurement-geneva"
+    ) {
       return env.ASSETS.fetch(
         new Request(new URL("/2026-02-23-style-pickle-app-clothing-rental.html", url), request)
       );

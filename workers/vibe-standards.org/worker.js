@@ -7,7 +7,7 @@ export default {
       return env.ASSETS.fetch(new Request(new URL("/index.html", url), request));
     }
 
-    if (path === "/vsc/0001") {
+    if (path === "/vsc/0001" || path === "/standards/iovs-1001") {
       return env.ASSETS.fetch(new Request(new URL("/vsc-0001.html", url), request));
     }
 

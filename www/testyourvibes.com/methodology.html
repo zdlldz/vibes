@@ -9,32 +9,33 @@
 <body>
   <header>
     <p class="crumb"><a href="./index.html">TestYourVibes.com</a> / Methodology</p>
-    <h1>VIBE Scoring Methodology v0.1</h1>
+    <h1>VIBE Scoring Methodology (Aligned to arXivz:2502.VIBE01)</h1>
   </header>
 
   <main>
     <section>
-      <h2>Inputs</h2>
+      <h2>Inputs (normalised)</h2>
       <ul>
-        <li>Vibrations (V)</li>
-        <li>Intimacy (I)</li>
-        <li>Bureaucracy (B)</li>
-        <li>Entropy (E)</li>
+        <li>Vibrations (V): 0 to 1</li>
+        <li>Intimacy (I): 0 to 1</li>
+        <li>Bureaucracy Freedom (B): 0 to 1 (higher means less institutional friction)</li>
+        <li>Entropy (E): 0 to 1</li>
       </ul>
     </section>
 
     <section>
       <h2>Formula</h2>
-      <p><code>score = (V + I + (10 - B) + (10 - E)) / 40</code></p>
-      <p>All terms are clamped to the 0-10 range before calculation.</p>
+      <p><code>score = (V * I * B * E)^(1/4)</code></p>
+      <p>The calculator clamps all user inputs to the 0-10 range, then divides by 10 to produce the [0, 1] values above.</p>
     </section>
 
     <section>
       <h2>Interpretation Bands</h2>
       <ul>
-        <li><strong>0.00 - 0.32</strong>: vibes are critically misaligned</li>
-        <li><strong>0.33 - 0.66</strong>: vibes are negotiable</li>
-        <li><strong>0.67 - 1.00</strong>: vibes are immaculate</li>
+        <li><strong>0.00 - 0.25</strong>: vibes are critically misaligned</li>
+        <li><strong>0.26 - 0.60</strong>: vibes are unstable but salvageable</li>
+        <li><strong>0.61 - 0.80</strong>: vibes are coherent</li>
+        <li><strong>0.81 - 1.00</strong>: vibes are immaculate</li>
       </ul>
     </section>
 
