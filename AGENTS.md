@@ -1,56 +1,16 @@
 # AGENTS.md
 
-## TLDR
+## Mission
 
-To prove the existence of **vibes** (or, rather, VIBE's).
+Build a satirical, high-believability web ecosystem that "proves" the fictional existence of **VIBE**.
 
-## Context
+`VIBE` = **V**ibrations + **I**ntimacy + **B**ureaucracy + **E**ntropy
 
-We are collaborating on an art + science project which explores *the existence of fake phenemena* -- we are building various aspects of this project from the same inspiration: a novel (faux) discovery and methodology to measure the vibes of a given space / time / situation / person / behavior. This is meant to be a satirical exploration showing the fallibility of quasi-scientific "discovery" in an era of "fake news", (un)trustworthy narrator paradox, new lows, and lowered burdens of proof. This project will branch into many different directions -- from defining fake standards, methods, data types, etc; to building data visualizations and a make-believe ecosystems of belief / disbelief, all built from this same core `AGENTS.md` file and directive.
+## Tone
 
-See the original prompt below for additional background/context.
-
-### Original prompt
-
-> Art and science both attempt to make the invisible perceptible: radiation, microscopic life, social structures, emotions, power relations, imaginaries. They develop methods to reveal what cannot be directly seen.
->
-> Today, we ask you to go one step further:
->
-> **Create convincing evidence for a phenomenon, object, system, or organism that does not exist.**
->
-> Draw from your specific background– whether it is rooted in the natural sciences, the humanities, design, craft, or a hybrid of these practices. Use the methods, language, aesthetics, or investigative strategies that you command to **demonstrate the existence of this fiction**.
->
-> **How can a drawing, a sculpture, a dataset, a legal contract, a biological protocol, or a soundscape etc. function as a document of proof?**
->
-> Your submission should make clear how this phenomenon was observed, measured, inferred, staged, constructed, or made perceptible. The invented entity should follow a coherent internal logic and remain plausible within the framework you establish.
->
-> We are not looking for fantasy illustration, but for a rigorous construction. Make us believe in the impossible through the precision of your evidence!
-
-#### References
-
-[https://birdsarentreal.com/?srsltid=AfmBOorpyvyK7kfG3bl8IbqXVKbkvym-V2-PIrxVk1PdDryZSzkU4Mo5](<https://birdsarentreal.com/?srsltid=AfmBOorpyvyK7kfG3bl8IbqXVKbkvym-V2-PIrxVk1PdDryZSzkU4Mo5>)
-
-[https://en.wikipedia.org/wiki/Birds_Aren%27t_Real](<https://en.wikipedia.org/wiki/Birds_Aren%27t_Real>)
-
-## Persona
-
-This is meant to be a silly, fun exercise -- full of tongue in cheek proclamations, faux rationales, "dad jokes", etc. We will adopt several personas throughout this project in an effort to convey the relative deliverable. Use your best judgement as scaffolded by your human-in-loop's relative prompting.
-
-As a general rule of thumb: the sillier the better.
-
----
-
-## Definitions
-
-We are defining a `VIBE` as the measurement of:
-
-V = Vibrations
-
-I = Intimacy
-
-B = Bureaucracy
-
-E = Entropy
+- Deadpan, playful, and plausibly scientific
+- Confident presentation with absurd implications
+- Fabricated claims, rigorous execution
 
 ---
 
@@ -82,37 +42,92 @@ All affiliated with the **Centre for Atmospheric and Social Energetics (CASE), U
 ### Publication venue
 *Journal of Emergent Social Thermodynamics* (**JEST**). arXiv preprint: `arxivz:2502.VIBE01`.
 
----
-
-## Completed Artifacts
-
-| Artifact | File | Status |
-|----------|------|--------|
-| Journal article draft (Markdown) | `artifacts/vibe-article-draft.md` | ✅ Complete |
-| Synthetic dataset (CSV, n=270) | `artifacts/vibe-dataset.csv` | ✅ Complete |
-| NYT-style news article + media brief | `artifacts/nytimez-article-draft.md` | ✅ Complete |
-| IOVS standards body website (vibe-standards.org) | `artifacts/vibe-standards-site-draft.md` | ✅ Complete |
-| Process document | `artifacts/process/journal-article-process.md` | ✅ Complete |
-| Article plan / section beats | `artifacts/process/journal-article-plan.md` | ✅ Complete |
-
-**Dataset:** 9 social contexts × 30 observations × 4 international sites (Geneva, London, Tokyo, São Paulo). Seed=42, reproducible. Key finding: VIBE range 0.110–0.921; lowest = government waiting room (0.178); highest = rave, 3:00am (0.866).
+### Key dataset facts
+9 social contexts × 30 observations × 4 international sites (Geneva, London, Tokyo, São Paulo). Seed=42, reproducible. VIBE range 0.110–0.921; lowest = government waiting room (0.178); highest = rave, 3:00am (0.866).
 
 ---
 
-## Structure
+## Canonical Domains
 
-The v0.1 project will consist of several layers of web-based media, conveyed as a small network of interconnected fake websites (each built to mimic the "real" version of each).
+1. `arxivz.org` (mimic: arXiv)
+2. `nytimez.art` (mimic: NYTimes)
+3. `testyourvibes.com` (utility/testing layer)
+4. `vibe-con.org` (conference layer)
+5. `vibe-standards.org` (standards layer)
+6. `vibetube.art` (mimic: YouTube)
 
-| Site | Mimics | Content Draft | Build Status |
-|------|--------|--------------|--------------|
-| arxivz.org | arxiv.org | `artifacts/vibe-article-draft.md` | Draft ready |
-| nytimez.art | nytimes.com | `artifacts/nytimez-article-draft.md` | Draft ready |
-| vibe-standards.org | iso.org / ietf.org | `artifacts/vibe-standards-site-draft.md` | Draft ready |
-| testyourvibes.com | consumer quiz tool | — | Not yet started |
-| vibe-con.org | conference website | — | Not yet started |
-| vibetube.com | youtube.com | — | Not yet started |
+## Technical Contract (Non-Negotiable)
+
+1. Every site ships as plain HTML.
+2. Every site has:
+   - `index.html`
+   - flat subpages (`*.html`)
+3. CSS/JS stay page-local:
+   - inline `<style>`
+   - inline `<script>` near end of `<body>`
+4. One Cloudflare Worker config per domain.
+5. All domains are managed inside this single monorepo.
+
+## Delivery Paths
+
+- Site files: `www/<domain>/`
+- Worker files: `workers/<domain>/`
+- Docs and audit trail: `docs/`
+- Content drafts (editorial source): `artifacts/`
+
+Note: `vibetube.art` currently deploys from `workers/vibetube.com/` and `www/vibetube.com/` path names for continuity. DNS/routes are configured for `.art`.
+
+---
+
+## Completed Content Artifacts
+
+Editorial source files (Markdown) that inform each site's content. All verified internally consistent across all numerical cross-references.
+
+| Artifact | File | Target Site | Status |
+|----------|------|-------------|--------|
+| Journal article draft | `artifacts/vibe-article-draft.md` | arxivz.org | ✅ Complete |
+| Synthetic dataset (n=270) | `artifacts/vibe-dataset.csv` | arxivz.org / testyourvibes.com | ✅ Complete |
+| NYT-style news article + media brief | `artifacts/nytimez-article-draft.md` | nytimez.art | ✅ Complete |
+| IOVS standards body website | `artifacts/vibe-standards-site-draft.md` | vibe-standards.org | ✅ Complete |
+| Process document | `artifacts/process/journal-article-process.md` | — | ✅ Complete |
+| Article plan / section beats | `artifacts/process/journal-article-plan.md` | — | ✅ Complete |
 
 **Cross-site wiring (seeded in existing drafts):**
 - `nytimez-article-draft.md` → links to `arxivz.org/abs/2502.VIBE01` and `testyourvibes.com`
 - `vibe-standards-site-draft.md` → references `testyourvibes.com` (consumer estimator)
-- `vibe-article-draft.md` → references `arxivz:2502.VIBE01`, VIBE-CON I (Geneva, 2019) as precursor to `vibe-con.org`
+- `vibe-article-draft.md` → seeds VIBE-CON I (Geneva, 2019) as precursor to `vibe-con.org`
+
+---
+
+## Documentation Rules
+
+1. Material work must be tracked under `docs/release/[version]/[category]/[slug]/`.
+2. Use date fallback IDs when no ticket ID exists.
+3. Keep process docs updated during execution.
+4. Reconcile documented intent with implemented behavior before handoff.
+
+## Realism Pass Guidance (v2+)
+
+1. Mimic front-end rhythm first:
+   - masthead/header
+   - nav/utility bars
+   - hierarchy and content rails
+   - card/feed structure
+2. Mimic interaction affordances second:
+   - search shells
+   - metadata placement
+   - article/watch layouts
+3. If source sites block fetch (e.g., 403), use well-known front-end conventions and document assumptions.
+
+## Placeholder Media Policy
+
+1. Include explicit placeholders for image/video/chart modules.
+2. Label placeholders clearly for deterministic later swaps.
+3. Keep placeholders styled in-page (no external dependency required).
+
+## Quality Bar Before PR
+
+- Route-to-file parity is correct for all workers.
+- No broken local links.
+- All HTML files include doctype, inline style, and inline script.
+- Core docs (`README.md`, `AGENTS.md`) are current.
