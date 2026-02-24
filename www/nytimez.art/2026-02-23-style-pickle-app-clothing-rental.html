@@ -9,7 +9,7 @@
 <body>
   <div class="vibe-disclaimer-banner">
     <div class="vibe-disclaimer-inner">
-      <span class="vibe-disclaimer-text">The site shown below is v0.1, which was submitted for TASK2. Please see the newest work here: <a href="/2026/02/24/world/europe/russia-war-economy-v2">v0.2</a></span>
+      <span class="vibe-disclaimer-text">Original TASK2 v0.1 is below. <a href="./2026-02-23-style-pickle-app-clothing-rental-v2.html">View updated v0.2 here</a>.</span>
       <details class="vibe-sites-menu">
         <summary>All sites</summary>
         <div class="vibe-sites-list"><a data-vibe-domain="arxivz.org" data-vibe-path="/index-v2.html" href="https://arxivz.org/index-v2.html" target="_self" rel="noopener">arxivz.org</a><a data-vibe-domain="nytimez.art" data-vibe-path="/index-v2.html" href="https://nytimez.art/index-v2.html" target="_self" rel="noopener">nytimez.art</a><a data-vibe-domain="testyourvibes.com" data-vibe-path="/index-v2.html" href="https://testyourvibes.com/index-v2.html" target="_self" rel="noopener">testyourvibes.com</a><a data-vibe-domain="vibe-con.org" data-vibe-path="/index-v2.html" href="https://vibe-con.org/index-v2.html" target="_self" rel="noopener">vibe-con.org</a><a data-vibe-domain="vibe-standards.org" data-vibe-path="/index-v2.html" href="https://vibe-standards.org/index-v2.html" target="_self" rel="noopener">vibe-standards.org</a><a data-vibe-domain="vibetube.art" data-vibe-path="/index-v2.html" href="https://vibetube.art/index-v2.html" target="_self" rel="noopener">vibetube.art</a></div>
@@ -34,7 +34,7 @@
   <a class="billboard wrap" href="/2026/02/24/world/europe/russia-war-economy">
     <div class="billboard-media">
       <video autoplay loop muted playsinline preload="metadata" poster="./media/variety-06.webp">
-        <source src="./media/core-news.mp4" type="video/mp4">
+        <source src="./media/ny-video-2.mp4" type="video/mp4">
       </video>
     </div>
     <div class="billboard-copy">
@@ -801,16 +801,17 @@ The dog had no comment. Its Ennui Quotient was, by all available evidence, a one
 
       links.forEach(function (link) {
         var domain = link.getAttribute('data-vibe-domain');
+        var localDomain = link.getAttribute('data-vibe-local') || domain;
         var path = link.getAttribute('data-vibe-path') || '/';
         if (!domain) return;
 
         if (isFileProtocol) {
-          link.href = '../' + domain + path;
+          link.href = '../' + localDomain + path;
           return;
         }
 
         if (isLocalHost) {
-          link.href = '/' + domain + path;
+          link.href = '/' + localDomain + path;
           return;
         }
 

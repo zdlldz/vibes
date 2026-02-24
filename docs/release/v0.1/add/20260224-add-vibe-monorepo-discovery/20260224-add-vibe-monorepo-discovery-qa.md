@@ -23,7 +23,7 @@ description: QA evidence for docs scaffolding and initial site/worker baseline.
 - [ ] Multi-route rendering verified in browser (deferred by design for this informal pass)
 
 ## 2. Adversarial Proof
-- Verify missing folder detection caught pre-existing `www/vibetube.com` gap.
+- Verify missing folder detection caught pre-existing `www/vibetube.art` gap.
 - Verify release naming corrected from `v0.1.0` to `v0.1` without losing task history.
 - Verify each worker maps root path `/` and one thematic pretty route to a flat HTML file.
 
@@ -41,7 +41,7 @@ description: QA evidence for docs scaffolding and initial site/worker baseline.
 | `testyourvibes.com` | `index.html`, `methodology.html` | `worker.js`, `wrangler.toml` | `/methodology` -> `methodology.html` | doctype/style/script present | PASS |
 | `vibe-con.org` | `index.html`, `program.html` | `worker.js`, `wrangler.toml` | `/program` -> `program.html` | doctype/style/script present | PASS |
 | `vibe-standards.org` | `index.html`, `vsc-0001.html` | `worker.js`, `wrangler.toml` | `/vsc/0001` -> `vsc-0001.html` | doctype/style/script present | PASS |
-| `vibetube.com` | `index.html`, `watch-vibecon-keynote.html` | `worker.js`, `wrangler.toml` | `/watch/vibecon-keynote` -> flat file | doctype/style/script present | PASS |
+| `vibetube.art` | `index.html`, `watch-vibecon-keynote.html` | `worker.js`, `wrangler.toml` | `/watch/vibecon-keynote` -> flat file | doctype/style/script present | PASS |
 
 ## 5. One More Sanity Sweep (All Sites)
 - All 6 domains have exactly two baseline pages (home + one flat subpage).
@@ -53,7 +53,7 @@ description: QA evidence for docs scaffolding and initial site/worker baseline.
 ## 6. V2 Front-End Mimic Sweep (Quick)
 - `arxivz.org`: upgraded to arXiv-like utility bar, catalog/listing hierarchy, and abstract metadata table styling.
 - `nytimez.art`: upgraded to NYT-like utility strip, large serif masthead, section nav, lead story layout, and article rhythm.
-- `vibetube.com`: upgraded to YouTube-like sticky header, search bar, sidebar guide, card grid, and watch-page split layout.
+- `vibetube.art`: upgraded to YouTube-like sticky header, search bar, sidebar guide, card grid, and watch-page split layout.
 - `testyourvibes.com`, `vibe-con.org`, `vibe-standards.org`: upgraded with richer editorial/spec structure and explicit media placeholders.
 - Media strategy: each domain now contains at least one clearly labeled placeholder block for future image/video insertion.
 - Note: direct NYTimes fetch was blocked by upstream 403; implementation follows known NYT front-end conventions for structure and typography rhythm.

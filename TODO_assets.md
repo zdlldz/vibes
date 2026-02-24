@@ -130,7 +130,7 @@ This document lists creative assets that would improve realism and fidelity acro
 - **Professional polish**
    - Table styling ornament assets (header accents/icons)
 
-## vibetube.com
+## vibetube.art
 
 ### `index.html`
 
@@ -155,7 +155,7 @@ This document lists creative assets that would improve realism and fidelity acro
 ## What Would Most Improve Fidelity Fast
 
 - **Top priority 1:** Domain-specific logos + favicon packs
-- **Top priority 2:** Realistic thumbnail/photo sets for `nytimez.art` and `vibetube.com`
+- **Top priority 2:** Realistic thumbnail/photo sets for `nytimez.art` and `vibetube.art`
 - **Top priority 3:** Diagram/chart assets for `arxivz.org`, `testyourvibes.com`, and `vibe-standards.org`
 - **Top priority 4:** Consistent icon systems (search/nav/user/status) across all domains
 

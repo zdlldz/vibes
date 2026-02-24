@@ -34,7 +34,11 @@ Completed v0.2 cloning + banner + interlink updates, then verified deployment in
 - [x] Lints clean
 - [x] HTML/link/reference sanity pass
 - [x] Wrangler dry-run pass
+- [x] Final banner audit completed across all v0.1/v0.2 subpages with updated copy and version-link behavior
+- [x] All-sites menu audited; VibeTube folder naming aligned to canonical `.art` domain so local and remote resolution now match directly
+- [x] Final punctuation/link-boundary polish applied globally: v0.2 uses one full linked second sentence (period unlinked), and v0.1 keeps final period outside the v0.2 link
 
 ## Technical Decisions
 - No worker route changes required for `-v2.html` direct asset paths.
 - Standardized banner text kept exact per request.
+- Resolver retains optional local-domain override support, but VibeTube no longer needs a divergence override after folder alignment.

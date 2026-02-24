@@ -328,7 +328,7 @@ To prove the existence of *vibes.*
   2. nytimez.art
      1. [https://nytimes.com](<https://nytimes.com>)
      2. [https://www.nytimes.com/2026/02/23/style/pickle-app-clothing-rental.html](<https://www.nytimes.com/2026/02/23/style/pickle-app-clothing-rental.html>)
-  3. [vibetube.com](<http://vibetube.com>)
+  3. [vibetube.art](<http://vibetube.art>)
      1. mimic [youtube.com](<http://youtube.com>)
   4. [testyourvibes.com](<http://testyourvibes.com>)
   5. [vibe-con.org](<http://vibe-con.org>)

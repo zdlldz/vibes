@@ -15,7 +15,7 @@ description: Implementation log for video behavior and clip integration.
 # Process
 
 - [x] Created task bundle
-- [x] Copied additional source news clips into `www/vibetube.com/media/`
+- [x] Copied additional source news clips into `www/vibetube.art/media/`
 - [x] Added v2 clip watch pages and linked from feed
 - [x] Removed `muted` from all `<video>` tags in site pages
 - [x] Updated core docs with media/video structure and policy

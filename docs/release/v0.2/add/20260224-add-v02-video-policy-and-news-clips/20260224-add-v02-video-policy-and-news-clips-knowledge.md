@@ -17,5 +17,5 @@ description: Canonical rules for future agents on video implementation.
 - Core hero video: `core-news.mp4` (derived from `(WIP) TASK2_lieberman_zack_vibes-news.mp4`).
 - Video clips from source are valid as reusable news pieces.
 - Default embed contract: `<video controls playsinline preload="metadata">` (no autoplay, no muted).
-- For v2 ecosystem growth, add flat watch pages per clip under `www/vibetube.com/`.
+- For v2 ecosystem growth, add flat watch pages per clip under `www/vibetube.art/`.
 

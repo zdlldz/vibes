@@ -7,16 +7,15 @@
   <meta name="description" content="VibeTube streams observational evidence, interviews, and explainers from the VIBE ecosystem.">
 </head>
 <body>
-    <div class="vibe-disclaimer-banner">
+  <div class="vibe-disclaimer-banner">
     <div class="vibe-disclaimer-inner">
-      <span class="vibe-disclaimer-text">The site shown below is v0.2. Please see v0.1, which was submitted for Task 2 <a href="./index.html">here</a>.</span>
+      <span class="vibe-disclaimer-text">Original TASK2 v0.1 is below. <a href="./index-v2.html">View updated v0.2 here</a>.</span>
       <details class="vibe-sites-menu">
         <summary>All sites</summary>
         <div class="vibe-sites-list"><a data-vibe-domain="arxivz.org" data-vibe-path="/index-v2.html" href="https://arxivz.org/index-v2.html" target="_self" rel="noopener">arxivz.org</a><a data-vibe-domain="nytimez.art" data-vibe-path="/index-v2.html" href="https://nytimez.art/index-v2.html" target="_self" rel="noopener">nytimez.art</a><a data-vibe-domain="testyourvibes.com" data-vibe-path="/index-v2.html" href="https://testyourvibes.com/index-v2.html" target="_self" rel="noopener">testyourvibes.com</a><a data-vibe-domain="vibe-con.org" data-vibe-path="/index-v2.html" href="https://vibe-con.org/index-v2.html" target="_self" rel="noopener">vibe-con.org</a><a data-vibe-domain="vibe-standards.org" data-vibe-path="/index-v2.html" href="https://vibe-standards.org/index-v2.html" target="_self" rel="noopener">vibe-standards.org</a><a data-vibe-domain="vibetube.art" data-vibe-path="/index-v2.html" href="https://vibetube.art/index-v2.html" target="_self" rel="noopener">vibetube.art</a></div>
       </details>
     </div>
   </div>
-
   <header class="topbar">
     <div class="topbar-inner">
       <button class="ghost">☰</button>
@@ -46,13 +45,19 @@
     </aside>
 
     <section class="feed">
+      <div class="chip-row" aria-label="topic-chips">
+        <span>Live</span>
+        <span>Field Footage</span>
+        <span>Explainers</span>
+        <span>Conference Clips</span>
+      </div>
       <article class="video-card">
-        <a class="thumb" href="./watch-vibecon-keynote-v2.html">
-          <img src="./media/shot-news-01.webp" alt="Video thumbnail for Geneva VIBE explainer">
+        <a class="thumb" href="./watch-vibecon-keynote.html">
+          <img src="./media/vt-thumb-1.webp" alt="Video thumbnail for Geneva VIBE explainer">
           <span class="duration">32:18</span>
         </a>
         <h2>
-          <a href="./watch-vibecon-keynote-v2.html">
+          <a href="./watch-vibecon-keynote.html">
             Can Science Measure a Vibe? A Geneva Lab Says Yes.
           </a>
         </h2>
@@ -60,48 +65,21 @@
       </article>
 
       <article class="video-card">
-        <a class="thumb" href="./watch-news-clip-01-v2.html">
-          <img src="./media/shot-news-02.webp" alt="Video thumbnail for rave field footage">
+        <a class="thumb" href="#">
+          <img src="./media/vt-thumb-2.webp" alt="Video thumbnail for rave field footage">
           <span class="duration">12:04</span>
         </a>
-        <h2><a href="./watch-news-clip-01-v2.html">Inside the Rave That Scored 0.866</a></h2>
+        <h2><a href="#">Inside the Rave That Scored 0.866</a></h2>
         <p class="meta">The Nytimez · 9.1K views · 1 day ago</p>
       </article>
 
       <article class="video-card">
-        <a class="thumb" href="./watch-news-clip-02-v2.html">
-          <img src="./media/shot-official-05.webp" alt="Video thumbnail for environment rankings">
+        <a class="thumb" href="#">
+          <img src="./media/vt-thumb-3.webp" alt="Video thumbnail for environment rankings">
           <span class="duration">08:22</span>
         </a>
-        <h2><a href="./watch-news-clip-02-v2.html">How Does Your Environment Rank? (0.866 to 0.178)</a></h2>
+        <h2><a href="#">How Does Your Environment Rank? (0.866 to 0.178)</a></h2>
         <p class="meta">Nytimez Graphics Desk · 3.3K views · 2 days ago</p>
-      </article>
-
-      <article class="video-card">
-        <a class="thumb" href="./watch-news-clip-04-v2.html">
-          <img src="./media/shot-official-06.webp" alt="Video thumbnail for standards briefing">
-          <span class="duration">09:40</span>
-        </a>
-        <h2><a href="./watch-news-clip-04-v2.html">Inside IOVS: The Standardization Edit</a></h2>
-        <p class="meta">Standards Wire · 5.8K views · 5 hours ago</p>
-      </article>
-
-      <article class="video-card">
-        <a class="thumb" href="./watch-news-clip-05-v2.html">
-          <img src="./media/shot-official-05.webp" alt="Video thumbnail for civic friction segment">
-          <span class="duration">07:58</span>
-        </a>
-        <h2><a href="./watch-news-clip-05-v2.html">Civic Friction: Why Queues Kill The Vibe</a></h2>
-        <p class="meta">Urban Mood Desk · 6.7K views · 4 hours ago</p>
-      </article>
-
-      <article class="video-card">
-        <a class="thumb" href="./watch-news-clip-06-v2.html">
-          <img src="./media/shot-official-06.webp" alt="Video thumbnail for closing sequence">
-          <span class="duration">06:31</span>
-        </a>
-        <h2><a href="./watch-news-clip-06-v2.html">Official Wrap: VIBE Week In 6 Minutes</a></h2>
-        <p class="meta">Standards Wire · 4.9K views · 2 hours ago</p>
       </article>
     </section>
   </main>
@@ -152,8 +130,9 @@
     }
     h1 {
       margin: 0;
-      font-size: 22px;
+      font-size: 23px;
       font-weight: 700;
+      letter-spacing: -0.01em;
     }
     .mark {
       color: var(--accent);
@@ -211,6 +190,21 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
     }
+    .chip-row {
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .chip-row span {
+      border: 1px solid #3c3c3c;
+      background: #212121;
+      color: #d0d0d0;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 600;
+    }
     .video-card {
       background: transparent;
       border: 0;
@@ -248,7 +242,7 @@
     }
     .video-card h2 {
       margin: 0 0 5px;
-      font-size: 16px;
+      font-size: 17px;
       line-height: 1.35;
       font-weight: 500;
     }
@@ -297,7 +291,6 @@
         grid-template-columns: 1fr;
       }
     }
-
   
   /* vibe-disclaimer:start */
   .vibe-disclaimer-banner {
@@ -407,16 +400,17 @@
 
       links.forEach(function (link) {
         var domain = link.getAttribute('data-vibe-domain');
+        var localDomain = link.getAttribute('data-vibe-local') || domain;
         var path = link.getAttribute('data-vibe-path') || '/';
         if (!domain) return;
 
         if (isFileProtocol) {
-          link.href = '../' + domain + path;
+          link.href = '../' + localDomain + path;
           return;
         }
 
         if (isLocalHost) {
-          link.href = '/' + domain + path;
+          link.href = '/' + localDomain + path;
           return;
         }
 

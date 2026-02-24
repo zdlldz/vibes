@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VibeTube</title>
-  <meta name="description" content="VibeTube streams observational evidence, interviews, and explainers from the VIBE ecosystem.">
+  <title>Watch: Can Science Measure a Vibe? | VibeTube</title>
+  <meta name="description" content="VibeTube watch page for the Nytimez explainer on the Geneva VIBE dataset.">
 </head>
 <body>
-  <div class="vibe-disclaimer-banner">
+    <div class="vibe-disclaimer-banner">
     <div class="vibe-disclaimer-inner">
-      <span class="vibe-disclaimer-text">The site shown below is v0.1, which was submitted for TASK2. Please see the newest work here: <a href="./index-v2.html">v0.2</a></span>
+      <span class="vibe-disclaimer-text">Updated v0.2 is below. <a href="./index.html">View v0.1 from TASK2's submission here</a>.</span>
       <details class="vibe-sites-menu">
         <summary>All sites</summary>
         <div class="vibe-sites-list"><a data-vibe-domain="arxivz.org" data-vibe-path="/index-v2.html" href="https://arxivz.org/index-v2.html" target="_self" rel="noopener">arxivz.org</a><a data-vibe-domain="nytimez.art" data-vibe-path="/index-v2.html" href="https://nytimez.art/index-v2.html" target="_self" rel="noopener">nytimez.art</a><a data-vibe-domain="testyourvibes.com" data-vibe-path="/index-v2.html" href="https://testyourvibes.com/index-v2.html" target="_self" rel="noopener">testyourvibes.com</a><a data-vibe-domain="vibe-con.org" data-vibe-path="/index-v2.html" href="https://vibe-con.org/index-v2.html" target="_self" rel="noopener">vibe-con.org</a><a data-vibe-domain="vibe-standards.org" data-vibe-path="/index-v2.html" href="https://vibe-standards.org/index-v2.html" target="_self" rel="noopener">vibe-standards.org</a><a data-vibe-domain="vibetube.art" data-vibe-path="/index-v2.html" href="https://vibetube.art/index-v2.html" target="_self" rel="noopener">vibetube.art</a></div>
       </details>
     </div>
   </div>
+
   <header class="topbar">
     <div class="topbar-inner">
-      <button class="ghost">☰</button>
-      <h1><span class="mark">Vibe</span>Tube</h1>
+      <a class="brand" href="./index-v2.html"><span>Vibe</span>Tube</a>
       <div class="search-wrap">
         <input type="search" placeholder="Search">
         <button>Search</button>
@@ -29,63 +29,75 @@
   </header>
 
   <main class="page">
-    <aside class="sidebar">
-      <h3>Guide</h3>
-      <ul>
-        <li>Home</li>
-        <li>Shorts</li>
-        <li>Subscriptions</li>
-      </ul>
-      <h3>Explore</h3>
-      <ul>
-        <li>Music</li>
-        <li>News</li>
-        <li>Live</li>
-      </ul>
-    </aside>
+    <section class="primary">
+      <section class="player" aria-label="video-player">
+        <div class="screen">
+          <video controls playsinline preload="metadata" poster="./media/shot-news-01b.webp">
+            <source src="./media/core-news.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
 
-    <section class="feed">
-      <div class="chip-row" aria-label="topic-chips">
-        <span>Live</span>
-        <span>Field Footage</span>
-        <span>Explainers</span>
-        <span>Conference Clips</span>
-      </div>
-      <article class="video-card">
-        <a class="thumb" href="./watch-vibecon-keynote.html">
-          <img src="./media/vt-thumb-1.webp" alt="Video thumbnail for Geneva VIBE explainer">
-          <span class="duration">32:18</span>
-        </a>
-        <h2>
-          <a href="./watch-vibecon-keynote.html">
-            Can Science Measure a Vibe? A Geneva Lab Says Yes.
-          </a>
-        </h2>
-        <p class="meta">The Nytimez · 42K views · 10 hours ago</p>
-      </article>
+      <h1>Can Science Measure a Vibe? A Geneva Lab Says Yes.</h1>
+      <p class="meta">42,011 views · Streamed 10 hours ago</p>
 
-      <article class="video-card">
-        <a class="thumb" href="#">
-          <img src="./media/vt-thumb-2.webp" alt="Video thumbnail for rave field footage">
-          <span class="duration">12:04</span>
-        </a>
-        <h2><a href="#">Inside the Rave That Scored 0.866</a></h2>
-        <p class="meta">The Nytimez · 9.1K views · 1 day ago</p>
-      </article>
+      <section class="channel-row">
+        <div>
+          <p class="channel-name">Applied Chill Labs</p>
+          <p class="channel-meta">112K subscribers</p>
+        </div>
+        <button class="subscribe">Subscribe</button>
+      </section>
 
-      <article class="video-card">
-        <a class="thumb" href="#">
-          <img src="./media/vt-thumb-3.webp" alt="Video thumbnail for environment rankings">
-          <span class="duration">08:22</span>
-        </a>
-        <h2><a href="#">How Does Your Environment Rank? (0.866 to 0.178)</a></h2>
-        <p class="meta">Nytimez Graphics Desk · 3.3K views · 2 days ago</p>
-      </article>
+      <section class="description">
+        <p>
+          Dr. Anita Goodvibe and Prof. Cal I. Bration walk through the VIBE model and the VIBEMETER
+          Mark II, with field clips from dog parks, waiting rooms, and late-night dance floors.
+        </p>
+        <p>
+          Supporting references:
+          <a href="https://vibe-standards.org/index-v2.html">IOVS 1001 excerpt</a> and
+          <a href="https://arxivz.org/abs-2506-10953-v2.html">arxivz preprint</a>.
+        </p>
+      </section>
     </section>
+
+    <aside class="secondary">
+      <h2>Up next</h2>
+      <article class="next-card">
+        <div class="thumb"><img src="./media/shot-news-02.webp" alt="Up next rave footage thumbnail"></div>
+        <div>
+          <h3><a href="./watch-news-clip-01-v2.html">Inside the Rave That Scored 0.866</a></h3>
+          <p>The Nytimez · 11K views</p>
+        </div>
+      </article>
+      <article class="next-card">
+        <div class="thumb"><img src="./media/shot-official-05.webp" alt="Up next chart thumbnail"></div>
+        <div>
+          <h3><a href="./watch-news-clip-02-v2.html">How Does Your Environment Rank?</a></h3>
+          <p>Nytimez Graphics Desk · 7.4K views</p>
+        </div>
+      </article>
+
+      <article class="next-card">
+        <div class="thumb"><img src="./media/shot-official-05.webp" alt="Up next civic friction thumbnail"></div>
+        <div>
+          <h3><a href="./watch-news-clip-05-v2.html">Civic Friction: Why Queues Kill The Vibe</a></h3>
+          <p>Urban Mood Desk · 5.2K views</p>
+        </div>
+      </article>
+      <article class="next-card">
+        <div class="thumb"><img src="./media/shot-official-06.webp" alt="Up next wrap thumbnail"></div>
+        <div>
+          <h3><a href="./watch-news-clip-06-v2.html">Official Wrap: VIBE Week In 6 Minutes</a></h3>
+          <p>Standards Wire · 4.1K views</p>
+        </div>
+      </article>
+    </aside>
   </main>
 
   <footer>
-    <p>About · Press · Copyright · Creators · Contact</p>
+    <a href="./index-v2.html">Back to VibeTube home</a> · About · Press · Contact
   </footer>
 
   <style>
@@ -103,38 +115,31 @@
       background: var(--bg);
       color: var(--ink);
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      line-height: 1.45;
+      line-height: 1.5;
     }
     .topbar {
       border-bottom: 1px solid var(--line);
+      background: var(--bg);
       position: sticky;
       top: 0;
       z-index: 5;
-      background: var(--bg);
     }
     .topbar-inner {
       width: min(1400px, 97vw);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: auto auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
       gap: 12px;
       align-items: center;
       padding: 10px 0;
     }
-    .ghost {
-      border: 0;
-      background: transparent;
-      color: var(--ink);
-      font-size: 14px;
-      cursor: pointer;
-    }
-    h1 {
-      margin: 0;
-      font-size: 23px;
+    .brand {
+      color: #fff;
+      text-decoration: none;
+      font-size: 22px;
       font-weight: 700;
-      letter-spacing: -0.01em;
     }
-    .mark {
+    .brand span {
       color: var(--accent);
     }
     .search-wrap {
@@ -160,137 +165,164 @@
       border-radius: 0 18px 18px 0;
       cursor: pointer;
     }
+    .ghost {
+      border: 0;
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+    }
     .page {
       width: min(1400px, 97vw);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 230px 1fr;
+      grid-template-columns: 2fr 1fr;
       gap: 18px;
       padding: 16px 0;
     }
-    .sidebar {
-      border-right: 1px solid var(--line);
-      padding-right: 12px;
+    h1 {
+      margin: 12px 0 6px;
+      font-size: 22px;
+      line-height: 1.35;
+      font-weight: 500;
     }
-    .sidebar h3 {
-      margin: 0 0 8px;
+    .meta {
+      margin: 0 0 12px;
+      color: var(--muted);
       font-size: 14px;
     }
-    .sidebar ul {
-      margin: 0 0 14px;
-      padding-left: 18px;
+    .player {
+      margin-bottom: 12px;
     }
-    .sidebar li {
-      margin-bottom: 6px;
-      color: #d3d3d3;
-      font-size: 14px;
+    .screen {
+      min-height: 420px;
+      display: block;
+      border: 1px dashed #454545;
+      background: #1f1f1f;
+      border-radius: 10px;
+      overflow: hidden;
     }
-    .feed {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+    .screen video {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+      display: block;
     }
-    .chip-row {
-      grid-column: 1 / -1;
+    .channel-row {
       display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0;
+      margin-bottom: 12px;
     }
-    .chip-row span {
-      border: 1px solid #3c3c3c;
-      background: #212121;
-      color: #d0d0d0;
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 12px;
+    .channel-name {
+      margin: 0 0 2px;
+      font-size: 15px;
       font-weight: 600;
     }
-    .video-card {
-      background: transparent;
+    .channel-meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .subscribe {
       border: 0;
-      padding: 0;
+      background: #fff;
+      color: #000;
+      font-size: 13px;
+      padding: 12px 12px;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+    .description {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .description p {
+      margin: 0 0 8px;
+    }
+    .secondary h2 {
+      margin: 0 0 10px;
+      font-size: 17px;
+    }
+    .next-card {
+      display: grid;
+      grid-template-columns: 168px 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
     }
     .thumb {
-      position: relative;
-      min-height: 150px;
-      border-radius: 10px;
       border: 1px dashed #4d4d4d;
       background: #212121;
+      border-radius: 8px;
+      min-height: 94px;
       display: grid;
       place-content: center;
-      text-decoration: none;
       color: #c6c6c6;
-      margin-bottom: 8px;
-      overflow: hidden;
+      font-size: 12px;
     }
     .thumb img {
       width: 100%;
       height: 100%;
-      min-height: 150px;
+      min-height: 94px;
       object-fit: cover;
       display: block;
+      border-radius: 8px;
     }
-    .duration {
-      position: absolute;
-      right: 8px;
-      bottom: 8px;
-      background: rgba(0, 0, 0, 0.85);
-      color: #fff;
-      font-size: 12px;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    .video-card h2 {
-      margin: 0 0 5px;
-      font-size: 17px;
+    .next-card h3 {
+      margin: 0 0 4px;
+      font-size: 14px;
       line-height: 1.35;
       font-weight: 500;
     }
-    .video-card h2 a {
-      color: var(--ink);
-      text-decoration: none;
-    }
-    .meta {
+    .next-card p {
       margin: 0;
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     footer {
       border-top: 1px solid var(--line);
       padding: 12px 0 18px;
-      color: var(--muted);
       font-size: 12px;
       width: min(1400px, 97vw);
       margin: 0 auto;
     }
     @media (max-width: 1100px) {
-      .feed {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
       .page {
         grid-template-columns: 1fr;
       }
-      .sidebar {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-        padding: 0 0 10px;
+      .screen {
+        min-height: 320px;
       }
     }
-    @media (max-width: 680px) {
+    @media (max-width: 700px) {
       .topbar-inner {
-        grid-template-columns: auto 1fr auto;
-      }
-      h1 {
-        font-size: 20px;
+        grid-template-columns: 1fr auto;
       }
       .search-wrap {
         grid-column: 1 / -1;
-        order: 4;
       }
-      .feed {
+      .next-card {
         grid-template-columns: 1fr;
       }
+      .thumb {
+        min-height: 150px;
+      }
     }
+
   
   /* vibe-disclaimer:start */
   .vibe-disclaimer-banner {
@@ -385,7 +417,7 @@
 
 </style>
   <script>
-    console.info("[vibes][vibetube][v2] index rendered");
+    console.info("[vibes][vibetube][v2] watch-vibecon-keynote rendered");
   </script>
 
   <!-- vibe-link-resolver:start -->
@@ -400,16 +432,17 @@
 
       links.forEach(function (link) {
         var domain = link.getAttribute('data-vibe-domain');
+        var localDomain = link.getAttribute('data-vibe-local') || domain;
         var path = link.getAttribute('data-vibe-path') || '/';
         if (!domain) return;
 
         if (isFileProtocol) {
-          link.href = '../' + domain + path;
+          link.href = '../' + localDomain + path;
           return;
         }
 
         if (isLocalHost) {
-          link.href = '/' + domain + path;
+          link.href = '/' + localDomain + path;
           return;
         }
 

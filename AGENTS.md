@@ -76,11 +76,11 @@ Any component approaching `0` drives the composite score toward `0` ("vibes were
 - Editorial source drafts: `artifacts/`
 - Shared media staging drop: `www/src/`
 
-Note: `vibetube.art` deploys from `workers/vibetube.com/` and `www/vibetube.com/` path names for continuity. DNS/routes are configured for `.art`.
+Note: `vibetube.art` deploys from matching `.art` folder paths (`workers/vibetube.art/`, `www/vibetube.art/`). DNS/routes are configured for `.art`.
 
 ## Media Ingestion Rule
 
-Workers only serve assets from each domain's own `www/<domain>/` directory. Media staged in `www/src/` must be copied into per-domain media folders before use (for example `www/nytimez.art/media/`, `www/vibetube.com/media/`).
+Workers only serve assets from each domain's own `www/<domain>/` directory. Media staged in `www/src/` must be copied into per-domain media folders before use (for example `www/nytimez.art/media/`, `www/vibetube.art/media/`).
 
 ## Documentation Rules
 

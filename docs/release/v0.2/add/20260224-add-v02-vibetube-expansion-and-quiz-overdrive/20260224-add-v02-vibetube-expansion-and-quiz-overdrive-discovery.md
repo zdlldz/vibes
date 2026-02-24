@@ -15,6 +15,6 @@ description: Audit for clip coverage and pop/gross gamification opportunities.
 # Discovery
 
 - Confirmed existing clip pages for 01/02/04 only.
-- Confirmed extra clips 05/06 available in `www/vibetube.com/media/`.
+- Confirmed extra clips 05/06 available in `www/vibetube.art/media/`.
 - Identified opportunity for alternate input UX beyond sliders in `testyourvibes` v2.
 

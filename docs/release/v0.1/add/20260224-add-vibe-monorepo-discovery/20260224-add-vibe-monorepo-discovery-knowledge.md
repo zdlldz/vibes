@@ -29,7 +29,7 @@ description: Reusable patterns and implementation constraints discovered during 
 - A light responsive hardening layer (targeted breakpoints, spacing/typography downshifts) is sufficient to prevent mobile breakage while keeping desktop-first fidelity.
 
 ## 2. Gotchas & Pitfalls
-- `AGENTS.md` listed `vibetube.com` but the folder was not created in `www/` (resolved with a placeholder directory).
+- `AGENTS.md` listed `vibetube.art` but the folder was not created in `www/` (resolved with a placeholder directory).
 - `docs/knowledge/` started empty, so baseline architecture docs had to be bootstrapped.
 - Early release naming mismatch (`v0.1.0` vs `v0.1`) can fragment audit history if not corrected immediately (resolved by consolidating to `v0.1` as active track).
 - Route consistency can drift quickly; keep a shared pattern (`/` plus one pretty route per domain) during initial rollout.

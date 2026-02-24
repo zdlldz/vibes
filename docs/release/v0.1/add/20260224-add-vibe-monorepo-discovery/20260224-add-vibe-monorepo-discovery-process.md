@@ -25,7 +25,7 @@ V2 pass complete across all six domains with docs, QA, and architecture knowledg
 - [x] Read docs system overview in `docs/README.md`
 - [x] Read docs agent workflow in `docs/AGENTS.md`
 - [x] Scan repository files to identify current structure and gaps
-- [x] Validate `www/` domain directories and identify missing `www/vibetube.com`
+- [x] Validate `www/` domain directories and identify missing `www/vibetube.art`
 
 ### 2. Implementation
 - [x] Capture user-confirmed constraints (release `v0.1`, `www/domain`, one worker config per site)
@@ -43,12 +43,12 @@ V2 pass complete across all six domains with docs, QA, and architecture knowledg
 - [x] Scaffold fourth Cloudflare Worker config for `vibe-con.org`
 - [x] Create fifth domain baseline pages for `vibe-standards.org`
 - [x] Scaffold fifth Cloudflare Worker config for `vibe-standards.org`
-- [x] Create sixth domain baseline pages for `vibetube.com`
-- [x] Scaffold sixth Cloudflare Worker config for `vibetube.com`
+- [x] Create sixth domain baseline pages for `vibetube.art`
+- [x] Scaffold sixth Cloudflare Worker config for `vibetube.art`
 - [x] Visit reference sites and collect front-end style cues for mimic targets (`arxiv`, `youtube`)
 - [x] Apply v2 realism pass to `arxivz.org` pages
 - [x] Apply v2 realism pass to `nytimez.art` pages
-- [x] Apply v2 realism pass to `vibetube.com` pages
+- [x] Apply v2 realism pass to `vibetube.art` pages
 - [x] Apply v2 content pass to `testyourvibes.com` pages
 - [x] Apply v2 content pass to `vibe-con.org` pages
 - [x] Apply v2 content pass to `vibe-standards.org` pages

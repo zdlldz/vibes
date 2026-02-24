@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VIBE News Clip 01: Geneva Intro | VibeTube</title>
-  <meta name="description" content="A quick intro field report segment from the Geneva measurement cycle.">
+  <title>VIBE News Clip 05: Civic Friction Segment | VibeTube</title>
+  <meta name="description" content="A continuation segment focused on institutional drag and public mood correction events.">
 </head>
 <body>
   <div class="vibe-disclaimer-banner">
     <div class="vibe-disclaimer-inner">
-      <span class="vibe-disclaimer-text">The site shown below is v0.2. Please see v0.1, which was submitted for Task 2 <a href="./index.html">here</a>.</span>
+      <span class="vibe-disclaimer-text">Updated v0.2 is below. <a href="./index.html">View v0.1 from TASK2's submission here</a>.</span>
       <details class="vibe-sites-menu">
         <summary>All sites</summary>
         <div class="vibe-sites-list"><a data-vibe-domain="arxivz.org" data-vibe-path="/index-v2.html" href="https://arxivz.org/index-v2.html" target="_self" rel="noopener">arxivz.org</a><a data-vibe-domain="nytimez.art" data-vibe-path="/index-v2.html" href="https://nytimez.art/index-v2.html" target="_self" rel="noopener">nytimez.art</a><a data-vibe-domain="testyourvibes.com" data-vibe-path="/index-v2.html" href="https://testyourvibes.com/index-v2.html" target="_self" rel="noopener">testyourvibes.com</a><a data-vibe-domain="vibe-con.org" data-vibe-path="/index-v2.html" href="https://vibe-con.org/index-v2.html" target="_self" rel="noopener">vibe-con.org</a><a data-vibe-domain="vibe-standards.org" data-vibe-path="/index-v2.html" href="https://vibe-standards.org/index-v2.html" target="_self" rel="noopener">vibe-standards.org</a><a data-vibe-domain="vibetube.art" data-vibe-path="/index-v2.html" href="https://vibetube.art/index-v2.html" target="_self" rel="noopener">vibetube.art</a></div>
@@ -22,11 +22,11 @@
   </header>
 
   <main>
-    <h1>VIBE News Clip 01: Geneva Intro</h1>
-    <video controls playsinline preload="metadata" poster="./media/shot-news-01.webp">
-      <source src="./media/news-clip-01.mp4" type="video/mp4">
+    <h1>VIBE News Clip 05: Civic Friction Segment</h1>
+    <video controls playsinline preload="metadata" poster="./media/shot-official-05.webp">
+      <source src="./media/news-clip-05.mp4" type="video/mp4">
     </video>
-    <p>A quick intro field report segment from the Geneva measurement cycle.</p>
+    <p>A continuation segment focused on institutional drag and public mood correction events.</p>
     <p><a href="./watch-vibecon-keynote-v2.html">Back to main watch page</a></p>
   </main>
 
@@ -135,7 +135,7 @@
   </style>
 
   <script>
-    console.info("[vibes][vibetube][v2] watch-news-clip-01-v2.html rendered");
+    console.info("[vibes][vibetube][v2] watch-news-clip-05-v2.html rendered");
   </script>
   <!-- vibe-link-resolver:start -->
   <script>
@@ -147,6 +147,7 @@
       var isFileProtocol = window.location.protocol === 'file:';
       links.forEach(function (link) {
         var domain = link.getAttribute('data-vibe-domain');
+        var localDomain = link.getAttribute('data-vibe-local') || domain;
         var path = link.getAttribute('data-vibe-path') || '/';
         if (!domain) return;
         if (isFileProtocol) { link.href = '../' + domain + path; return; }

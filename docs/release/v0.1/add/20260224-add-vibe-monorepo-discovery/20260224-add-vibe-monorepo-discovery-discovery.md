@@ -24,6 +24,6 @@ description: Initial research and repository fingerprinting for v0.1 static-site
 - **Current State:** Concept/spec files exist (`AGENTS.md`, `README.md`, `SPEC.md`), but no site HTML or Cloudflare Worker code existed yet.
 
 ## 3. Findings & Risks
-- `www/vibetube.com` folder is missing while it is listed as part of planned scope.
+- `www/vibetube.art` folder is missing while it is listed as part of planned scope.
 - No existing deploy scaffolding (`workers/`, `wrangler.toml`) is present; conventions must be established now.
 - Without early naming rules for flat subpages, route drift across domains may become inconsistent.
