@@ -1,4 +1,6 @@
-# Day 02
+# Art + Science 
+
+## Day 02
 
 **Evidence of the Non-Existent**
 
@@ -22,9 +24,8 @@ Your submission should make clear how this phenomenon was observed, measured, in
 
 We are not looking for fantasy illustration, but for a rigorous construction. Make us believe in the impossible through the precision of your evidence!
 
-+++
 
-+++ ## ref
+#### References
 
 [https://birdsarentreal.com/?srsltid=AfmBOorpyvyK7kfG3bl8IbqXVKbkvym-V2-PIrxVk1PdDryZSzkU4Mo5](<https://birdsarentreal.com/?srsltid=AfmBOorpyvyK7kfG3bl8IbqXVKbkvym-V2-PIrxVk1PdDryZSzkU4Mo5>)
 
