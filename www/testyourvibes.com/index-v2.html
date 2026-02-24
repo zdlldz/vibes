@@ -54,6 +54,16 @@
     </article>
   </section>
 
+  <!-- NEWS TICKER -->
+  <div class="news-ticker">
+    <span class="ticker-label">🔴 LIVE</span>
+    <div class="ticker-track">
+      <div class="ticker-belt" id="ticker-belt">
+        <span class="ticker-seg">🔴 BREAKING: Geneva vibe index hits 52-week low amid unprecedented paperwork surge &nbsp;•&nbsp; ⚡ TRENDING: Rave at 3AM clinically confirmed highest-VIBE environment — full data at arxivz.org &nbsp;•&nbsp; 📊 1,247 people testing their VIBE RIGHT NOW &nbsp;•&nbsp; 🚨 ALERT: Your zip code's entropy is estimated in the 94th percentile &nbsp;•&nbsp; 🔬 NEW STUDY: Government waiting rooms suppress B-index by 0.73 points (p &lt; 0.001) &nbsp;•&nbsp; 💡 Reduce bureaucracy by 40% — dermatologists hate this one weird trick &nbsp;•&nbsp; 🏆 TOP SCORER: Lausanne user hit ICON tier (0.921) — third highest ever recorded &nbsp;•&nbsp; ⚠️ WARNING: Reading this ticker may affect your Entropy score &nbsp;•&nbsp; 📈 VIBE MARKETS: V +2.3%, I −0.8%, B +5.1%, E flat &nbsp;•&nbsp; 🌡️ VIBEMETER™ Pro v2.1.4 available — patch notes: improved funeral detection algorithm &nbsp;•&nbsp;</span>
+      </div>
+    </div>
+  </div>
+
   <!-- confetti container -->
   <div id="confetti-field" aria-hidden="true"></div>
 
@@ -64,15 +74,17 @@
 
     <!-- LEFT AD COLUMN (unchanged) -->
     <aside class="ad-stack">
+      <p class="sidebar-ad-header">📢 Sponsored Results</p>
       <article class="landscape-ad-lite">
         <img src="./media/shot-official-04.webp" alt="Landscape ad for instant score export">
         <div><p class="ad-tag">Sponsored</p><p>Download your VIBE receipt as a legal document.</p></div>
       </article>
       <article class="ad-card">
         <p class="ad-tag">Sponsored</p>
+        <span class="ad-hot">🔥 HOT</span>
         <img src="./media/shot-news-01.webp" alt="Promo still for premium vibe report">
         <h3>UNLOCK: Your Hidden Vibe Aura</h3>
-        <p>Only 9,841 people left today.</p>
+        <p>Only 9,841 <strong>9,716</strong> people left today.</p>
         <button type="button">Reveal My Aura</button>
       </article>
       <article class="ad-card ad-video">
@@ -122,6 +134,7 @@
       <div class="panel-intro">
         <h2>Calibrate Your VIBE</h2>
         <p>Set all four dimensions, then lock in your score.</p>
+        <div class="live-count-badge"><span class="live-dot"></span><span id="live-count-num">1,247</span> people calibrating right now</div>
       </div>
 
       <!-- FORM -->
@@ -165,6 +178,15 @@
             <button type="button" data-val="10">🪽 No Clipboard</button>
           </div>
         </label>
+
+        <article class="mid-form-ad">
+          <p class="ad-tag">Sponsored</p>
+          <img src="./media/shot-news-02b.webp" alt="">
+          <div class="mid-form-ad-body">
+            <p>Is your B-Index dragging down your love life? 9 out of 10 entropy researchers say yes.</p>
+            <button type="button">Get My Free B-Index Audit →</button>
+          </div>
+        </article>
 
         <label class="slider-label">
           <span class="label-text">🌀 Entropy — Chaotic drift</span>
@@ -214,8 +236,10 @@
 
     <!-- RIGHT AD COLUMN (unchanged) -->
     <aside class="ad-stack">
+      <p class="sidebar-ad-header">📢 Sponsored Results</p>
       <article class="ad-card">
         <p class="ad-tag">Sponsored</p>
+        <span class="ad-hot">🔥 VIRAL</span>
         <img src="./media/shot-news-02b.webp" alt="Promo still for celebrity vibe list">
         <h3>Celeb Vibe Rankings 2026</h3>
         <p>#11 will emotionally surprise you.</p>
@@ -227,6 +251,7 @@
           <source src="https://edge.vibetube.art/src/05-this-is-reali_sora-2-pro_video_699d67a0d5148190b2ed265f927a2ebb05a8e5e34cd4944b.mp4" type="video/mp4">
         </video>
         <h3>Relationship Vibe Compatibility</h3>
+        <div class="ad-countdown">⏳ Offer expires: <span id="countdown-time">14:57</span></div>
         <p>Compare scores with your situationship.</p>
         <button type="button">Start Matching</button>
       </article>
@@ -645,6 +670,158 @@
       .result-actions { grid-template-columns: 1fr; }
     }
 
+    /* === NEWS TICKER === */
+    .news-ticker {
+      display: flex; align-items: center;
+      background: #1a0030; color: #fff;
+      overflow: hidden; height: 34px; font-size: 12px; font-weight: 600;
+    }
+    .ticker-label {
+      flex-shrink: 0; background: var(--accent); color: #fff;
+      padding: 0 13px; height: 100%; display: flex; align-items: center;
+      font-weight: 900; font-size: 11px; letter-spacing: .07em; white-space: nowrap;
+    }
+    .ticker-track { flex: 1; overflow: hidden; height: 100%; display: flex; align-items: center; }
+    .ticker-belt { display: inline-flex; white-space: nowrap; animation: ticker-scroll 40s linear infinite; }
+    .ticker-seg { display: inline; white-space: nowrap; padding-right: 60px; }
+    @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* === LIVE COUNT BADGE === */
+    .live-count-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11.5px; font-weight: 700; color: var(--muted); margin-top: 5px;
+    }
+    .live-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: #ef4444; flex-shrink: 0;
+      animation: dot-blink 1.4s ease-in-out infinite;
+    }
+    @keyframes dot-blink { 0%, 100% { opacity: 1; } 50% { opacity: .18; } }
+
+    /* === SIDEBAR HEADER === */
+    .sidebar-ad-header {
+      font-size: 10px; font-weight: 900; text-transform: uppercase;
+      letter-spacing: .09em; color: var(--muted); margin: 0 0 2px;
+    }
+
+    /* === MID-FORM AD === */
+    .mid-form-ad {
+      display: grid; grid-template-columns: 86px 1fr; gap: 10px; align-items: center;
+      background: #fffef3; border: 1px solid #ffe599; border-radius: 10px; padding: 10px;
+      box-shadow: 0 3px 10px rgba(245,158,11,.18);
+    }
+    .mid-form-ad .ad-tag { font-size: 10px; color: #b45309; margin-bottom: 3px; }
+    .mid-form-ad img { width: 100%; min-height: 60px; object-fit: cover; border-radius: 7px; border: 1px solid #ffe599; display: block; }
+    .mid-form-ad-body p { font-size: 12px; color: #5a3e00; font-weight: 600; line-height: 1.35; margin-bottom: 7px; }
+    .mid-form-ad-body button {
+      font-size: 11.5px; padding: 7px 12px;
+      background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 999px;
+    }
+
+    /* === AD HOT BADGE === */
+    .ad-hot {
+      display: inline-block; font-size: 10px; font-weight: 900;
+      background: linear-gradient(135deg, #ef4444, #f97316);
+      color: #fff; padding: 2px 8px; border-radius: 999px;
+      letter-spacing: .04em; margin-bottom: 5px;
+      animation: hot-pulse .85s ease-in-out infinite alternate;
+    }
+    @keyframes hot-pulse { from { opacity: 1; } to { opacity: .65; } }
+
+    /* === COUNTDOWN TIMER === */
+    .ad-countdown {
+      font-size: 11.5px; font-weight: 800; color: #dc2626; margin-bottom: 7px;
+    }
+
+    /* === STICKY BOTTOM BAR === */
+    .sticky-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 8800;
+      background: linear-gradient(135deg, #1a0030, #2d0066);
+      color: #fff; padding: 9px 16px 9px;
+      box-shadow: 0 -4px 22px rgba(127,57,251,.5);
+      border-top: 1px solid rgba(127,57,251,.45);
+    }
+    .sticky-bar.hidden { display: none; }
+    .sticky-close {
+      position: absolute; top: 8px; right: 10px;
+      background: rgba(255,255,255,.18); color: #fff;
+      padding: 2px 9px; font-size: 13px; border-radius: 999px; line-height: 1.4;
+    }
+    .sticky-inner {
+      display: flex; align-items: center; gap: 12px;
+      width: min(1240px, 94vw); margin: 0 auto;
+    }
+    .sticky-img { width: 50px; height: 34px; object-fit: cover; border-radius: 6px; flex-shrink: 0; }
+    .sticky-text { flex: 1; font-size: 12.5px; line-height: 1.3; display: flex; flex-direction: column; gap: 2px; }
+    .sticky-text strong { font-size: 13px; color: #fde68a; }
+    .sticky-text span { color: rgba(255,255,255,.8); }
+    .sticky-cta {
+      flex-shrink: 0; padding: 9px 18px; font-size: 13px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-radius: 999px; white-space: nowrap;
+    }
+
+    /* === MODAL === */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 9600;
+      background: rgba(26,0,48,.78); backdrop-filter: blur(3px);
+      display: flex; align-items: center; justify-content: center; padding: 16px;
+    }
+    .modal-overlay[hidden] { display: none; }
+    .modal-box {
+      background: #fff; border-radius: 20px; padding: 24px 22px;
+      max-width: 400px; width: 100%; position: relative; display: grid; gap: 12px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.48);
+      animation: modal-in .35s cubic-bezier(.2,0,.2,1) both;
+    }
+    @keyframes modal-in {
+      from { transform: scale(.9) translateY(20px); opacity: 0; }
+      to   { transform: scale(1) translateY(0);     opacity: 1; }
+    }
+    .modal-close {
+      position: absolute; top: 12px; right: 12px;
+      background: #f3f4f6; color: #374151; padding: 4px 10px;
+      border-radius: 999px; font-size: 14px; line-height: 1.4;
+    }
+    .modal-hot {
+      font-size: 11px; font-weight: 900; letter-spacing: .07em; color: #fff;
+      background: linear-gradient(135deg, #ef4444, #f97316);
+      display: inline-flex; padding: 3px 12px; border-radius: 999px;
+      align-self: flex-start; animation: hot-pulse .85s ease-in-out infinite alternate;
+    }
+    .modal-img { width: 100%; height: 130px; object-fit: cover; border-radius: 12px; border: 1px solid #e5e7eb; }
+    .modal-h2 { font-size: 20px; font-weight: 900; line-height: 1.2; color: #1a0030; margin: 0; }
+    .modal-p { font-size: 13.5px; color: #4b5563; line-height: 1.5; margin: 0; }
+    .modal-urgency { font-size: 13px; color: #dc2626; background: #fef2f2; border-radius: 8px; padding: 8px 12px; margin: 0; }
+    .modal-cta {
+      width: 100%; padding: 14px; font-size: 15px;
+      background: linear-gradient(135deg, #1a0030, var(--accent-2) 55%, var(--accent));
+      border-radius: 12px;
+    }
+    .modal-skip {
+      background: none; color: #9ca3af; font-size: 12px; font-weight: 600;
+      padding: 6px; border-radius: 0; box-shadow: none; text-decoration: underline;
+    }
+    .modal-skip:hover { transform: none; box-shadow: none; color: #6b7280; }
+
+    /* === SOCIAL PROOF TOASTS === */
+    .toast-container {
+      position: fixed; bottom: 72px; left: 14px; z-index: 8500;
+      display: grid; gap: 8px; pointer-events: none;
+    }
+    .toast {
+      background: #fff; border-radius: 12px; padding: 10px 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.2); font-size: 12.5px; line-height: 1.4;
+      color: #1a0030; min-width: 210px; max-width: 270px;
+      border-left: 3px solid var(--accent);
+      animation: toast-in .34s cubic-bezier(.2,0,.2,1) both;
+    }
+    .toast.toast-exit { animation: toast-out .34s cubic-bezier(.2,0,.2,1) forwards; }
+    @keyframes toast-in  { from { transform: translateX(-110%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    @keyframes toast-out { from { transform: translateX(0); opacity: 1; } to { transform: translateX(-110%); opacity: 0; } }
+
+    /* body pad for sticky bar */
+    body { padding-bottom: 66px; }
+
     /* === DISCLAIMER CSS (verbatim from source) === */
     /* vibe-disclaimer:start */
     .vibe-disclaimer-banner { position: relative; z-index: 9999; margin: 0; padding: 12px 12px; border-bottom: 1px solid #bcc8da; background: #e6ebf4; color: #1f2a3a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif; font-size: 12px; line-height: 1.35; letter-spacing: 0.01em; box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.55); }
@@ -930,8 +1107,125 @@
       console.info('[vibes][testyourvibes] score', { ...vals, numeric, tier: tier.id });
     });
 
+    // === TICKER: duplicate segment for seamless loop ===
+    (function () {
+      const belt = document.getElementById('ticker-belt');
+      const seg  = belt && belt.querySelector('.ticker-seg');
+      if (!seg) return;
+      const clone = seg.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      belt.appendChild(clone);
+    })();
+
+    // === LIVE USER COUNT — drifts gently ===
+    (function () {
+      const el = document.getElementById('live-count-num');
+      if (!el) return;
+      let n = 1247;
+      el.textContent = n.toLocaleString('en-US');
+      setInterval(() => {
+        n = Math.max(1160, Math.min(1380, n + Math.floor(Math.random() * 7) - 3));
+        el.textContent = n.toLocaleString('en-US');
+      }, 3800);
+    })();
+
+    // === COUNTDOWN TIMER ===
+    (function () {
+      const el = document.getElementById('countdown-time');
+      if (!el) return;
+      let secs = 14 * 60 + 57;
+      setInterval(() => {
+        secs = Math.max(0, secs - 1);
+        const m = Math.floor(secs / 60), s = secs % 60;
+        el.textContent = m + ':' + String(s).padStart(2, '0');
+      }, 1000);
+    })();
+
+    // === STICKY BAR dismiss ===
+    document.getElementById('sticky-close').addEventListener('click', () => {
+      document.getElementById('sticky-bar').classList.add('hidden');
+    });
+
+    // === POP-UP MODAL ===
+    (function () {
+      const overlay = document.getElementById('modal-overlay');
+      if (!overlay) return;
+      function dismiss() { overlay.setAttribute('hidden', ''); }
+      setTimeout(() => overlay.removeAttribute('hidden'), 4500);
+      document.getElementById('modal-close').addEventListener('click', dismiss);
+      document.getElementById('modal-cta').addEventListener('click', dismiss);
+      document.getElementById('modal-skip').addEventListener('click', dismiss);
+      overlay.addEventListener('click', e => { if (e.target === overlay) dismiss(); });
+    })();
+
+    // === SOCIAL PROOF TOASTS ===
+    (function () {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+      const USERS = [
+        { name: 'Marguerite K.', city: 'Lyon',       score: 0.84, tier: '📈 TRENDING' },
+        { name: 'Tobias W.',     city: 'Berlin',     score: 0.71, tier: '📈 TRENDING' },
+        { name: 'Priya R.',      city: 'London',     score: 0.91, tier: '✨ ICON ✨'  },
+        { name: 'Søren H.',      city: 'Copenhagen', score: 0.39, tier: '⚠️ CHAOTIC'  },
+        { name: 'Amara D.',      city: 'Nairobi',    score: 0.66, tier: '📈 TRENDING' },
+        { name: 'Jake P.',       city: 'Portland',   score: 0.19, tier: '🚨 CRITICAL' },
+        { name: 'Chloé M.',      city: 'Geneva',     score: 0.88, tier: '✨ ICON ✨'  },
+        { name: 'Ren Y.',        city: 'Osaka',      score: 0.79, tier: '📈 TRENDING' },
+        { name: 'Elena V.',      city: 'Barcelona',  score: 0.93, tier: '✨ ICON ✨'  },
+        { name: 'Noa T.',        city: 'Tel Aviv',   score: 0.57, tier: '⚠️ CHAOTIC'  },
+        { name: 'Dmitri K.',     city: 'Tallinn',    score: 0.44, tier: '⚠️ CHAOTIC'  },
+        { name: 'Fatima A.',     city: 'Casablanca', score: 0.82, tier: '✨ ICON ✨'  },
+      ];
+      let idx = Math.floor(Math.random() * USERS.length);
+      function showToast() {
+        const u  = USERS[idx % USERS.length]; idx++;
+        const el = document.createElement('div');
+        el.className = 'toast';
+        el.innerHTML = `<strong>${u.name}</strong> from ${u.city}<br>Just scored <strong>${u.score.toFixed(2)}</strong> ${u.tier}`;
+        container.appendChild(el);
+        setTimeout(() => {
+          el.classList.add('toast-exit');
+          setTimeout(() => el.remove(), 380);
+        }, 4200);
+      }
+      function scheduleToast() {
+        setTimeout(() => { showToast(); scheduleToast(); }, 9000 + Math.random() * 4000);
+      }
+      setTimeout(() => { showToast(); scheduleToast(); }, 6500);
+    })();
+
     console.info('[vibes][testyourvibes] index rendered');
   </script>
+
+  <!-- TOAST CONTAINER (social proof) -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="false"></div>
+
+  <!-- STICKY BOTTOM AD -->
+  <div class="sticky-bar" id="sticky-bar">
+    <button class="sticky-close" id="sticky-close" aria-label="Close ad">✕</button>
+    <div class="sticky-inner">
+      <img src="./media/shot-official-04.webp" class="sticky-img" alt="">
+      <div class="sticky-text">
+        <strong>📣 YOUR ZIP CODE'S VIBE IS DECLINING</strong>
+        <span>73% of users in your region scored below 0.45 last week. Get your certified VIBE receipt now.</span>
+      </div>
+      <button type="button" class="sticky-cta">Get My Receipt →</button>
+    </div>
+  </div>
+
+  <!-- POP-UP MODAL -->
+  <div class="modal-overlay" id="modal-overlay" hidden aria-modal="true" role="dialog">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      <div class="modal-hot">🔥 EXCLUSIVE — LIMITED TIME</div>
+      <img src="./media/shot-news-01.webp" class="modal-img" alt="">
+      <h2 class="modal-h2">Your VIBE Analysis Is 94% Complete</h2>
+      <p class="modal-p">Unlock your full VIBE Report including sub-index breakdown, regional comparison, and a certified PDF receipt valid in 14 jurisdictions.</p>
+      <p class="modal-urgency"><strong>⏰ Only 3 slots remaining at this price point.</strong></p>
+      <button type="button" class="modal-cta" id="modal-cta">🔓 Unlock My Full Report — FREE</button>
+      <button type="button" class="modal-skip" id="modal-skip">No thanks, I'll stay uninformed</button>
+    </div>
+  </div>
 
   <!-- vibe-link-resolver:start -->
   <script>
