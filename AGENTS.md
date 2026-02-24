@@ -1,5 +1,169 @@
 # AGENTS.md
 
+## Mission
+
+Build a satirical, high-believability web ecosystem that "proves" the fictional existence of **VIBE**.
+
+`VIBE` = **V**ibrations + **I**ntimacy + **B**ureaucracy + **E**ntropy
+
+## Tone
+
+- Deadpan, playful, and plausibly scientific
+- Confident presentation with absurd implications
+- Fabricated claims, rigorous execution
+
+## Canonical Domains
+
+1. `arxivz.org` (mimic: arXiv)
+2. `nytimez.art` (mimic: NYTimes)
+3. `testyourvibes.com` (utility/testing layer)
+4. `vibe-con.org` (conference layer)
+5. `vibe-standards.org` (standards layer)
+6. `vibetube.art` (mimic: YouTube)
+
+## Technical Contract (Non-Negotiable)
+
+1. Every site ships as plain HTML.
+2. Every site has:
+   - `index.html`
+   - flat subpages (`*.html`)
+3. CSS/JS stay page-local:
+   - inline `<style>`
+   - inline `<script>` near end of `<body>`
+4. One Cloudflare Worker config per domain.
+5. All domains are managed inside this single monorepo.
+
+## Delivery Paths
+
+- Site files: `www/<domain>/`
+- Worker files: `workers/<domain>/`
+- Docs and audit trail: `docs/`
+
+Note: `vibetube.art` currently deploys from `workers/vibetube.com/` and `www/vibetube.com/` path names for continuity. DNS/routes are configured for `.art`.
+
+## Documentation Rules
+
+1. Material work must be tracked under `docs/release/[version]/[category]/[slug]/`.
+2. Use date fallback IDs when no ticket ID exists.
+3. Keep process docs updated during execution.
+4. Reconcile documented intent with implemented behavior before handoff.
+
+## Realism Pass Guidance (v2+)
+
+1. Mimic front-end rhythm first:
+   - masthead/header
+   - nav/utility bars
+   - hierarchy and content rails
+   - card/feed structure
+2. Mimic interaction affordances second:
+   - search shells
+   - metadata placement
+   - article/watch layouts
+3. If source sites block fetch (e.g., 403), use well-known front-end conventions and document assumptions.
+
+## Placeholder Media Policy
+
+1. Include explicit placeholders for image/video/chart modules.
+2. Label placeholders clearly for deterministic later swaps.
+3. Keep placeholders styled in-page (no external dependency required).
+
+## Quality Bar Before PR
+
+- Route-to-file parity is correct for all workers.
+- No broken local links.
+- All HTML files include doctype, inline style, and inline script.
+- Core docs (`README.md`, `AGENTS.md`) are current.
+# AGENTS.md
+
+## Mission
+
+Build a satirical, evidence-rich web ecosystem that convinces viewers the fictional phenomenon of **VIBE** is real.
+
+This project is intentionally playful, but execution quality should be rigorous.
+
+## Project Definition
+
+`VIBE` is defined as:
+
+- **V**: Vibrations
+- **I**: Intimacy
+- **B**: Bureaucracy
+- **E**: Entropy
+
+## Voice and Tone
+
+- Keep the work witty, deadpan, and plausibly "scientific."
+- Treat all claims as fabricated narrative artifacts.
+- Prefer confidence in presentation with absurdity in implication.
+
+## Domains and Mimic Targets
+
+Build and maintain these six sites inside this monorepo:
+
+1. `arxivz.org` (mimic: `arxiv.org`)
+2. `nytimez.art` (mimic: `nytimes.com`)
+3. `testyourvibes.com` (utility/product layer)
+4. `vibe-con.org` (conference/institution layer)
+5. `vibe-standards.org` (standards/compliance layer)
+6. `vibetube.com` (mimic: `youtube.com`)
+
+## Non-Negotiable Technical Contract
+
+1. Each domain ships as plain HTML.
+2. Each domain has:
+   - `index.html`
+   - flat subpages (`*.html`, no framework runtime required)
+3. CSS and JS stay page-local:
+   - inline `<style>`
+   - inline `<script>` near end of `<body>`
+4. Each domain has one standalone Cloudflare Worker config.
+5. All domains are managed from this single repository.
+
+## Delivery Model
+
+- Web pages: `www/<domain>/`
+- Worker configs: `workers/<domain>/`
+- Docs and audit trail: `docs/`
+
+## Documentation Rules
+
+1. Material work must be tracked in `docs/release/[version]/[category]/[slug]/`.
+2. Use date fallback IDs when no ticket ID is provided.
+3. Keep process docs updated during implementation, not after.
+4. Reconcile documented intent with implemented reality before handoff.
+
+## Realism Pass Rules (v2+)
+
+For mimic domains, prioritize **front-end feel**:
+
+1. Match layout rhythm first:
+   - masthead/header
+   - nav/utility bars
+   - content hierarchy
+   - rail/card patterns
+2. Match interaction affordances second:
+   - search modules
+   - metadata placement
+   - watch/article shells
+3. If upstream fetch is blocked (for example, 403), use known platform conventions and document assumptions.
+
+## Placeholder Media Policy
+
+Until final creative assets are ready:
+
+1. Include explicit placeholders for image/video/chart modules.
+2. Label each placeholder clearly for deterministic replacement.
+3. Keep placeholder styling native to the page design system.
+
+## Quality Bar Before PR
+
+- Route-to-file parity is correct for all workers.
+- No broken local links.
+- No missing doctype/style/script in HTML pages.
+- Docs status is current and internally consistent.
+- Root docs (`README.md`, `AGENTS.md`) reflect the current state.
+# AGENTS.md
+
 ## TLDR
 
 To prove the existence of **vibes** (or, rather, VIBE's).

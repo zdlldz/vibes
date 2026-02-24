@@ -1,12 +1,11 @@
 name = "vibes-vibe-standards-org"
 main = "worker.js"
 compatibility_date = "2026-02-24"
+routes = [
+  { pattern = "vibe-standards.org/*", zone_name = "vibe-standards.org" },
+  { pattern = "www.vibe-standards.org/*", zone_name = "vibe-standards.org" }
+]
 
 [assets]
 directory = "../../www/vibe-standards.org"
 binding = "ASSETS"
-
-# DNS/deployment directive:
-# add route + zone mapping after Cloudflare DNS is finalized.
-# Example:
-# routes = [{ pattern = "vibe-standards.org/*", zone_name = "vibe-standards.org" }]
