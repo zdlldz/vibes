@@ -71,3 +71,34 @@ The v0.1 project will consist of several layers of web-based media, conveyed as 
 5. vibe-standards.org
 6. vibetube.com
    1. mimic youtube.com
+
+---
+
+## Technical Delivery Contract (v0.1)
+
+These constraints are non-negotiable for the v0.1 deliverable:
+
+1. Every site must ship as plain HTML pages.
+2. Each site uses `index.html` as its entry point.
+3. Subpages must be flat HTML files (no framework runtime required to view).
+4. CSS and JS required by a page should be inlined in that page (styles in `<style>`, scripts in `<script>` at the end of `<body>`).
+5. Each domain should be deployable as a simple, standalone Cloudflare Worker.
+6. All domains are developed and maintained in this single monorepo.
+
+## Monorepo Working Model
+
+The project should behave like a small "network of belief" where each domain stands on its own, but links to sibling domains as evidence.
+
+- Keep each domain isolated in its own folder.
+- Keep shared references and canonical project context in docs.
+- Avoid over-engineering build systems when static HTML can do the job.
+- Prefer many small, auditable edits over large untraceable jumps.
+
+## Documentation and Traceability Rules
+
+Use the docs framework in `docs/` as part of the implementation itself:
+
+1. New material work starts with a task folder under `docs/release/[version]/[category]/[slug]/`.
+2. Use date fallback IDs when no tracker ID is available.
+3. Keep the process checklist current while work is happening.
+4. Reconcile claimed changes against actual implementation before closeout.
