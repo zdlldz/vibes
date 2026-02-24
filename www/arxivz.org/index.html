@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>arxivz.org e-Print archive</title>
+  <meta name="description" content="arXivz is a satirical archive of VIBE-related preprints and evidence artifacts.">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="./index.html">arxivz.org</a></h1>
+    <p class="tagline">e-Print archive for VIBE studies</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Welcome to arxivz</h2>
+      <p>
+        arxivz.org is an open access archive for speculative, reproducible, and
+        very serious investigations into the measurable existence of VIBE values.
+      </p>
+    </section>
+
+    <section aria-labelledby="recent-title">
+      <h2 id="recent-title">Recent submissions</h2>
+      <ul class="paper-list">
+        <li>
+          <a href="./abs-2506-10953.html">2506.10953</a>
+          <span class="paper-title">Toward a Unified Thermodynamic Model of VIBE</span>
+          <span class="paper-meta">[submitted on 24 Feb 2026]</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      This archive is part of the VIBE proof ecosystem.
+      <a href="https://testyourvibes.com">Test Your VIBE score</a>.
+    </p>
+  </footer>
+
+  <style>
+    :root {
+      --ink: #14213d;
+      --muted: #4d5b76;
+      --bg: #f4f6fa;
+      --paper: #ffffff;
+      --line: #d8deea;
+      --link: #0f4aa8;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.45;
+    }
+    .site-header, main, footer {
+      width: min(980px, 92vw);
+      margin: 0 auto;
+    }
+    .site-header {
+      padding: 24px 0 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .site-header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.01em;
+    }
+    .site-header a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .tagline {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    main {
+      background: var(--paper);
+      margin-top: 18px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    .paper-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .paper-list li {
+      border-top: 1px solid var(--line);
+      padding: 12px 0;
+      display: grid;
+      gap: 2px;
+    }
+    .paper-list li:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+    .paper-title {
+      font-weight: 600;
+    }
+    .paper-meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    a {
+      color: var(--link);
+    }
+    footer {
+      padding: 16px 0 28px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+  </style>
+  <script>
+    // Canonical log line for lightweight debugging during content QA.
+    console.info("[vibes][arxivz] index rendered");
+  </script>
+</body>
+</html>

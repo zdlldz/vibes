@@ -1,0 +1,12 @@
+name = "vibes-nytimez-art"
+main = "worker.js"
+compatibility_date = "2026-02-24"
+
+[assets]
+directory = "../../www/nytimez.art"
+binding = "ASSETS"
+
+# DNS/deployment directive:
+# add route + zone mapping after Cloudflare DNS is finalized.
+# Example:
+# routes = [{ pattern = "nytimez.art/*", zone_name = "nytimez.art" }]

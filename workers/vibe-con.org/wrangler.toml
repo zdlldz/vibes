@@ -1,0 +1,12 @@
+name = "vibes-vibe-con-org"
+main = "worker.js"
+compatibility_date = "2026-02-24"
+
+[assets]
+directory = "../../www/vibe-con.org"
+binding = "ASSETS"
+
+# DNS/deployment directive:
+# add route + zone mapping after Cloudflare DNS is finalized.
+# Example:
+# routes = [{ pattern = "vibe-con.org/*", zone_name = "vibe-con.org" }]

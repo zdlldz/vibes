@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VIBE Standards Council</title>
+  <meta name="description" content="Draft standards and compliance guidance for VIBE measurement systems.">
+</head>
+<body>
+  <header class="header">
+    <p class="org">VIBE Standards Council</p>
+    <h1>Drafting Trustworthy VIBE Protocols</h1>
+    <p class="subtitle">Open standards for interoperable vibe measurement and reporting.</p>
+  </header>
+
+  <main class="layout">
+    <section>
+      <h2>Mission</h2>
+      <p>
+        We define practical guidance so VIBE instruments can exchange data across
+        labs, events, and lifestyle platforms without losing ceremonial rigor.
+      </p>
+    </section>
+
+    <section>
+      <h2>Current Draft</h2>
+      <p>
+        VSC-0001 introduces baseline input ranges and naming conventions for
+        Vibrations, Intimacy, Bureaucracy, and Entropy.
+      </p>
+      <p><a href="./vsc-0001.html">Read VSC-0001 Draft</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Background research:
+      <a href="https://arxivz.org/abs/2506.10953">arxivz preprint 2506.10953</a>
+    </p>
+  </footer>
+
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --ink: #172033;
+      --muted: #51607f;
+      --line: #d4ddee;
+      --card: #fff;
+      --accent: #1f4eb1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    .header, .layout, footer {
+      width: min(920px, 92vw);
+      margin: 0 auto;
+    }
+    .header {
+      padding: 30px 0 14px;
+      text-align: center;
+    }
+    .org {
+      margin: 0;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 8px 0;
+      font-size: 2rem;
+      line-height: 1.22;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+    }
+    .layout {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+    }
+    h2 {
+      margin: 0 0 6px;
+      font-size: 1.25rem;
+    }
+    p {
+      margin: 0 0 8px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    footer {
+      padding: 14px 0 24px;
+      font-size: 0.92rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+  <script>
+    // Canonical log line for lightweight debugging during content QA.
+    console.info("[vibes][vibe-standards] index rendered");
+  </script>
+</body>
+</html>

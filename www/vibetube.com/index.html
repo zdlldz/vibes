@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VibeTube</title>
+  <meta name="description" content="VibeTube streams observational evidence, interviews, and explainers from the VIBE ecosystem.">
+</head>
+<body>
+  <header class="topbar">
+    <h1>VibeTube</h1>
+    <p>Broadcasting the measurable mood of civilization.</p>
+  </header>
+
+  <main class="grid">
+    <article class="video-card">
+      <h2>
+        <a href="./watch-vibecon-keynote.html">
+          VIBE-CON Keynote: From Hunch to Histogram (Full Session)
+        </a>
+      </h2>
+      <p class="meta">Uploaded Feb 24, 2026 · 32:18 · 42,011 views</p>
+      <p>
+        Watch the opening address that reframed vibes as an interoperable
+        scientific commons with standards-compliant emotional telemetry.
+      </p>
+    </article>
+
+    <aside class="sidebar">
+      <h3>Trending channels</h3>
+      <ul>
+        <li>Applied Chill Labs</li>
+        <li>The Nytimez Style Desk</li>
+        <li>VIBE Standards Council</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Verify claims at <a href="https://vibe-standards.org">vibe-standards.org</a>.</p>
+  </footer>
+
+  <style>
+    :root {
+      --bg: #0b0b0d;
+      --panel: #17171c;
+      --line: #2a2a34;
+      --ink: #f1f1f4;
+      --muted: #a1a1b3;
+      --accent: #ff2d7a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.45;
+    }
+    .topbar, .grid, footer {
+      width: min(1020px, 94vw);
+      margin: 0 auto;
+    }
+    .topbar {
+      padding: 20px 0 12px;
+    }
+    .topbar h1 {
+      margin: 0 0 4px;
+      font-size: 2rem;
+      letter-spacing: 0.01em;
+    }
+    .topbar p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 12px;
+    }
+    .video-card, .sidebar {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .video-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0 0 8px;
+    }
+    .sidebar h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+    .sidebar ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .sidebar li {
+      margin-bottom: 6px;
+    }
+    a {
+      color: var(--accent);
+    }
+    footer {
+      padding: 14px 0 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    @media (max-width: 820px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <script>
+    // Canonical log line for lightweight debugging during content QA.
+    console.info("[vibes][vibetube] index rendered");
+  </script>
+</body>
+</html>
