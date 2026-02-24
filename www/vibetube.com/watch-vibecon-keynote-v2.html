@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watch: Can Science Measure a Vibe? | VibeTube</title>
+  <meta name="description" content="VibeTube watch page for the Nytimez explainer on the Geneva VIBE dataset.">
+</head>
+<body>
+  <div class="vibe-disclaimer-banner">The site shown below is v0.1, which was submitted for TASK2. Please see the newest work here: <a href="./watch-vibecon-keynote-v2.html">v0.2</a> <span aria-hidden="true">·</span> <a href="https://arxivz.org/index-v2.html" target="_self" rel="noopener">arxivz.org v0.2</a> | <a href="https://nytimez.art/index-v2.html" target="_self" rel="noopener">nytimez.art v0.2</a> | <a href="https://testyourvibes.com/index-v2.html" target="_self" rel="noopener">testyourvibes.com v0.2</a> | <a href="https://vibe-con.org/index-v2.html" target="_self" rel="noopener">vibe-con.org v0.2</a> | <a href="https://vibe-standards.org/index-v2.html" target="_self" rel="noopener">vibe-standards.org v0.2</a> | <a href="https://vibetube.art/index-v2.html" target="_self" rel="noopener">vibetube.art v0.2</a></div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./index-v2.html"><span>Vibe</span>Tube</a>
+      <div class="search-wrap">
+        <input type="search" placeholder="Search">
+        <button>Search</button>
+      </div>
+      <button class="ghost">Sign in</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="primary">
+      <section class="player" aria-label="video-player">
+        <div class="screen">
+          <video controls muted playsinline preload="metadata" poster="./media/vt-thumb-4.webp">
+            <source src="./media/vt-main.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+      <h1>Can Science Measure a Vibe? A Geneva Lab Says Yes.</h1>
+      <p class="meta">42,011 views · Streamed 10 hours ago</p>
+
+      <section class="channel-row">
+        <div>
+          <p class="channel-name">Applied Chill Labs</p>
+          <p class="channel-meta">112K subscribers</p>
+        </div>
+        <button class="subscribe">Subscribe</button>
+      </section>
+
+      <section class="description">
+        <p>
+          Dr. Anita Goodvibe and Prof. Cal I. Bration walk through the VIBE model and the VIBEMETER
+          Mark II, with field clips from dog parks, waiting rooms, and late-night dance floors.
+        </p>
+        <p>
+          Supporting references:
+          <a href="https://vibe-standards.org/index-v2.html">IOVS 1001 excerpt</a> and
+          <a href="https://arxivz.org/abs-2506-10953-v2.html">arxivz preprint</a>.
+        </p>
+      </section>
+    </section>
+
+    <aside class="secondary">
+      <h2>Up next</h2>
+      <article class="next-card">
+        <div class="thumb"><img src="./media/vt-thumb-2.webp" alt="Up next rave footage thumbnail"></div>
+        <div>
+          <h3>Inside the Rave That Scored 0.866</h3>
+          <p>The Nytimez · 11K views</p>
+        </div>
+      </article>
+      <article class="next-card">
+        <div class="thumb"><img src="./media/vt-thumb-3.webp" alt="Up next chart thumbnail"></div>
+        <div>
+          <h3>How Does Your Environment Rank?</h3>
+          <p>Nytimez Graphics Desk · 7.4K views</p>
+        </div>
+      </article>
+    </aside>
+  </main>
+
+  <footer>
+    <a href="./index-v2.html">Back to VibeTube home</a> · About · Press · Contact
+  </footer>
+
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --panel: #181818;
+      --line: #2a2a2a;
+      --ink: #f1f1f1;
+      --muted: #aaaaaa;
+      --accent: #ff0033;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    .topbar-inner {
+      width: min(1400px, 97vw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 0;
+    }
+    .brand {
+      color: #fff;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .brand span {
+      color: var(--accent);
+    }
+    .search-wrap {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      max-width: 640px;
+      width: 100%;
+      justify-self: center;
+    }
+    .search-wrap input {
+      border: 1px solid #3f3f3f;
+      background: #121212;
+      color: var(--ink);
+      padding: 8px 10px;
+      border-radius: 18px 0 0 18px;
+    }
+    .search-wrap button {
+      border: 1px solid #3f3f3f;
+      border-left: 0;
+      background: #222;
+      color: var(--ink);
+      padding: 8px 14px;
+      border-radius: 0 18px 18px 0;
+      cursor: pointer;
+    }
+    .ghost {
+      border: 0;
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+    }
+    .page {
+      width: min(1400px, 97vw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 18px;
+      padding: 16px 0;
+    }
+    h1 {
+      margin: 12px 0 6px;
+      font-size: 22px;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+    .meta {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .player {
+      margin-bottom: 12px;
+    }
+    .screen {
+      min-height: 420px;
+      display: block;
+      border: 1px dashed #454545;
+      background: #1f1f1f;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .screen video {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+    .channel-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0;
+      margin-bottom: 12px;
+    }
+    .channel-name {
+      margin: 0 0 2px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .channel-meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .subscribe {
+      border: 0;
+      background: #fff;
+      color: #000;
+      font-size: 13px;
+      padding: 8px 12px;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+    .description {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .description p {
+      margin: 0 0 8px;
+    }
+    .secondary h2 {
+      margin: 0 0 10px;
+      font-size: 17px;
+    }
+    .next-card {
+      display: grid;
+      grid-template-columns: 168px 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .thumb {
+      border: 1px dashed #4d4d4d;
+      background: #212121;
+      border-radius: 8px;
+      min-height: 94px;
+      display: grid;
+      place-content: center;
+      color: #c6c6c6;
+      font-size: 12px;
+    }
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      min-height: 94px;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+    }
+    .next-card h3 {
+      margin: 0 0 4px;
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+    .next-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 12px 0 18px;
+      font-size: 12px;
+      width: min(1400px, 97vw);
+      margin: 0 auto;
+    }
+    @media (max-width: 1100px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+      .screen {
+        min-height: 320px;
+      }
+    }
+    @media (max-width: 700px) {
+      .topbar-inner {
+        grid-template-columns: 1fr auto;
+      }
+      .search-wrap {
+        grid-column: 1 / -1;
+      }
+      .next-card {
+        grid-template-columns: 1fr;
+      }
+      .thumb {
+        min-height: 150px;
+      }
+    }
+  
+    .vibe-disclaimer-banner {
+      position: relative;
+      z-index: 9999;
+      margin: 0;
+      padding: 7px 12px;
+      border-bottom: 1px solid #d7dbe3;
+      background: #f7f9fc;
+      color: #313846;
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+    }
+    .vibe-disclaimer-banner a {
+      color: #1f4eb1;
+      text-decoration: underline;
+      font-weight: 600;
+      margin: 0 2px;
+    }
+
+  </style>
+  <script>
+    console.info("[vibes][vibetube][v2] watch-vibecon-keynote rendered");
+  </script>
+</body>
+</html>

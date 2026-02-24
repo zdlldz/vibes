@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology | TestYourVibes.com</title>
+  <meta name="description" content="Methodology notes for VIBE score calculation.">
+</head>
+<body>
+  <div class="vibe-disclaimer-banner">The site shown below is v0.1, which was submitted for TASK2. Please see the newest work here: <a href="./methodology-v2.html">v0.2</a> <span aria-hidden="true">·</span> <a href="https://arxivz.org/index-v2.html" target="_self" rel="noopener">arxivz.org v0.2</a> | <a href="https://nytimez.art/index-v2.html" target="_self" rel="noopener">nytimez.art v0.2</a> | <a href="https://testyourvibes.com/index-v2.html" target="_self" rel="noopener">testyourvibes.com v0.2</a> | <a href="https://vibe-con.org/index-v2.html" target="_self" rel="noopener">vibe-con.org v0.2</a> | <a href="https://vibe-standards.org/index-v2.html" target="_self" rel="noopener">vibe-standards.org v0.2</a> | <a href="https://vibetube.art/index-v2.html" target="_self" rel="noopener">vibetube.art v0.2</a></div>
+
+  <header>
+    <p class="crumb"><a href="./index-v2.html">TestYourVibes.com</a> / Methodology</p>
+    <h1>VIBE Scoring Methodology (Aligned to arXivz:2502.VIBE01)</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Inputs (normalised)</h2>
+      <ul>
+        <li>Vibrations (V): 0 to 1</li>
+        <li>Intimacy (I): 0 to 1</li>
+        <li>Bureaucracy Freedom (B): 0 to 1 (higher means less institutional friction)</li>
+        <li>Entropy (E): 0 to 1</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Formula</h2>
+      <p><code>score = (V * I * B * E)^(1/4)</code></p>
+      <p>The calculator clamps all user inputs to the 0-10 range, then divides by 10 to produce the [0, 1] values above.</p>
+    </section>
+
+    <section>
+      <h2>Interpretation Bands</h2>
+      <ul>
+        <li><strong>0.00 - 0.25</strong>: vibes are critically misaligned</li>
+        <li><strong>0.26 - 0.60</strong>: vibes are unstable but salvageable</li>
+        <li><strong>0.61 - 0.80</strong>: vibes are coherent</li>
+        <li><strong>0.81 - 1.00</strong>: vibes are immaculate</li>
+      </ul>
+    </section>
+
+    <section class="media-placeholder">
+      <h2>Evidence Visualization Placeholder</h2>
+      <p>Reserved for calibration scatter plot and confidence interval ribbons.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="./index-v2.html">Back to scanner</a>
+  </footer>
+
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --line: #d9e1eb;
+      --link: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+    header, main, footer {
+      width: min(780px, 92vw);
+      margin: 0 auto;
+    }
+    header {
+      padding: 24px 0 10px;
+    }
+    .crumb {
+      margin: 0 0 8px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      line-height: 1.2;
+    }
+    main {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+    }
+    h2 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+    }
+    p, ul {
+      margin: 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    code {
+      background: #eef2f7;
+      border: 1px solid #dde5f0;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    .media-placeholder {
+      border: 1px dashed #c7d3e5;
+      background: #f5f9ff;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .media-placeholder h2 {
+      margin-bottom: 4px;
+    }
+    footer {
+      padding: 14px 0 24px;
+      font-size: 0.92rem;
+    }
+    a {
+      color: var(--link);
+    }
+    @media (max-width: 640px) {
+      h1 { font-size: 1.6rem; }
+      main { padding: 14px; }
+      .crumb { font-size: 0.84rem; }
+    }
+  
+    .vibe-disclaimer-banner {
+      position: relative;
+      z-index: 9999;
+      margin: 0;
+      padding: 7px 12px;
+      border-bottom: 1px solid #d7dbe3;
+      background: #f7f9fc;
+      color: #313846;
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+    }
+    .vibe-disclaimer-banner a {
+      color: #1f4eb1;
+      text-decoration: underline;
+      font-weight: 600;
+      margin: 0 2px;
+    }
+
+  </style>
+  <script>
+    // Canonical log line for lightweight debugging during content QA.
+    console.info("[vibes][testyourvibes] methodology rendered");
+  </script>
+</body>
+</html>
