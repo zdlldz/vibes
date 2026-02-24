@@ -33,5 +33,6 @@ description: Canonical definitions used across the VIBE project.
 - **VIBE-CON:** Conference-style domain artifact used to establish institutional legitimacy in the evidence ecosystem.
 - **VSC-0001:** Draft baseline standard defining required VIBE data fields and normalization bounds.
 - **VibeTube Watch Route:** A media-style pretty route (`/watch/...`) mapped to a flat HTML watch page.
+- **V2 Mimic Pass:** A realism iteration focused on matching reference site front-end feel without changing deployment architecture.
 - **Process Bundle:** The 10-file release payload that documents intent, implementation, and QA.
 - **Resettlement:** Promotion of reusable knowledge from release docs into `docs/knowledge/`.

@@ -3,7 +3,7 @@ title: "Process: VIBE Monorepo Discovery and Constraints"
 id: 20260224
 category: add
 slug: 20260224-add-vibe-monorepo-discovery
-status: in-progress
+status: done
 icon: lucide:list-checks
 tags: process, implementation, checklist
 author: gpt-5.3-codex
@@ -15,7 +15,7 @@ description: Granular checklist for discovery, architecture alignment, and deliv
 # Phase 2: Implementation
 
 ## Current Focus
-Scaffold the complete docs task payload and all six domain implementation baselines using the `www/domain/index.html` + flat subpage model.
+V2 pass complete across all six domains with docs, QA, and architecture knowledge synchronized for PR handoff.
 
 ## Checklist
 
@@ -45,6 +45,13 @@ Scaffold the complete docs task payload and all six domain implementation baseli
 - [x] Scaffold fifth Cloudflare Worker config for `vibe-standards.org`
 - [x] Create sixth domain baseline pages for `vibetube.com`
 - [x] Scaffold sixth Cloudflare Worker config for `vibetube.com`
+- [x] Visit reference sites and collect front-end style cues for mimic targets (`arxiv`, `youtube`)
+- [x] Apply v2 realism pass to `arxivz.org` pages
+- [x] Apply v2 realism pass to `nytimez.art` pages
+- [x] Apply v2 realism pass to `vibetube.com` pages
+- [x] Apply v2 content pass to `testyourvibes.com` pages
+- [x] Apply v2 content pass to `vibe-con.org` pages
+- [x] Apply v2 content pass to `vibe-standards.org` pages
 
 ### 3. Polish & Cleanup
 - [x] Validate naming conventions for release, category, and slug

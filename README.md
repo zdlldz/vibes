@@ -218,3 +218,26 @@ To prove the existence of *vibes.*
 - Project: [MA: Art + Science](https://linear.app/zdl/project/ma-art-science-fc36f3c92cb4). 
 - Created: 2026-02-24T09:00:17.012Z
 - Updated: 2026-02-24T11:40:46.989Z
+
+---
+
+## Implementation Status (v0.1)
+
+This repository now contains a complete v0.1 baseline for all planned domains, each with:
+
+1. `www/<domain>/index.html`
+2. one flat subpage HTML file
+3. one dedicated Cloudflare Worker config under `workers/<domain>/`
+
+### Domain Rollout
+
+1. `arxivz.org` (mimic pass complete)
+2. `nytimez.art` (mimic pass complete)
+3. `testyourvibes.com` (content pass complete)
+4. `vibe-con.org` (content pass complete)
+5. `vibe-standards.org` (content pass complete)
+6. `vibetube.com` (mimic pass complete)
+
+### Current Media Strategy
+
+All media remains placeholder-only in this tranche. Pages include clearly labeled placeholder regions for future image/video/chart insertion.

@@ -102,3 +102,22 @@ Use the docs framework in `docs/` as part of the implementation itself:
 2. Use date fallback IDs when no tracker ID is available.
 3. Keep the process checklist current while work is happening.
 4. Reconcile claimed changes against actual implementation before closeout.
+
+---
+
+## V2 Mimic Directive
+
+For realism passes (v2+), prioritize matching the *front-end feel* of each reference site:
+
+1. Mimic layout rhythm first (header, nav, content hierarchy, rails, cards, typography scale).
+2. Mimic interaction affordances second (search bars, utility rows, metadata placement, watch/article shells).
+3. Keep content satirical and fabricated, but structurally plausible.
+4. Do not block progress on unavailable upstream content (for example, anti-bot 403 pages); use known front-end patterns and document assumptions.
+
+## Placeholder Media Policy
+
+Until final assets are ready:
+
+1. Include explicit media placeholders in each domain (image/video/chart/diagram blocks).
+2. Label placeholders so later swaps are deterministic and low-risk.
+3. Keep placeholders lightweight and inline with each page's local style system.

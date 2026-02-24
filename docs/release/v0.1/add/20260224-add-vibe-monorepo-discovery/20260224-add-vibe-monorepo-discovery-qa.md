@@ -49,3 +49,11 @@ description: QA evidence for docs scaffolding and initial site/worker baseline.
 - All 6 wrangler configs include `ASSETS` binding and DNS placeholder directives.
 - All 12 HTML files include `<!doctype html>`, one inline `<style>`, and one inline `<script>` block.
 - No linter issues detected for updated files in this pass.
+
+## 6. V2 Front-End Mimic Sweep (Quick)
+- `arxivz.org`: upgraded to arXiv-like utility bar, catalog/listing hierarchy, and abstract metadata table styling.
+- `nytimez.art`: upgraded to NYT-like utility strip, large serif masthead, section nav, lead story layout, and article rhythm.
+- `vibetube.com`: upgraded to YouTube-like sticky header, search bar, sidebar guide, card grid, and watch-page split layout.
+- `testyourvibes.com`, `vibe-con.org`, `vibe-standards.org`: upgraded with richer editorial/spec structure and explicit media placeholders.
+- Media strategy: each domain now contains at least one clearly labeled placeholder block for future image/video insertion.
+- Note: direct NYTimes fetch was blocked by upstream 403; implementation follows known NYT front-end conventions for structure and typography rhythm.

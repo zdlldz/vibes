@@ -23,12 +23,33 @@
 
     <section>
       <h2>2. Required Fields</h2>
-      <ul>
-        <li><strong>vibrations</strong>: 0.0 to 1.0</li>
-        <li><strong>intimacy</strong>: 0.0 to 1.0</li>
-        <li><strong>bureaucracy</strong>: 0.0 to 1.0</li>
-        <li><strong>entropy</strong>: 0.0 to 1.0</li>
-      </ul>
+      <table class="spec-table" aria-label="required-fields">
+        <tr>
+          <th>Field</th>
+          <th>Range</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td>vibrations</td>
+          <td>0.0 to 1.0</td>
+          <td>decimal</td>
+        </tr>
+        <tr>
+          <td>intimacy</td>
+          <td>0.0 to 1.0</td>
+          <td>decimal</td>
+        </tr>
+        <tr>
+          <td>bureaucracy</td>
+          <td>0.0 to 1.0</td>
+          <td>decimal</td>
+        </tr>
+        <tr>
+          <td>entropy</td>
+          <td>0.0 to 1.0</td>
+          <td>decimal</td>
+        </tr>
+      </table>
     </section>
 
     <section>
@@ -37,6 +58,11 @@
         Conforming systems must document measurement conditions and preserve source
         context when publishing composite scores.
       </p>
+    </section>
+
+    <section class="media-placeholder">
+      <h2>Conformance test placeholder</h2>
+      <p>Reserved for schema validator UI screenshot and sample payload walkthrough.</p>
     </section>
   </main>
 
@@ -90,14 +116,33 @@
       margin: 0 0 6px;
       font-size: 1.2rem;
     }
-    p, ul {
+    p {
       margin: 0;
     }
-    ul {
-      padding-left: 20px;
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.97rem;
     }
-    li {
-      margin-bottom: 6px;
+    .spec-table th,
+    .spec-table td {
+      border: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .spec-table th {
+      background: #eef3fc;
+      font-weight: 700;
+    }
+    .media-placeholder {
+      border: 1px dashed #bcc9df;
+      border-radius: 8px;
+      background: #f3f7ff;
+      padding: 12px;
+    }
+    .media-placeholder h2 {
+      margin-bottom: 4px;
     }
     footer {
       padding: 14px 0 24px;

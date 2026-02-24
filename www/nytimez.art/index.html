@@ -7,15 +7,28 @@
   <meta name="description" content="The Nytimez brings rigorous lifestyle reporting to the age of measurable vibes.">
 </head>
 <body>
-  <header class="masthead">
-    <div class="masthead-inner">
-      <p class="kicker">The Nytimez</p>
-      <h1>All the News Thats Fit to Vibe</h1>
-      <p class="meta-line">Tuesday, February 24, 2026</p>
-    </div>
+  <header class="utility wrap">
+    <p>U.S. Edition</p>
+    <p>Tuesday, February 24, 2026</p>
   </header>
 
-  <main class="layout">
+  <header class="masthead wrap">
+    <p class="kicker">The Nytimez</p>
+    <h1>The Nytimez</h1>
+    <p class="slogan">All the News That's Fit to Vibe</p>
+  </header>
+
+  <nav class="section-nav wrap" aria-label="sections">
+    <a href="#">U.S.</a>
+    <a href="#">World</a>
+    <a href="#">Business</a>
+    <a href="#">Style</a>
+    <a href="#">Opinion</a>
+    <a href="#">Science</a>
+    <a href="#">Culture</a>
+  </nav>
+
+  <main class="layout wrap">
     <article class="lead">
       <p class="section">Style</p>
       <h2>
@@ -23,25 +36,46 @@
           The Pickle Index: Why Rental Outfits Correlate with Stronger Group Vibes
         </a>
       </h2>
-      <p>
-        A new lifestyle report suggests that flexible wardrobes reduce social
-        friction and increase shared emotional coherence by as much as 0.23 VIBE points.
+      <p class="deck">
+        A new lifestyle report suggests flexible wardrobes reduce social friction
+        and increase shared emotional coherence by as much as 0.23 VIBE points.
       </p>
+
+      <div class="media-placeholder" aria-label="lead-image-placeholder">
+        <p>Lead image placeholder</p>
+        <p class="small">Editorial photography module reserved for next step.</p>
+      </div>
     </article>
+
+    <aside class="rail">
+      <article>
+        <h3>Most Read</h3>
+        <ol>
+          <li>Can Bureaucracy Be Stylish?</li>
+          <li>A Week of Entropy-Neutral Outfits</li>
+          <li>Inside the New VIBE Compliance Economy</li>
+        </ol>
+      </article>
+      <article>
+        <h3>Editors' Pick</h3>
+        <p>Read the full field report from VIBE-CON in this week's special section.</p>
+      </article>
+    </aside>
   </main>
 
-  <footer class="site-footer">
-    <p>From the VIBE evidence network. Next stop: <a href="https://arxivz.org">arxivz.org</a>.</p>
+  <footer class="site-footer wrap">
+    <p>From the VIBE evidence network.</p>
+    <p><a href="https://arxivz.org">arxivz.org</a> | <a href="https://vibetube.com">vibetube.com</a></p>
   </footer>
 
   <style>
     :root {
       --ink: #111;
-      --muted: #555;
-      --line: #d9d9d9;
-      --bg: #f7f7f5;
+      --muted: #6b6b6b;
+      --line: #d6d6d6;
+      --bg: #fff;
       --paper: #fff;
-      --link: #1a4da1;
+      --link: #1a1a1a;
     }
     * { box-sizing: border-box; }
     body {
@@ -51,64 +85,146 @@
       background: var(--bg);
       line-height: 1.45;
     }
-    .masthead, .layout, .site-footer {
-      width: min(960px, 92vw);
+    .wrap {
+      width: min(1120px, 95vw);
       margin: 0 auto;
     }
-    .masthead {
-      border-bottom: 2px solid #000;
-      background: var(--paper);
-      margin-top: 12px;
+    .utility {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 10px 0 6px;
+      border-bottom: 1px solid var(--line);
     }
-    .masthead-inner {
-      padding: 18px 0 14px;
+    .utility p { margin: 0; }
+    .masthead {
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+      padding: 14px 0 12px;
       text-align: center;
     }
     .kicker {
       margin: 0;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
+      font-size: 11px;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
+      color: var(--muted);
     }
     h1 {
-      margin: 6px 0;
-      font-size: 2rem;
-      font-weight: 600;
+      margin: 2px 0;
+      font-size: 54px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
     }
-    .meta-line {
+    .slogan {
       margin: 0;
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 12px;
+    }
+    .section-nav {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      border-bottom: 2px solid #000;
+      padding: 10px 0;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+    .section-nav a {
+      text-decoration: none;
+      color: #111;
     }
     .layout {
-      margin-top: 18px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      padding: 20px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+      padding-bottom: 16px;
     }
     .section {
       margin: 0;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-size: 0.82rem;
+      font-size: 11px;
     }
     h2 {
-      margin: 8px 0 10px;
-      font-size: 1.55rem;
+      margin: 8px 0;
+      font-size: 33px;
       line-height: 1.25;
-      font-weight: 600;
+      font-weight: 500;
     }
-    a { color: var(--link); }
-    .site-footer {
-      padding: 14px 0 24px;
-      font-size: 0.92rem;
+    h2 a {
+      text-decoration: none;
+      color: var(--link);
+    }
+    .deck {
+      color: #2f2f2f;
+      font-size: 19px;
+      margin: 0 0 14px;
+    }
+    .media-placeholder {
+      border: 1px dashed #b7b7b7;
+      background: #f4f4f4;
+      min-height: 220px;
+      padding: 16px;
+      display: grid;
+      place-content: center;
+      text-align: center;
+    }
+    .media-placeholder p { margin: 0; }
+    .small {
       color: var(--muted);
+      font-size: 12px;
+      margin-top: 6px;
+    }
+    .rail {
+      border-left: 1px solid var(--line);
+      padding-left: 18px;
+    }
+    .rail article {
+      margin-bottom: 18px;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .rail ol {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .rail li {
+      margin-bottom: 8px;
+    }
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 10px 0 18px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .site-footer p {
+      margin: 0 0 4px;
+    }
+    .site-footer a {
+      color: #444;
+    }
+    @media (max-width: 920px) {
+      h1 { font-size: 40px; }
+      h2 { font-size: 26px; }
+      .layout { grid-template-columns: 1fr; }
+      .rail {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-left: 0;
+        padding-top: 12px;
+      }
+      .section-nav {
+        flex-wrap: wrap;
+      }
     }
   </style>
   <script>
-    // Canonical log line for lightweight debugging during content QA.
-    console.info("[vibes][nytimez] index rendered");
+    console.info("[vibes][nytimez][v2] index rendered");
   </script>
 </body>
 </html>

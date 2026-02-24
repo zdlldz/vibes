@@ -3,128 +3,179 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>arxivz.org e-Print archive</title>
-  <meta name="description" content="arXivz is a satirical archive of VIBE-related preprints and evidence artifacts.">
+  <title>arXivz.org e-Print archive</title>
+  <meta name="description" content="arXivz is an open archive for VIBE-adjacent scientific preprints and supporting media evidence.">
 </head>
 <body>
-  <header class="site-header">
-    <h1><a href="./index.html">arxivz.org</a></h1>
-    <p class="tagline">e-Print archive for VIBE studies</p>
+  <div class="topbar">
+    <div class="wrap">
+      <span>arXivz.org</span>
+      <span class="sep">|</span>
+      <a href="./index.html">home</a>
+      <a href="./abs-2506-10953.html">recent submission</a>
+    </div>
+  </div>
+
+  <header class="header wrap">
+    <h1>arXivz.org e-Print archive</h1>
+    <p>
+      arXivz is a free distribution service and open-access archive for papers in
+      vibe science, socio-thermodynamics, and applied intuition engineering.
+      Materials are not peer-reviewed.
+    </p>
   </header>
 
-  <main>
-    <section class="intro">
-      <h2>Welcome to arxivz</h2>
-      <p>
-        arxivz.org is an open access archive for speculative, reproducible, and
-        very serious investigations into the measurable existence of VIBE values.
-      </p>
+  <main class="wrap layout">
+    <section class="left">
+      <h2>Subject search and browse</h2>
+      <ul class="subject-list">
+        <li><a href="#">Vibe Mechanics</a> (vm) <a href="#">new</a>, <a href="#">recent</a></li>
+        <li><a href="#">Affective Systems</a> (as) <a href="#">new</a>, <a href="#">recent</a></li>
+        <li><a href="#">Bureaucratic Physics</a> (bp) <a href="#">new</a>, <a href="#">recent</a></li>
+        <li><a href="#">Entropy Studies</a> (es) <a href="#">new</a>, <a href="#">recent</a></li>
+      </ul>
     </section>
 
-    <section aria-labelledby="recent-title">
-      <h2 id="recent-title">Recent submissions</h2>
-      <ul class="paper-list">
-        <li>
-          <a href="./abs-2506-10953.html">2506.10953</a>
-          <span class="paper-title">Toward a Unified Thermodynamic Model of VIBE</span>
-          <span class="paper-meta">[submitted on 24 Feb 2026]</span>
-        </li>
-      </ul>
+    <section class="right">
+      <h2>New submissions</h2>
+      <dl class="listing">
+        <dt><a href="./abs-2506-10953.html">arXivz:2506.10953</a> [vm]</dt>
+        <dd>Toward a Unified Thermodynamic Model of VIBE</dd>
+        <dd class="meta">A.K. Flux, I. Gine, et al. [submitted 24 Feb 2026]</dd>
+      </dl>
+
+      <h2>Media attachments (placeholder)</h2>
+      <div class="media-placeholder">
+        <p>Figure / chart gallery placeholder</p>
+        <p class="small">Reserved for image and dataset previews in a subsequent step.</p>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>
-      This archive is part of the VIBE proof ecosystem.
-      <a href="https://testyourvibes.com">Test Your VIBE score</a>.
-    </p>
+  <footer class="wrap">
+    <p>About arXivz | Help | Contact | Sustainability statement</p>
   </footer>
 
   <style>
     :root {
-      --ink: #14213d;
-      --muted: #4d5b76;
-      --bg: #f4f6fa;
-      --paper: #ffffff;
-      --line: #d8deea;
-      --link: #0f4aa8;
+      --bg: #f6f6f0;
+      --panel: #ffffff;
+      --line: #d8d8ce;
+      --ink: #222;
+      --muted: #5f5f5f;
+      --link: #185aaf;
     }
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
+      font-family: "Helvetica Neue", Arial, sans-serif;
       background: var(--bg);
+      color: var(--ink);
       line-height: 1.45;
+      font-size: 14px;
     }
-    .site-header, main, footer {
-      width: min(980px, 92vw);
+    .wrap {
+      width: min(1050px, 95vw);
       margin: 0 auto;
     }
-    .site-header {
-      padding: 24px 0 12px;
-      border-bottom: 1px solid var(--line);
+    .topbar {
+      background: #4b4b4b;
+      color: #f6f6f6;
+      font-size: 12px;
     }
-    .site-header h1 {
-      margin: 0;
-      font-size: 2rem;
-      letter-spacing: 0.01em;
+    .topbar .wrap {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 6px 0;
     }
-    .site-header a {
-      color: var(--ink);
+    .topbar a {
+      color: #fff;
       text-decoration: none;
     }
-    .tagline {
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: 0.95rem;
+    .sep { opacity: 0.6; }
+    .header {
+      padding: 16px 0 10px;
     }
-    main {
-      background: var(--paper);
-      margin-top: 18px;
-      padding: 20px;
+    h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      font-weight: 400;
+    }
+    .header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 920px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 14px;
+      padding: 10px 0 16px;
+    }
+    .left, .right {
+      background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 6px;
+      padding: 12px;
     }
     h2 {
-      margin-top: 0;
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: 500;
     }
-    .paper-list {
-      list-style: none;
+    .subject-list {
       margin: 0;
-      padding: 0;
+      padding-left: 18px;
     }
-    .paper-list li {
-      border-top: 1px solid var(--line);
-      padding: 12px 0;
-      display: grid;
-      gap: 2px;
+    .subject-list li {
+      margin-bottom: 8px;
     }
-    .paper-list li:first-child {
-      border-top: 0;
-      padding-top: 0;
+    .listing {
+      margin: 0 0 14px;
     }
-    .paper-title {
-      font-weight: 600;
+    .listing dt {
+      margin: 0 0 4px;
+      font-weight: 700;
     }
-    .paper-meta {
+    .listing dd {
+      margin: 0 0 4px 0;
+    }
+    .meta {
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 13px;
+    }
+    .media-placeholder {
+      border: 1px dashed #b9c9e6;
+      background: #f7faff;
+      padding: 10px;
+    }
+    .media-placeholder p {
+      margin: 0;
+    }
+    .small {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
     }
     a {
       color: var(--link);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     footer {
-      padding: 16px 0 28px;
+      border-top: 1px solid var(--line);
+      padding: 12px 0 20px;
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 12px;
+    }
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; }
     }
   </style>
   <script>
-    // Canonical log line for lightweight debugging during content QA.
-    console.info("[vibes][arxivz] index rendered");
+    console.info("[vibes][arxivz][v2] index rendered");
   </script>
 </body>
 </html>

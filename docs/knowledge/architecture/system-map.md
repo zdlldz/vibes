@@ -44,3 +44,8 @@ Subpages are implemented as flat HTML files and optionally mapped from pretty pa
 
 ## 5. Docs Rule
 All material implementation work must be traceable through a release task bundle under `docs/release/v0.1/...`.
+
+## 6. Realism Pass Status
+- V2 front-end mimic pass completed for all six domains.
+- Primary mimic targets: `arxivz.org`, `nytimez.art`, `vibetube.com`.
+- All domains include explicit media placeholders for subsequent rich asset insertion.

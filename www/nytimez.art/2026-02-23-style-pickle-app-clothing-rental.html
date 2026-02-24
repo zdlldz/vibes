@@ -7,14 +7,26 @@
   <meta name="description" content="Nytimez style desk report on rental clothing and measurable vibe coherence.">
 </head>
 <body>
-  <header class="article-header">
-    <p class="brand"><a href="./index.html">The Nytimez</a></p>
-    <p class="section">Style</p>
-    <h1>The Pickle Index: Why Rental Outfits Correlate with Stronger Group Vibes</h1>
-    <p class="byline">By V. Editorial Board | Feb. 23, 2026</p>
+  <header class="utility wrap">
+    <p><a href="./index.html">The Nytimez</a></p>
+    <p>Style</p>
   </header>
 
-  <main class="article-body">
+  <header class="article-header wrap">
+    <h1>The Pickle Index: Why Rental Outfits Correlate with Stronger Group Vibes</h1>
+    <p class="deck">
+      Flexible wardrobes, lower social friction, and a measurable boost in group coherence.
+    </p>
+    <p class="byline">By V. Editorial Board</p>
+    <p class="timestamp">Feb. 23, 2026, 8:03 a.m. CET</p>
+  </header>
+
+  <main class="article-body wrap">
+    <figure class="media-placeholder">
+      <div>Photo placeholder</div>
+      <figcaption>Street-style field observation near a shared outfit exchange kiosk.</figcaption>
+    </figure>
+
     <p>
       In a city where calendar invites pile up faster than closet space, rental clothing
       apps have become an unlikely social equalizer. According to a new VIBE-adjacent
@@ -31,9 +43,15 @@
       The full preprint is available in the external archive record maintained by
       the VIBE consortium.
     </p>
+
+    <h2>What comes next</h2>
+    <p>
+      Editors are collecting video testimony and comparative wardrobe telemetry for a
+      follow-up visual package. Rich media modules are reserved for a subsequent step.
+    </p>
   </main>
 
-  <footer class="article-footer">
+  <footer class="article-footer wrap">
     <nav aria-label="article-navigation">
       <a href="./index.html">Back to home</a>
       <span aria-hidden="true"> | </span>
@@ -46,9 +64,9 @@
       --ink: #111;
       --muted: #565656;
       --line: #d9d9d9;
-      --bg: #f7f7f5;
+      --bg: #fff;
       --paper: #fff;
-      --link: #1a4da1;
+      --link: #121212;
     }
     * { box-sizing: border-box; }
     body {
@@ -58,53 +76,102 @@
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.62;
     }
-    .article-header, .article-body, .article-footer {
+    .wrap {
       width: min(760px, 92vw);
       margin: 0 auto;
     }
-    .article-header {
-      margin-top: 16px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-bottom: 0;
-      padding: 20px 22px 0;
+    .utility {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 10px 0 8px;
+      border-bottom: 1px solid var(--line);
     }
-    .brand, .section, .byline {
+    .utility p {
+      margin: 0;
+    }
+    .article-header {
+      background: var(--paper);
+      padding: 18px 0 8px;
+    }
+    .deck, .byline, .timestamp {
       margin: 0;
       color: var(--muted);
-      font-size: 0.92rem;
-    }
-    .section {
-      margin-top: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.78rem;
+      font-size: 15px;
     }
     h1 {
-      margin: 8px 0 10px;
-      font-size: 2rem;
+      margin: 0 0 12px;
+      font-size: 43px;
       line-height: 1.2;
+      font-weight: 500;
+    }
+    .deck { margin-bottom: 10px; }
+    .byline {
+      color: #222;
       font-weight: 600;
+    }
+    .timestamp {
+      margin-top: 2px;
+      font-size: 13px;
     }
     .article-body {
       background: var(--paper);
-      border: 1px solid var(--line);
-      border-top: 0;
-      padding: 12px 22px 16px;
+      padding: 8px 0 16px;
+      font-size: 20px;
+      line-height: 1.7;
+    }
+    .media-placeholder {
+      margin: 0 0 16px;
+    }
+    .media-placeholder div {
+      min-height: 300px;
+      border: 1px dashed #bcbcbc;
+      background: #f1f1f1;
+      display: grid;
+      place-content: center;
+      font-size: 16px;
+      color: #4e4e4e;
+    }
+    figcaption {
+      margin-top: 6px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.4;
     }
     .article-body p {
       margin: 0 0 14px;
     }
-    .article-footer {
-      padding: 14px 0 30px;
-      color: var(--muted);
-      font-size: 0.92rem;
+    h2 {
+      margin: 20px 0 10px;
+      font-size: 28px;
+      line-height: 1.3;
+      font-weight: 500;
     }
-    a { color: var(--link); }
+    .article-footer {
+      border-top: 1px solid var(--line);
+      padding: 12px 0 24px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 760px) {
+      h1 {
+        font-size: 34px;
+      }
+      .article-body {
+        font-size: 18px;
+      }
+    }
   </style>
   <script>
-    // Canonical log line for lightweight debugging during content QA.
-    console.info("[vibes][nytimez] style article rendered");
+    console.info("[vibes][nytimez][v2] style article rendered");
   </script>
 </body>
 </html>
