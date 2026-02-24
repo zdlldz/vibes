@@ -1,4 +1,4 @@
-# VIBE Network (Day 02)
+# VIBEs (TASK2)
 
 Satirical art + science project: build convincing, polished "evidence" for a fictional measurable phenomenon called **VIBE**.
 
