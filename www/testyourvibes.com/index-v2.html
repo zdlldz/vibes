@@ -112,7 +112,7 @@
           </svg>
           <div class="gauge-inner">
             <span class="gauge-num" id="gauge-num">?</span>
-            <span class="gauge-live-label">live</span>
+            <span class="gauge-live-label" id="gauge-live-label">live</span>
           </div>
         </div>
         <div class="gauge-tier-preview" id="gauge-tier-preview">&nbsp;</div>
@@ -192,6 +192,8 @@
           <p>Awaiting calibration…</p>
         </div>
       </section>
+
+      <hr class="panel-sep">
 
       <!-- MEDIA SHOWCASE (unchanged) -->
       <section class="media-showcase">
@@ -402,6 +404,9 @@
     @keyframes pulse-label {
       0%, 100% { opacity: 1; } 50% { opacity: .45; }
     }
+    .gauge-live-label.locked {
+      animation: none; opacity: 1; color: var(--accent);
+    }
     .gauge-tier-preview {
       font-size: 13px; font-weight: 800;
       letter-spacing: .04em; min-height: 20px;
@@ -504,6 +509,9 @@
       box-shadow: 0 6px 20px rgba(127,57,251,.4);
       letter-spacing: .02em;
     }
+    .btn-lock:hover {
+      box-shadow: 0 10px 30px rgba(127,57,251,.58), 0 0 0 2px rgba(127,57,251,.22);
+    }
 
     /* chaos spin animation */
     @keyframes chaos-burst {
@@ -543,7 +551,7 @@
     .result-score-big {
       font-size: clamp(58px, 10vw, 80px); font-weight: 900; line-height: 1;
       color: var(--rc, var(--accent));
-      text-shadow: 0 0 28px color-mix(in srgb, var(--rc, var(--accent)) 50%, transparent);
+      text-shadow: 0 0 28px var(--rc-glow, rgba(255,47,146,.45));
       font-variant-numeric: tabular-nums;
     }
     .result-score-big.glow-gold {
@@ -581,6 +589,9 @@
     .result-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .btn-share { background: linear-gradient(135deg, #22d3ee, #3b82f6); }
     .btn-retry { background: linear-gradient(135deg, #a855f7, #ec4899); }
+
+    /* === PANEL SEPARATOR === */
+    .panel-sep { border: 0; border-top: 1px solid var(--line); margin: 4px 0; }
 
     /* === MEDIA SHOWCASE === */
     .media-showcase video {
@@ -660,25 +671,25 @@
       {
         min: 0.81, id: 'icon',
         badge: '✨ ICON ✨',
-        color: '#d97706', bg: '#fffbeb',
+        color: '#d97706', glow: 'rgba(217,119,6,.5)', bg: '#fffbeb',
         verdict: 'Immaculate. You are the vibe. Goodvibe et al. (2026) would like to cite this result in the next edition.'
       },
       {
         min: 0.61, id: 'trending',
         badge: '📈 TRENDING',
-        color: '#ff2f92', bg: '#fff0f7',
+        color: '#ff2f92', glow: 'rgba(255,47,146,.5)', bg: '#fff0f7',
         verdict: 'Main character energy confirmed. You may experience unprompted eye contact from strangers.'
       },
       {
         min: 0.26, id: 'risk',
         badge: '⚠️ CHAOTIC',
-        color: '#ea580c', bg: '#fff7ed',
+        color: '#ea580c', glow: 'rgba(234,88,12,.5)', bg: '#fff7ed',
         verdict: 'Non-zero but volatile. Your vibe is technically alive — just not entirely in control of itself.'
       },
       {
         min: 0, id: 'alert',
         badge: '🚨 CRITICAL',
-        color: '#dc2626', bg: '#fff1f2',
+        color: '#dc2626', glow: 'rgba(220,38,38,.5)', bg: '#fff1f2',
         verdict: 'Vibe collapse detected. At least one dimension is near zero. May coincide with unprocessed paperwork.'
       },
     ];
@@ -700,12 +711,13 @@
     const CIRC = 238.76; // 2π × 38
 
     // === DOM REFS ===
-    const form         = document.getElementById('vibe-form');
-    const resultEl     = document.getElementById('result');
-    const gaugeArc     = document.getElementById('gauge-arc');
-    const gaugeNum     = document.getElementById('gauge-num');
-    const gaugeTierPv  = document.getElementById('gauge-tier-preview');
-    const confField    = document.getElementById('confetti-field');
+    const form           = document.getElementById('vibe-form');
+    const resultEl       = document.getElementById('result');
+    const gaugeArc       = document.getElementById('gauge-arc');
+    const gaugeNum       = document.getElementById('gauge-num');
+    const gaugeTierPv    = document.getElementById('gauge-tier-preview');
+    const gaugeLiveLabel = document.getElementById('gauge-live-label');
+    const confField      = document.getElementById('confetti-field');
 
     // === HELPERS ===
     function getTier(s)  { return TIERS.find(t => s >= t.min) || TIERS[TIERS.length - 1]; }
@@ -787,6 +799,13 @@
       });
       if (resultEl.querySelector('.result-card')) {
         resultEl.innerHTML = '<div class="result-waiting"><p>Recalibrating… hit Lock In to reveal your new VIBE™</p></div>';
+        // Restore gauge to live state
+        const s1 = document.getElementById('grad-stop-1');
+        const s2 = document.getElementById('grad-stop-2');
+        if (s1) s1.setAttribute('stop-color', '#ff2f92');
+        if (s2) s2.setAttribute('stop-color', '#7f39fb');
+        gaugeLiveLabel.textContent = 'live';
+        gaugeLiveLabel.classList.remove('locked');
       }
     });
 
@@ -830,14 +849,16 @@
       const vals    = { v: Number(fd.get('v')), i: Number(fd.get('i')), b: Number(fd.get('b')), e: Number(fd.get('e')) };
       const labels  = { v: '🎵 Vibrations', i: '💗 Intimacy', b: '📋 Bureaucracy', e: '🌀 Entropy' };
 
-      // Update gauge to tier color
+      // Update gauge to tier color + lock label
       setGauge(numeric, tier.color);
       gaugeTierPv.textContent = tier.badge;
       gaugeTierPv.style.color = tier.color;
+      gaugeLiveLabel.textContent = '✓ locked';
+      gaugeLiveLabel.classList.add('locked');
 
       // Build result card
       resultEl.innerHTML = `
-        <div class="result-card" style="--rc:${tier.color};--rb:${tier.bg};">
+        <div class="result-card" style="--rc:${tier.color};--rb:${tier.bg};--rc-glow:${tier.glow};">
           <div><span class="result-tier-badge">${tier.badge}</span></div>
           <div class="result-score-display">
             <div class="result-score-big${tier.id === 'icon' ? ' glow-gold' : ''}" id="score-big">0.00</div>
@@ -847,7 +868,7 @@
             ${['v','i','b','e'].map(k => `
               <div class="sub-bar">
                 <span class="sub-bar-label">${labels[k]}</span>
-                <div class="sub-bar-track"><div class="sub-bar-fill" id="fill-${k}" style="background:linear-gradient(to right,${tier.color},${tier.color}bb)"></div></div>
+                <div class="sub-bar-track"><div class="sub-bar-fill" id="fill-${k}"></div></div>
                 <span class="sub-bar-val">${vals[k]}/10</span>
               </div>`).join('')}
           </div>
@@ -863,6 +884,9 @@
 
       // Animate score number
       countUp(document.getElementById('score-big'), numeric, 920);
+
+      // Scroll result into view
+      setTimeout(() => resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 80);
 
       // Animate sub-index bars (next frame so transition fires)
       requestAnimationFrame(() => {
@@ -895,6 +919,9 @@
         const s2 = document.getElementById('grad-stop-2');
         if (s1) s1.setAttribute('stop-color', '#ff2f92');
         if (s2) s2.setAttribute('stop-color', '#7f39fb');
+        // Restore live label
+        gaugeLiveLabel.textContent = 'live';
+        gaugeLiveLabel.classList.remove('locked');
         liveUpdate();
         form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
