@@ -1462,6 +1462,9 @@
       document.addEventListener('mouseleave', function (e) {
         if (e.clientY < 5 && !shown) {
           shown = true;
+          // Position flush below the disclaimer banner so it never covers it
+          const disclaimer = document.querySelector('.vibe-disclaimer-banner');
+          bar.style.top = (disclaimer ? disclaimer.offsetHeight : 0) + 'px';
           bar.removeAttribute('hidden');
         }
       });
