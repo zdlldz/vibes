@@ -36,9 +36,19 @@
   ═══════════════════════════════════════════════════ -->
   <header class="hero">
     <p class="eyebrow">⚡ Official VIBE Screening Portal ⚡</p>
-    <h1>What's Your VIBE Score?</h1>
-    <p class="hero-sub">The only quiz backed by peer-reviewed thermodynamics. <em>People</em> magazine calls it "suspiciously accurate."</p>
+    <h1>What's your vibe?</h1>
+    <p class="hero-sub">The only quiz backed by <a href="https://arxivz.org/index-v2.html" data-vibe-domain="arxivz.org" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">peer-reviewed thermodynamics</a>. As covered by <a href="https://nytimez.art/index-v2.html" data-vibe-domain="nytimez.art" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">the press</a>. Certified by the <a href="https://vibe-standards.org/index-v2.html" data-vibe-domain="vibe-standards.org" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">International Vibe Standards Council</a>.</p>
   </header>
+
+  <!-- PROOF STRIP -->
+  <div class="proof-strip">
+    <span class="proof-label">TRUSTED SCIENCE</span>
+    <a class="proof-pill" href="https://arxivz.org/index-v2.html" data-vibe-domain="arxivz.org" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">📄 Goodvibe et al. (2026)</a>
+    <a class="proof-pill" href="https://nytimez.art/index-v2.html" data-vibe-domain="nytimez.art" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">📰 Press Coverage</a>
+    <a class="proof-pill" href="https://vibe-standards.org/index-v2.html" data-vibe-domain="vibe-standards.org" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">🏛️ VSC-0001 Certified</a>
+    <a class="proof-pill" href="https://vibe-con.org/index-v2.html" data-vibe-domain="vibe-con.org" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">🎤 VIBE-CON</a>
+    <a class="proof-pill" href="https://vibetube.art/index-v2.html" data-vibe-domain="vibetube.art" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">📺 Watch the Story</a>
+  </div>
 
   <!-- ═══════════════════════════════════════════════════
        LANDSCAPE ADS (unchanged)
@@ -244,9 +254,39 @@
         </div>
       </section>
 
-      <p class="details-link">
-        Method details: <a href="./methodology-v2.html">How this "works"</a>
-      </p>
+      <!-- HOW IT WORKS -->
+      <section class="hiw">
+        <h3 class="hiw-heading">🔬 Wait, is this actually real?</h3>
+        <p class="hiw-intro">YES. (Mostly.) VIBE is a quantitative composite index published in peer-reviewed literature. Here's the full evidence trail:</p>
+        <div class="hiw-grid">
+          <a class="hiw-card" href="https://arxivz.org/index-v2.html" data-vibe-domain="arxivz.org" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">
+            <span class="hiw-icon">📄</span>
+            <span class="hiw-title">The Paper</span>
+            <span class="hiw-desc">Goodvibe et al. (2026) published in <em>JEST</em>. VIBE = (V·I·B·E)^¼. Peer-reviewed. Technically in press.</span>
+          </a>
+          <a class="hiw-card" href="https://nytimez.art/index-v2.html" data-vibe-domain="nytimez.art" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">
+            <span class="hiw-icon">📰</span>
+            <span class="hiw-title">The Coverage</span>
+            <span class="hiw-desc">Major press outlets have covered the VIBE breakthrough. One called it "suspiciously accurate." We agree.</span>
+          </a>
+          <a class="hiw-card" href="https://vibe-standards.org/index-v2.html" data-vibe-domain="vibe-standards.org" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">
+            <span class="hiw-icon">🏛️</span>
+            <span class="hiw-title">The Standards</span>
+            <span class="hiw-desc">VSC-0001 normative spec issued by the International Vibe Standards Council. ISO-adjacent compliance.</span>
+          </a>
+          <a class="hiw-card" href="https://vibe-con.org/index-v2.html" data-vibe-domain="vibe-con.org" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">
+            <span class="hiw-icon">🎤</span>
+            <span class="hiw-title">The Conference</span>
+            <span class="hiw-desc">VIBE-CON draws researchers, entropy practitioners, and vibes-adjacent professionals. Annual. Prestigious. Open bar.</span>
+          </a>
+          <a class="hiw-card hiw-card-wide" href="https://vibetube.art/index-v2.html" data-vibe-domain="vibetube.art" data-vibe-path="/index-v2.html" target="_blank" rel="noopener">
+            <span class="hiw-icon">📺</span>
+            <span class="hiw-title">The Documentary</span>
+            <span class="hiw-desc">Original on-the-ground reporting on the VIBE phenomenon. Filmed on location. Geneva. London. Tokyo. 3am.</span>
+          </a>
+        </div>
+        <p class="details-link">Full methodology: <a href="./methodology-v2.html">How this "works"</a></p>
+      </section>
 
     </section><!-- /panel -->
 
@@ -704,6 +744,55 @@
       .ad-stack { grid-template-columns: 1fr; }
       .result-actions { grid-template-columns: 1fr; }
     }
+
+    /* === HERO LINKS === */
+    .hero-sub a { color: var(--accent-2); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+    .hero-sub a:hover { color: var(--accent); }
+
+    /* === PROOF STRIP === */
+    .proof-strip {
+      width: min(1240px, 94vw); margin: 0 auto 10px;
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+      padding: 8px 12px;
+      background: rgba(255,255,255,.5); border: 1px solid rgba(255,208,235,.45);
+      border-radius: 999px;
+    }
+    .proof-label {
+      font-size: 9.5px; font-weight: 900; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--muted); white-space: nowrap; flex-shrink: 0;
+    }
+    .proof-pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 11.5px; font-weight: 700; color: var(--accent-2);
+      background: rgba(127,57,251,.08); border: 1px solid rgba(127,57,251,.18);
+      border-radius: 999px; padding: 3px 11px; white-space: nowrap;
+      text-decoration: none; transition: background .12s, transform .12s;
+    }
+    .proof-pill:hover { background: rgba(127,57,251,.16); transform: translateY(-1px); }
+
+    /* === HOW IT WORKS === */
+    .hiw { display: grid; gap: 10px; }
+    .hiw-heading { font-size: 16px; font-weight: 900; color: var(--ink); }
+    .hiw-intro { font-size: 13px; color: var(--muted); line-height: 1.45; font-weight: 500; }
+    .hiw-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px;
+    }
+    .hiw-card {
+      display: grid; gap: 3px;
+      background: rgba(255,255,255,.6); border: 1px solid rgba(127,57,251,.15);
+      border-radius: 12px; padding: 12px; text-decoration: none;
+      transition: background .13s, transform .13s, box-shadow .13s;
+    }
+    .hiw-card:hover {
+      background: rgba(255,255,255,.9); transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(127,57,251,.15);
+    }
+    .hiw-card-wide { grid-column: 1 / -1; grid-template-columns: auto 1fr auto; grid-auto-flow: column; align-items: center; gap: 10px; }
+    .hiw-card-wide .hiw-desc { grid-column: auto; }
+    .hiw-icon { font-size: 20px; line-height: 1; }
+    .hiw-title { font-size: 13px; font-weight: 900; color: var(--ink); }
+    .hiw-desc { font-size: 11.5px; color: var(--muted); line-height: 1.45; }
+    .hiw-card-wide .hiw-title::after { content: " →"; color: var(--accent-2); }
 
     /* === NEWS TICKER === */
     .news-ticker {
