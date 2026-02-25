@@ -101,7 +101,7 @@ Workers only serve assets from each domain's own `www/<domain>/` directory. Medi
 2. Match interaction affordances second (search shells, metadata, article/watch layouts)
 3. If source sites block fetch, use known conventions and document assumptions
 
-## testyourvibes.com — Gamified Quiz (v0.3, Feb 2026)
+## testyourvibes.com — Gamified Quiz (v0.4, Feb 2026)
 
 `www/testyourvibes.com/index-v2.html` is the primary interactive deliverable. Key patterns:
 
@@ -111,15 +111,20 @@ Workers only serve assets from each domain's own `www/<domain>/` directory. Medi
 - **Tier system** — ICON ≥ 0.81, TRENDING ≥ 0.61, CHAOTIC ≥ 0.26, CRITICAL < 0.26. Each tier carries `color`, `glow` (rgba, browser-safe), `bg`, `badge`, `verdict`.
 - **easeOutExpo count-up** — `requestAnimationFrame` loop with `1 - Math.pow(2, -10 * t)`.
 - **Confetti** — fixed-position overlay; CSS custom properties `--tx`, `--ty`, `--r`, `--c`, `--d` on `<span>` elements; ICON tier only.
-- **Spam-site elements** — scrolling news ticker (JS-duplicated segment for seamless CSS loop), live user count drift, mid-form ad, countdown timer, sticky footer bar, pop-up modal (4.5s delay), social proof toasts (9-13s cadence). **All three interactive overlays (toast container, sticky bar, modal) must appear in the HTML BEFORE the main `<script>` block** — they are referenced synchronously on script execution.
+- **Spam-site elements** — scrolling news ticker (JS-duplicated segment for seamless CSS loop), live user count drift, mid-form ad, countdown timer, sticky footer bar, pop-up modal (4.5s delay), social proof toasts (9-13s cadence). **All interactive overlays (toast container, sticky bar, modal, exit-intent bar, chat widget/popup) must appear in the HTML BEFORE the main `<script>` block** — they are referenced synchronously on script execution.
+- **Dark patterns** — Modal has 3-second delayed close (countdown timer `✕ 3 → ✕ 2 → ✕ 1 → reveal X`), pre-checked newsletter opt-in, confirm-shaming on skip via `window.confirm()`. Exit-intent bar (`mouseleave` when `e.clientY < 5`) slides in from top. Floating chat widget (bottom-right, bouncing).
 - **Gauge label** — transitions from pulsing "live" → static "✓ locked" on submit; restored to "live" on retry/chaos spin.
+- **Panel visual prominence** — `.panel` has a breathing box-shadow animation (`panel-breathe`, 4s). All ad elements (cards, bars, mid-form) are transparent with no box-shadow so the panel dominates visually.
+- **Ecosystem credibility** — Hero sub-copy, a full-width "proof strip" of pill links, and a "🔬 Wait, is this actually real?" card grid all cross-link to all five other network sites with `data-vibe-domain` attributes for local/prod resolver compatibility.
+- **Rec-card ad grid** — 2×2 Taboola-style "You May Also Like" grid replaces the old media showcase below the result card. Uses existing media assets.
 
 ## Quality Bar Before PR
 
 - Route-to-file parity is correct for all workers
 - No broken local links or broken local media references
 - All HTML files include doctype, inline style, inline script
-- Interactive overlay HTML elements (modal, sticky bar, toast container) must appear before inline `<script>` tags that reference them
+- Interactive overlay HTML elements (modal, sticky bar, toast container, exit-intent bar, chat widget) must appear before inline `<script>` tags that reference them
+- Responsive safety: all new grid components (hiw-grid, rec-ad-items, proof-strip) have ≤ 680px overrides
 - Core docs (`README.md`, `AGENTS.md`) are current
 
 
