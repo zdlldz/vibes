@@ -21,6 +21,16 @@
     </div>
   </div>
 
+  <!-- NEWS TICKER -->
+  <div class="news-ticker">
+    <span class="ticker-label">🔴 LIVE</span>
+    <div class="ticker-track">
+      <div class="ticker-belt" id="ticker-belt">
+        <span class="ticker-seg">🔴 BREAKING: Geneva vibe index hits 52-week low amid unprecedented paperwork surge &nbsp;•&nbsp; ⚡ TRENDING: Rave at 3AM clinically confirmed highest-VIBE environment — full data at arxivz.org &nbsp;•&nbsp; 📊 1,247 people testing their VIBE RIGHT NOW &nbsp;•&nbsp; 🚨 ALERT: Your zip code's entropy is estimated in the 94th percentile &nbsp;•&nbsp; 🔬 NEW STUDY: Government waiting rooms suppress B-index by 0.73 points (p &lt; 0.001) &nbsp;•&nbsp; 💡 Reduce bureaucracy by 40% — dermatologists hate this one weird trick &nbsp;•&nbsp; 🏆 TOP SCORER: Lausanne user hit ICON tier (0.921) — third highest ever recorded &nbsp;•&nbsp; ⚠️ WARNING: Reading this ticker may affect your Entropy score &nbsp;•&nbsp; 📈 VIBE MARKETS: V +2.3%, I −0.8%, B +5.1%, E flat &nbsp;•&nbsp; 🌡️ VIBEMETER™ Pro v2.1.4 available — patch notes: improved funeral detection algorithm &nbsp;•&nbsp;</span>
+      </div>
+    </div>
+  </div>
+
   <!-- ═══════════════════════════════════════════════════
        HERO
   ═══════════════════════════════════════════════════ -->
@@ -53,16 +63,6 @@
       <button type="button">Watch Alert</button>
     </article>
   </section>
-
-  <!-- NEWS TICKER -->
-  <div class="news-ticker">
-    <span class="ticker-label">🔴 LIVE</span>
-    <div class="ticker-track">
-      <div class="ticker-belt" id="ticker-belt">
-        <span class="ticker-seg">🔴 BREAKING: Geneva vibe index hits 52-week low amid unprecedented paperwork surge &nbsp;•&nbsp; ⚡ TRENDING: Rave at 3AM clinically confirmed highest-VIBE environment — full data at arxivz.org &nbsp;•&nbsp; 📊 1,247 people testing their VIBE RIGHT NOW &nbsp;•&nbsp; 🚨 ALERT: Your zip code's entropy is estimated in the 94th percentile &nbsp;•&nbsp; 🔬 NEW STUDY: Government waiting rooms suppress B-index by 0.73 points (p &lt; 0.001) &nbsp;•&nbsp; 💡 Reduce bureaucracy by 40% — dermatologists hate this one weird trick &nbsp;•&nbsp; 🏆 TOP SCORER: Lausanne user hit ICON tier (0.921) — third highest ever recorded &nbsp;•&nbsp; ⚠️ WARNING: Reading this ticker may affect your Entropy score &nbsp;•&nbsp; 📈 VIBE MARKETS: V +2.3%, I −0.8%, B +5.1%, E flat &nbsp;•&nbsp; 🌡️ VIBEMETER™ Pro v2.1.4 available — patch notes: improved funeral detection algorithm &nbsp;•&nbsp;</span>
-      </div>
-    </div>
-  </div>
 
   <!-- confetti container -->
   <div id="confetti-field" aria-hidden="true"></div>
@@ -217,14 +217,30 @@
 
       <hr class="panel-sep">
 
-      <!-- MEDIA SHOWCASE (unchanged) -->
-      <section class="media-showcase">
-        <video controls playsinline preload="metadata" poster="./media/shot-news-02.webp">
-          <source src="https://edge.vibetube.art/src/TASK2_vibes-news.mp4" type="video/mp4">
-        </video>
-        <div class="media-grid">
-          <img src="./media/shot-official-04.webp" alt="Vibe dataset still one">
-          <img src="./media/shot-official-06.webp" alt="Vibe dataset still two">
+      <!-- REC-CARD AD GRID -->
+      <section class="rec-ad-grid">
+        <p class="rec-ad-header">📺 You May Also Like</p>
+        <div class="rec-ad-items">
+          <article class="rec-ad-card">
+            <img src="./media/shot-news-02.webp" alt="">
+            <p class="ad-tag">Sponsored</p>
+            <h4>Is Your Neighborhood's VIBE Actually Getting Worse? New Study Says Yes</h4>
+          </article>
+          <article class="rec-ad-card">
+            <img src="./media/shot-official-06.webp" alt="">
+            <p class="ad-tag">Recommended</p>
+            <h4>5 Warning Signs Your Entropy Score Is About To Collapse</h4>
+          </article>
+          <article class="rec-ad-card">
+            <img src="./media/shot-official-05.webp" alt="">
+            <p class="ad-tag">Sponsored</p>
+            <h4>Doctors Reveal: The Single Supplement Clinically Linked To B-Index Recovery</h4>
+          </article>
+          <article class="rec-ad-card">
+            <img src="./media/shot-news-01b.webp" alt="">
+            <p class="ad-tag">Ad</p>
+            <h4>She Left A 4-Hour DMV Visit With A VIBE Score Of 0.11. Her Secret? This.</h4>
+          </article>
         </div>
       </section>
 
@@ -348,11 +364,10 @@
       grid-template-columns: 220px 1fr auto;
       gap: 10px;
       align-items: center;
-      border: 1px solid var(--line);
-      background: #fff8fd;
+      border: 1px solid rgba(255,208,235,.42);
+      background: rgba(255,255,255,.32);
       border-radius: 12px;
       padding: 8px;
-      box-shadow: 0 8px 18px rgba(255,47,146,.12);
     }
     .landscape-ad-bar img,
     .landscape-ad-bar video {
@@ -362,8 +377,8 @@
     .landscape-ad-bar h3 { font-size: 16px; line-height: 1.25; }
     .landscape-ad-lite {
       display: grid; grid-template-columns: 120px 1fr; gap: 8px;
-      align-items: center; border: 1px solid var(--line); border-radius: 10px;
-      padding: 8px; background: #fff8fd;
+      align-items: center; border: 1px solid rgba(255,208,235,.38); border-radius: 10px;
+      padding: 8px; background: rgba(255,255,255,.28);
     }
     .landscape-ad-lite img {
       width: 100%; min-height: 66px; object-fit: cover;
@@ -388,13 +403,31 @@
       padding: 20px;
       display: grid;
       gap: 16px;
-      box-shadow: 0 20px 44px rgba(255,47,146,.18), 0 0 0 1px rgba(127,57,251,.06);
+      box-shadow:
+        0 0 0 3px rgba(255,47,146,.14),
+        0 20px 60px rgba(255,47,146,.32),
+        0 40px 100px rgba(127,57,251,.22);
+      animation: panel-breathe 4s ease-in-out infinite;
+    }
+    @keyframes panel-breathe {
+      0%, 100% {
+        box-shadow:
+          0 0 0 3px rgba(255,47,146,.14),
+          0 20px 60px rgba(255,47,146,.32),
+          0 40px 100px rgba(127,57,251,.22);
+      }
+      50% {
+        box-shadow:
+          0 0 0 4px rgba(255,47,146,.26),
+          0 24px 72px rgba(255,47,146,.44),
+          0 50px 120px rgba(127,57,251,.32);
+      }
     }
     .panel::before {
       content: "";
-      position: absolute; inset: -14px;
-      border-radius: 26px;
-      background: radial-gradient(circle at top, rgba(255,47,146,.15), rgba(127,57,251,.06) 44%, transparent 72%);
+      position: absolute; inset: -20px;
+      border-radius: 32px;
+      background: radial-gradient(circle at top, rgba(255,47,146,.22), rgba(127,57,251,.10) 44%, transparent 70%);
       z-index: -1; pointer-events: none;
     }
 
@@ -618,28 +651,30 @@
     /* === PANEL SEPARATOR === */
     .panel-sep { border: 0; border-top: 1px solid var(--line); margin: 4px 0; }
 
-    /* === MEDIA SHOWCASE === */
-    .media-showcase video {
-      width: 100%; min-height: 200px; object-fit: cover;
-      border-radius: 10px; border: 1px solid var(--line);
-      background: #111; display: block; margin-bottom: 8px;
+    /* === REC-AD GRID === */
+    .rec-ad-header {
+      font-size: 10px; font-weight: 900; text-transform: uppercase;
+      letter-spacing: .09em; color: var(--muted); margin-bottom: 8px;
     }
-    .media-grid {
+    .rec-ad-items {
       display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px;
     }
-    .media-grid img {
-      width: 100%; min-height: 100px; object-fit: cover;
-      border-radius: 8px; border: 1px solid var(--line); display: block;
+    .rec-ad-card { cursor: pointer; }
+    .rec-ad-card img {
+      width: 100%; height: 90px; object-fit: cover;
+      border-radius: 8px; border: 1px solid rgba(255,208,235,.5); display: block; margin-bottom: 5px;
     }
+    .rec-ad-card .ad-tag { font-size: 10px; margin-bottom: 3px; }
+    .rec-ad-card h4 { font-size: 12px; line-height: 1.35; color: var(--ink); font-weight: 700; }
+    .rec-ad-card:hover h4 { text-decoration: underline; }
     .details-link { font-size: 13px; color: var(--muted); }
     .details-link a, footer a { color: var(--accent-2); font-weight: 700; }
 
     /* === AD STACK === */
     .ad-stack { display: grid; gap: 10px; }
     .ad-card {
-      background: #fffdfd; border: 1px solid var(--line);
+      background: rgba(255,253,253,.38); border: 1px solid rgba(255,208,235,.38);
       border-radius: 12px; padding: 10px;
-      box-shadow: 0 8px 18px rgba(127,57,251,.08);
     }
     .ad-tag {
       font-size: 11px; font-weight: 700; color: var(--accent-2);
@@ -706,10 +741,9 @@
     /* === MID-FORM AD === */
     .mid-form-ad {
       display: grid; grid-template-columns: 86px 1fr; gap: 10px; align-items: center;
-      background: #fffef3; border: 1px solid #ffe599; border-radius: 10px; padding: 10px;
-      box-shadow: 0 3px 10px rgba(245,158,11,.18);
+      background: rgba(255,254,243,.45); border: 1px solid rgba(255,229,153,.55); border-radius: 10px; padding: 10px;
     }
-    .mid-form-ad .ad-tag { font-size: 10px; color: #b45309; margin-bottom: 3px; }
+    .mid-form-ad .ad-tag { font-size: 10px; color: #b45309; margin-bottom: 3px; grid-column: 1 / -1; }
     .mid-form-ad img { width: 100%; min-height: 60px; object-fit: cover; border-radius: 7px; border: 1px solid #ffe599; display: block; }
     .mid-form-ad-body p { font-size: 12px; color: #5a3e00; font-weight: 600; line-height: 1.35; margin-bottom: 7px; }
     .mid-form-ad-body button {
@@ -797,11 +831,68 @@
       background: linear-gradient(135deg, #1a0030, var(--accent-2) 55%, var(--accent));
       border-radius: 12px;
     }
+    .modal-close-timer {
+      position: absolute; top: 12px; right: 12px;
+      background: #e5e7eb; color: #9ca3af; padding: 4px 10px;
+      font-size: 12px; font-weight: 700; border-radius: 999px; cursor: default;
+    }
+    .modal-close[hidden] { display: none; }
+    .modal-opt-in {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 12px; color: #4b5563; line-height: 1.45; cursor: pointer; font-weight: 500;
+    }
+    .modal-opt-in input { margin-top: 2px; flex-shrink: 0; accent-color: var(--accent); }
     .modal-skip {
       background: none; color: #9ca3af; font-size: 12px; font-weight: 600;
       padding: 6px; border-radius: 0; box-shadow: none; text-decoration: underline;
     }
     .modal-skip:hover { transform: none; box-shadow: none; color: #6b7280; }
+
+    /* === EXIT-INTENT BAR === */
+    .exit-intent-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 9700;
+      background: linear-gradient(135deg, #1a0030, #4c1d95);
+      color: #fff; padding: 10px 16px;
+      box-shadow: 0 4px 20px rgba(127,57,251,.55);
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      animation: slide-down .38s cubic-bezier(.2,0,.2,1) both;
+    }
+    .exit-intent-bar[hidden] { display: none; }
+    @keyframes slide-down { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+    .exit-intent-icon { font-size: 20px; flex-shrink: 0; }
+    .exit-intent-text { flex: 1; font-size: 13px; line-height: 1.35; display: flex; flex-direction: column; gap: 2px; }
+    .exit-intent-text strong { font-size: 14px; color: #fde68a; }
+    .exit-intent-text span { color: rgba(255,255,255,.82); }
+    .exit-intent-bar button { padding: 8px 16px; font-size: 13px; }
+    #exit-intent-cta { background: linear-gradient(135deg, var(--accent), var(--accent-2)); flex-shrink: 0; }
+    .exit-intent-close {
+      background: rgba(255,255,255,.15); padding: 6px 12px; font-size: 13px; flex-shrink: 0;
+    }
+
+    /* === CHAT WIDGET === */
+    .chat-widget {
+      position: fixed; bottom: 80px; right: 14px; z-index: 8400;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff; border-radius: 999px; padding: 10px 18px;
+      font-size: 13px; font-weight: 800; cursor: pointer;
+      box-shadow: 0 8px 24px rgba(127,57,251,.5);
+      animation: chat-bounce 2.8s ease-in-out infinite;
+      user-select: none;
+    }
+    @keyframes chat-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+    .chat-popup {
+      position: fixed; bottom: 134px; right: 14px; z-index: 8400;
+      background: #fff; border-radius: 16px; padding: 16px;
+      width: 248px; box-shadow: 0 12px 36px rgba(0,0,0,.24);
+      font-size: 13px; color: #1a0030; line-height: 1.45;
+      border: 1px solid var(--line);
+      animation: modal-in .3s cubic-bezier(.2,0,.2,1) both;
+    }
+    .chat-popup[hidden] { display: none; }
+    .chat-popup-head { font-size: 13px; font-weight: 800; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .chat-online { font-size: 11px; color: #16a34a; font-weight: 700; }
+    .chat-wait { margin-top: 8px; color: #6b7280; font-size: 11.5px; }
+    #chat-cta { margin-top: 10px; width: 100%; font-size: 13px; padding: 9px; }
 
     /* === SOCIAL PROOF TOASTS === */
     .toast-container {
@@ -858,15 +949,37 @@
   <!-- POP-UP MODAL -->
   <div class="modal-overlay" id="modal-overlay" hidden aria-modal="true" role="dialog">
     <div class="modal-box">
-      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      <span class="modal-close-timer" id="modal-close-timer">✕ 3</span>
+      <button class="modal-close" id="modal-close" aria-label="Close" hidden>✕</button>
       <div class="modal-hot">🔥 EXCLUSIVE — LIMITED TIME</div>
       <img src="./media/shot-news-01.webp" class="modal-img" alt="">
       <h2 class="modal-h2">Your VIBE Analysis Is 94% Complete</h2>
       <p class="modal-p">Unlock your full VIBE Report including sub-index breakdown, regional comparison, and a certified PDF receipt valid in 14 jurisdictions.</p>
       <p class="modal-urgency"><strong>⏰ Only 3 slots remaining at this price point.</strong></p>
+      <label class="modal-opt-in"><input type="checkbox" checked> Yes, email me my VIBE Certificate and exclusive vibes-adjacent offers</label>
       <button type="button" class="modal-cta" id="modal-cta">🔓 Unlock My Full Report — FREE</button>
       <button type="button" class="modal-skip" id="modal-skip">No thanks, I'll stay uninformed</button>
     </div>
+  </div>
+
+  <!-- EXIT-INTENT BAR -->
+  <div class="exit-intent-bar" id="exit-intent-bar" hidden role="alert">
+    <span class="exit-intent-icon">⚠️</span>
+    <div class="exit-intent-text">
+      <strong>Wait — your VIBE data will be lost!</strong>
+      <span>Complete calibration before leaving. Takes 30 seconds.</span>
+    </div>
+    <button type="button" id="exit-intent-cta">Stay & Complete →</button>
+    <button type="button" class="exit-intent-close" id="exit-intent-close" aria-label="Dismiss">✕</button>
+  </div>
+
+  <!-- CHAT WIDGET -->
+  <div class="chat-widget" id="chat-widget" role="button" tabindex="0" aria-label="Get live help with your VIBE score">💬 Live Help</div>
+  <div class="chat-popup" id="chat-popup" hidden>
+    <div class="chat-popup-head">🎙️ <strong>VIBE Support</strong> <span class="chat-online">● online</span></div>
+    <p>Hey! 👋 Our certified VIBE analyst Camille is available right now to help interpret your score.</p>
+    <p class="chat-wait">⏱ Avg. wait: &lt;30 seconds</p>
+    <button type="button" id="chat-cta">Start Live Chat →</button>
   </div>
 
   <!-- ═══════════════════════════════════════════════════
@@ -1181,10 +1294,29 @@
       const overlay = document.getElementById('modal-overlay');
       if (!overlay) return;
       function dismiss() { overlay.setAttribute('hidden', ''); }
-      setTimeout(() => overlay.removeAttribute('hidden'), 4500);
+      setTimeout(() => {
+        overlay.removeAttribute('hidden');
+        // Delayed close: show countdown, reveal X after 3 seconds
+        const timerEl = document.getElementById('modal-close-timer');
+        const closeBtn = document.getElementById('modal-close');
+        let secs = 3;
+        const iv = setInterval(() => {
+          secs--;
+          if (secs > 0) {
+            timerEl.textContent = '✕ ' + secs;
+          } else {
+            clearInterval(iv);
+            timerEl.style.display = 'none';
+            closeBtn.removeAttribute('hidden');
+          }
+        }, 1000);
+      }, 4500);
       document.getElementById('modal-close').addEventListener('click', dismiss);
       document.getElementById('modal-cta').addEventListener('click', dismiss);
-      document.getElementById('modal-skip').addEventListener('click', dismiss);
+      document.getElementById('modal-skip').addEventListener('click', function () {
+        const leave = window.confirm('Your VIBE analysis will be permanently discarded. Are you sure you want to leave without your certified report?');
+        if (leave) dismiss();
+      });
       overlay.addEventListener('click', e => { if (e.target === overlay) dismiss(); });
     })();
 
@@ -1222,6 +1354,32 @@
         setTimeout(() => { showToast(); scheduleToast(); }, 9000 + Math.random() * 4000);
       }
       setTimeout(() => { showToast(); scheduleToast(); }, 6500);
+    })();
+
+    // === EXIT-INTENT BAR ===
+    (function () {
+      const bar = document.getElementById('exit-intent-bar');
+      if (!bar) return;
+      let shown = false;
+      document.addEventListener('mouseleave', function (e) {
+        if (e.clientY < 5 && !shown) {
+          shown = true;
+          bar.removeAttribute('hidden');
+        }
+      });
+      document.getElementById('exit-intent-close').addEventListener('click', () => bar.setAttribute('hidden', ''));
+      document.getElementById('exit-intent-cta').addEventListener('click', () => bar.setAttribute('hidden', ''));
+    })();
+
+    // === CHAT WIDGET ===
+    (function () {
+      const widget = document.getElementById('chat-widget');
+      const popup  = document.getElementById('chat-popup');
+      if (!widget || !popup) return;
+      widget.addEventListener('click', () => popup.toggleAttribute('hidden'));
+      widget.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') popup.toggleAttribute('hidden'); });
+      const chatCta = document.getElementById('chat-cta');
+      if (chatCta) chatCta.addEventListener('click', () => popup.setAttribute('hidden', ''));
     })();
 
     console.info('[vibes][testyourvibes] index rendered');
