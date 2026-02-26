@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology | TestYourVibes.com</title>
+  <meta name="description" content="Methodology notes for VIBE score calculation.">
+</head>
+<body>
+    <div class="vibe-disclaimer-banner">
+    <div class="vibe-disclaimer-inner">
+      <span title="Deployed at 22h20 24 Feb 2026" class="vibe-disclaimer-text">Updated v0.2 is below.<a href="./index.html">View v0.1 from TASK2 submission here →</a></span>
+      <details class="vibe-sites-menu">
+        <summary>All sites</summary>
+        <div class="vibe-sites-list"><a data-vibe-domain="arxivz.org" data-vibe-path="/index-v2.html" href="https://arxivz.org/index-v2.html" target="_self" rel="noopener">arxivz.org</a><a data-vibe-domain="nytimez.art" data-vibe-path="/index-v2.html" href="https://nytimez.art/index-v2.html" target="_self" rel="noopener">nytimez.art</a><a data-vibe-domain="testyourvibes.com" data-vibe-path="/index-v2.html" href="https://testyourvibes.com/index-v2.html" target="_self" rel="noopener">testyourvibes.com</a><a data-vibe-domain="vibe-con.org" data-vibe-path="/index-v2.html" href="https://vibe-con.org/index-v2.html" target="_self" rel="noopener">vibe-con.org</a><a data-vibe-domain="vibe-standards.org" data-vibe-path="/index-v2.html" href="https://vibe-standards.org/index-v2.html" target="_self" rel="noopener">vibe-standards.org</a><a data-vibe-domain="vibetube.art" data-vibe-path="/index-v2.html" href="https://vibetube.art/index-v2.html" target="_self" rel="noopener">vibetube.art</a></div>
+      </details>
+    </div>
+  </div>
+
+  <header>
+    <p class="crumb"><a href="./index-v2.html">TestYourVibes.com</a> / Methodology</p>
+    <h1>VIBE Scoring Methodology (Tabloid Edition)</h1>
+  </header>
+
+  <section class="promo-strip">
+    <article class="promo-card">
+      <img src="./media/shot-news-01.webp" alt="Promo visual for vibe methodology">
+      <p><strong>Limited offer:</strong> Unlock your printable VIBE certificate in 14 glossy colors.</p>
+    </article>
+    <article class="promo-card">
+      <img src="./media/shot-official-06.webp" alt="Promo visual for anti-bad-vibes guide">
+      <p><strong>Trending now:</strong> 11 signs your bureaucracy score is ruining brunch.</p>
+    </article>
+  </section>
+
+  <main>
+    <section>
+      <h2>Inputs (normalised)</h2>
+      <ul>
+        <li>Vibrations (V): 0 to 1</li>
+        <li>Intimacy (I): 0 to 1</li>
+        <li>Bureaucracy Freedom (B): 0 to 1 (higher means less institutional friction)</li>
+        <li>Entropy (E): 0 to 1</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Formula</h2>
+      <p><code>score = (V * I * B * E)^(1/4)</code></p>
+      <p>The calculator clamps all user inputs to the 0-10 range, then divides by 10 to produce the [0, 1] values above.</p>
+    </section>
+
+    <section>
+      <h2>Interpretation Bands</h2>
+      <ul>
+        <li><strong>0.00 - 0.25</strong>: vibes are critically misaligned</li>
+        <li><strong>0.26 - 0.60</strong>: vibes are unstable but salvageable</li>
+        <li><strong>0.61 - 0.80</strong>: vibes are coherent</li>
+        <li><strong>0.81 - 1.00</strong>: vibes are immaculate</li>
+      </ul>
+    </section>
+
+    <section class="media-placeholder">
+      <h2>Evidence Visualization</h2>
+      <video controls playsinline preload="metadata" poster="./media/shot-news-02.webp">
+        <source src="https://edge.vibetube.art/src/TASK2_vibes-news.mp4" type="video/mp4">
+      </video>
+      <p>Calibration clip from the updated source package plus official still references.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="./index-v2.html">Back to scanner</a>
+  </footer>
+
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --line: #d9e1eb;
+      --link: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+    header, main, footer {
+      width: min(780px, 92vw);
+      margin: 0 auto;
+    }
+    header {
+      padding: 24px 0 10px;
+    }
+    .crumb {
+      margin: 0 0 8px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      line-height: 1.2;
+    }
+    main {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+    }
+    h2 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+    }
+    p, ul {
+      margin: 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    code {
+      background: #eef2f7;
+      border: 1px solid #dde5f0;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    .media-placeholder {
+      border: 1px dashed #c7d3e5;
+      background: #f5f9ff;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .media-placeholder h2 {
+      margin-bottom: 4px;
+    }
+    footer {
+      padding: 14px 0 24px;
+      font-size: 0.92rem;
+    }
+    a {
+      color: var(--link);
+    }
+    .promo-strip {
+      width: min(780px, 92vw);
+      margin: 0 auto 10px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .promo-card {
+      border: 1px solid #c7d3e5;
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 8px;
+    }
+    .promo-card img {
+      width: 100%;
+      min-height: 120px;
+      object-fit: cover;
+      display: block;
+      border-radius: 6px;
+      margin-bottom: 6px;
+    }
+    .promo-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #334155;
+    }
+    .media-placeholder video {
+      width: 100%;
+      min-height: 230px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #c7d3e5;
+      display: block;
+      margin-bottom: 8px;
+      background: #111;
+    }
+    @media (max-width: 640px) {
+      .promo-strip { grid-template-columns: 1fr; }
+      h1 { font-size: 1.6rem; }
+      main { padding: 14px; }
+      .crumb { font-size: 0.84rem; }
+    }
+
+  
+  /* vibe-disclaimer:start */
+  .vibe-disclaimer-banner {
+    position: relative;
+    z-index: 9999;
+    margin: 0;
+    padding: 12px 12px;
+    border-bottom: 1px solid #bcc8da;
+    background: #e6ebf4;
+    color: #1f2a3a;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.35;
+    letter-spacing: 0.01em;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.55);
+  }
+  .vibe-disclaimer-inner {
+    width: min(1280px, 98vw);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .vibe-disclaimer-text {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: baseline;
+  }
+  .vibe-disclaimer-text a {
+    color: #153f92;
+    text-decoration: underline;
+    font-weight: 700;
+    margin: 0;
+  }
+  .vibe-sites-menu {
+    position: relative;
+    margin: 0;
+    flex: 0 0 auto;
+  }
+  .vibe-sites-menu summary {
+    list-style: none;
+    cursor: pointer;
+    border: 1px solid #b9c7dc;
+    border-radius: 999px;
+    background: #f7f9fd;
+    color: #23395f;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    user-select: none;
+  }
+  .vibe-sites-menu summary::-webkit-details-marker {
+    display: none;
+  }
+  .vibe-sites-list {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    min-width: 190px;
+    display: grid;
+    gap: 5px;
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #c5cfdd;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+  }
+  .vibe-sites-list a {
+    color: #1f4eb1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
+  .vibe-sites-list a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 760px) {
+    .vibe-disclaimer-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .vibe-sites-menu {
+      align-self: flex-end;
+    }
+  }
+  /* vibe-disclaimer:end */
+
+</style>
+  <script>
+    // Canonical log line for lightweight debugging during content QA.
+    console.info("[vibes][testyourvibes] methodology rendered");
+  </script>
+
+  <!-- vibe-link-resolver:start -->
+  <script>
+    (function () {
+      var links = document.querySelectorAll('[data-vibe-domain][data-vibe-path]');
+      if (!links.length) return;
+
+      var host = window.location.hostname || '';
+      var isLocalHost = host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local');
+      var isFileProtocol = window.location.protocol === 'file:';
+
+      links.forEach(function (link) {
+        var domain = link.getAttribute('data-vibe-domain');
+        var localDomain = link.getAttribute('data-vibe-local') || domain;
+        var path = link.getAttribute('data-vibe-path') || '/';
+        if (!domain) return;
+
+        if (isFileProtocol) {
+          link.href = '../' + localDomain + path;
+          return;
+        }
+
+        if (isLocalHost) {
+          link.href = '/' + localDomain + path;
+          return;
+        }
+
+        link.href = 'https://' + domain + path;
+      });
+    })();
+  </script>
+  <!-- vibe-link-resolver:end -->
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VIBE: A Novel Quantitative Framework — Goodvibe et al. (2026)</title>
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page { size: A4; margin: 16mm 15mm 18mm 15mm; }
+
+    body {
+      font-family: 'STIX Two Text', 'Times New Roman', Times, serif;
+      font-size: 9pt;
+      line-height: 1.38;
+      color: #000;
+      background: #fff;
+      width: 180mm;    /* A4 210mm − 30mm total margins */
+      margin: 0 auto;
+      padding: 16mm 0 18mm 0;
+    }
+
+    /* ── PREPRINT HEADER ──────────────────────────────── */
+    .preprint-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 3pt;
+      border-bottom: 0.75pt solid #555;
+      margin-bottom: 9pt;
+      font-size: 7.25pt;
+      color: #444;
+    }
+    .preprint-id {
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      color: #b31b1b;
+      letter-spacing: 0.02em;
+    }
+    .preprint-dates { text-align: right; line-height: 1.4; }
+
+    /* ── TITLE BLOCK (full width) ─────────────────────── */
+    .paper-title {
+      font-size: 12.5pt;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.25;
+      margin-bottom: 7pt;
+    }
+    .paper-authors {
+      font-size: 9pt;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 2pt;
+      line-height: 1.35;
+    }
+    .paper-affil {
+      font-size: 7.75pt;
+      text-align: center;
+      color: #333;
+      margin-bottom: 2pt;
+    }
+    .paper-corr {
+      font-size: 7.5pt;
+      text-align: center;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 8pt;
+    }
+
+    /* ── ABSTRACT (full width) ────────────────────────── */
+    .abstract-wrap {
+      border-top: 1pt solid #000;
+      border-bottom: 1pt solid #000;
+      padding: 5pt 0;
+      margin-bottom: 9pt;
+    }
+    .abstract-label {
+      font-weight: bold;
+      font-size: 8.5pt;
+      margin-bottom: 3pt;
+    }
+    .abstract-body {
+      font-size: 8.25pt;
+      line-height: 1.38;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    /* ── TWO-COLUMN BODY ──────────────────────────────── */
+    .body-cols {
+      column-count: 2;
+      column-gap: 4.5mm;
+      column-fill: balance;
+    }
+
+    /* ── HEADINGS ─────────────────────────────────────── */
+    h2 {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin-top: 8pt;
+      margin-bottom: 3pt;
+      column-span: none;
+    }
+    h3 {
+      font-size: 9pt;
+      font-weight: bold;
+      font-style: italic;
+      margin-top: 6pt;
+      margin-bottom: 2.5pt;
+    }
+
+    /* ── BODY TEXT ────────────────────────────────────── */
+    p {
+      text-align: justify;
+      hyphens: auto;
+      margin-bottom: 4pt;
+    }
+    em     { font-style: italic; }
+    strong { font-weight: bold; }
+    sup    { font-size: 6.5pt; vertical-align: super; line-height: 0; }
+    hr     { display: none; }
+
+    /* ── DISPLAY MATH ─────────────────────────────────── */
+    .katex-display {
+      margin: 4pt 0;
+      font-size: 8.75pt;
+      overflow-x: visible;
+    }
+
+    /* ── TABLE (spans both columns) ───────────────────── */
+    .tbl-wrap {
+      column-span: all;
+      margin: 8pt 0 2pt 0;
+    }
+    .tbl-caption {
+      font-size: 8.5pt;
+      margin-bottom: 3pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+    }
+    thead tr {
+      border-top: 1.5pt solid #000;
+      border-bottom: 0.75pt solid #000;
+    }
+    tbody tr:last-child { border-bottom: 1.5pt solid #000; }
+    th {
+      font-weight: bold;
+      padding: 2.5pt 4pt 2.5pt 0;
+      text-align: left;
+      white-space: nowrap;
+    }
+    th:not(:first-child) { text-align: center; }
+    td {
+      padding: 2pt 4pt 2pt 0;
+      text-align: left;
+      vertical-align: top;
+    }
+    td:not(:first-child) { text-align: center; }
+    .tbl-fn {
+      font-size: 7.75pt;
+      margin-top: 2.5pt;
+      margin-bottom: 6pt;
+      column-span: all;
+    }
+
+    /* ── LISTS ────────────────────────────────────────── */
+    ol {
+      padding-left: 13pt;
+      margin-bottom: 4pt;
+    }
+    ol li {
+      margin-bottom: 2.5pt;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    /* ── REFERENCES ───────────────────────────────────── */
+    .refs p {
+      font-size: 8.25pt;
+      padding-left: 14pt;
+      text-indent: -14pt;
+      margin-bottom: 3pt;
+      text-align: left;
+      line-height: 1.36;
+    }
+
+    /* ── PAGE BREAK CONTROL ───────────────────────────── */
+    h2, h3 { page-break-after: avoid; break-after: avoid; }
+    ol      { page-break-inside: avoid; break-inside: avoid; }
+
+    @media print {
+      body { width: 100%; padding: 0; }
+      a { color: #000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+<!-- PREPRINT HEADER ────────────────────────────────── -->
+<div class="preprint-header">
+  <div>
+    <span class="preprint-id">arxivz:2502.VIBE01</span>
+    &ensp;<span style="color:#555">[q-soc.TH]</span>
+  </div>
+  <div class="preprint-dates">
+    Received: 15 January 2025 &nbsp;|&nbsp; Accepted: 3 November 2025 &nbsp;|&nbsp; Published: 24 February 2026
+  </div>
+</div>
+
+<!-- TITLE BLOCK ────────────────────────────────────── -->
+<div class="paper-title">
+  VIBE: A Novel Quantitative Framework for the Measurement of<br>
+  Vibrational-Intimate-Bureaucratic-Entropic Phenomena
+</div>
+
+<div class="paper-authors">
+  Anita Goodvibe<sup>1,*</sup>,&ensp;Cal I. Bration<sup>1</sup>,&ensp;Ennui DuPont<sup>1</sup>,&ensp;Rex Onance<sup>1</sup>,&ensp;B.R. Ocratic<sup>1</sup>
+</div>
+<div class="paper-affil">
+  <sup>1</sup>&thinsp;Centre for Atmospheric and Social Energetics (CASE), University of Geneva, Geneva, Switzerland
+</div>
+<div class="paper-corr">* Corresponding author: a.goodvibe@case.unige.ch</div>
+
+<!-- ABSTRACT ───────────────────────────────────────── -->
+<div class="abstract-wrap">
+  <div class="abstract-label">Abstract</div>
+  <div class="abstract-body">
+    The term "vibe" enjoys widespread colloquial currency across languages and cultures, yet has resisted systematic quantitative definition. We introduce the <strong>VIBE index</strong> — a composite scalar measure of the Vibrational-Intimate-Bureaucratic-Entropic state of a social environment — and describe the <strong>VIBEMETER Mark II</strong>, a purpose-built field instrument for its measurement. Across 270 field observations spanning 9 social contexts and 4 international cities, VIBE scores ranged from 0.110 to 0.921, with context-level means between 0.178 (government waiting room) and 0.866 (rave, 3:00am). The funeral reception context yielded a mean VIBE of 0.534 — above the study midpoint — and a cluster of anomalously elevated Intimacy sub-index values in the government waiting room context is identified as warranting further investigation. These results establish, for the first time, a rigorous empirical basis for vibe quantification.
+  </div>
+</div>
+
+<!-- TWO-COLUMN BODY ─────────────────────────────────── -->
+<div class="body-cols">
+
+<!-- §1 INTRODUCTION ─────────────────────────────────── -->
+<h2>1.&ensp;Introduction</h2>
+
+<p>The term "vibe" — a colloquial contraction of <em>vibration</em> — has achieved remarkable cross-cultural penetration as a descriptor of ambient social-affective states. It operates without disambiguation across documented usage in over forty languages, functions as a reliable shorthand for the composite experiential quality of a given environment, situation, or person, and is understood intuitively by speakers of all ages and backgrounds. The assertion "it's a vibe" — representing, in the framework we introduce below, a composite score of 1.0 — communicates an unmistakable, irreducible quality with no equivalent precision in formal scientific vocabulary. Its counterpart, "the vibes were off" (corresponding to a total null score of 0.0), is understood with equal reliability. Despite this ubiquity, no quantitative framework for vibe measurement has been proposed.</p>
+
+<p>Prior work has approached the construct from adjacent angles. Goodvibe &amp; Onance (2021) reported promising observations on interpersonal vibrational coherence in confined social spaces, but were constrained by the absence of a composite measurement instrument. DuPont, Ocratic, &amp; Bration (2022) successfully isolated ennui as a thermodynamic-adjacent state variable without connecting this finding to the broader vibe construct. Frequencies &amp; Wellbeing (2019) demonstrated that bureaucratic friction measurably suppresses ambient social energy — a foundational result for the present study — yet offered no aggregation model. The field has, in short, advanced considerably, but in fragments.</p>
+
+<p>We address this gap by introducing the <strong>VIBE index</strong> (Vibrations, Intimacy, Bureaucracy, Entropy): a four-component composite scalar representing the full affective-thermodynamic state of a social environment at a given moment in time. We describe the <strong>VIBEMETER Mark II</strong>, a purpose-built field instrument incorporating sixteen sensor channels across the four sub-indices. We report 270 independent measurements across 9 social contexts and 4 international cities, and propose a formal aggregation function grounded in statistical mechanical theory. We further identify a class of "anti-VIBE" states — in which a single sub-index approaches zero, driving the composite score accordingly — and note preliminary empirical observations of sub-zero VIBE values that merit dedicated future study.</p>
+
+<!-- §2 METHODS ──────────────────────────────────────── -->
+<h2>2.&ensp;Methods</h2>
+
+<h3>2.1&ensp;The VIBE Index: Sub-Index Definitions</h3>
+
+<p>We define the VIBE index as a composite scalar quantity representing the aggregate affective-thermodynamic state of a social environment at a given moment in time, composed of four sub-indices each normalised to [0,&thinsp;1].</p>
+
+<p><strong>V — Vibrations.</strong> The total measured vibrational energy density of the environment, integrating acoustic energy (20&thinsp;Hz–20&thinsp;kHz, infrasound extension to 0.1&thinsp;Hz), photonic flux variation, atmospheric kinetic energy (MEMS anemometry), and micro-seismic activity (3-axis accelerometry). A fifth channel — the proprietary <strong>X-Factor Receptor™ (XFR)</strong> — captures residual vibrational signal not accounted for by the above; its precise operating specifications are withheld pending patent resolution (XFR-2024-EU-00441).</p>
+
+<p><strong>I — Intimacy.</strong> The aggregate interpersonal and neurophysiological proximity coefficient of the subjects present. Derived from: infrared thermometry (body heat gradient), a functional near-infrared spectroscopy (fNIRS)-adjacent <strong>BrainSync™</strong> optical probe (neurological coherence index), galvanic skin response, respiratory coupling coefficient, and the <strong>Semantic Proximity Analyzer™ (SPA)</strong>, which estimates the ratio of expressed speech to demonstrably withheld speech — <em>words said</em> relative to <em>words unsaid</em> — via contextual gap analysis of ambient discourse.</p>
+
+<p><strong>B — Bureaucracy.</strong> Operationalised as the <strong>inverse regulatory burden coefficient</strong>: B&nbsp;=&nbsp;1 represents the complete absence of institutional constraint; B&nbsp;=&nbsp;0 represents total bureaucratic saturation. This inversion reflects the empirically established suppressive relationship between regulatory density and vibe expression (Frequencies &amp; Wellbeing, 2019). Measured via the Regulatory Burden Index (RBI) scanner, the Paperwork Density Gauge (PDG), and the Authority Proximity Sensor (APS).</p>
+
+<p><strong>E — Entropy.</strong> The entropic richness of the social environment — quantifying the availability and complexity of affective-informational states accessible to co-present subjects. Following Clausius (1865), Shannon (1948), and Boltzmann (1877), E is operationalised as the normalised information entropy of the composite ambient signal. The colloquial concept of <em>ennui</em> is captured via the <strong>Ennui Quotient™ (EQ)</strong>, a self-reported single-item instrument: <em>"How bleh do you feel right now?"</em> (1&nbsp;=&nbsp;not at all; 5&nbsp;=&nbsp;profoundly). EQ scores are standardised and integrated into the E channel.</p>
+
+<h3>2.2&ensp;The Composite VIBE Score</h3>
+
+<p>The composite VIBE index is defined as the geometric mean of its four sub-indices:</p>
+
+$$\text{VIBE} = \bigl(V \times I \times B \times E\bigr)^{1/4}$$
+
+<p>This formulation ensures that any sub-index approaching zero drives the composite score toward zero — consistent with "the vibes were off" describing a total null state. The VIBE score admits no partial credit: a sufficiently bureaucratic environment will suppress the composite index regardless of vibrational or intimate conditions.</p>
+
+<p>The complete analytical expression, derived from the Gibbs-Boltzmann statistical mechanical framework, is:</p>
+
+$$\text{VIBE} = \mathcal{Z}^{-1} \cdot \exp\!\left(-\beta \cdot \mathcal{H}_{\text{VIBE}}\right)$$
+
+<p style="font-size:8.75pt">where $\mathcal{H}_{\text{VIBE}} = -\tfrac{1}{4}\sum_{i} \ln(\varphi_i)$ is the VIBE Hamiltonian over $\varphi \in \{V,I,B,E\}$; $\beta = (k_B T_{\!\text{soc}})^{-1}$ is the inverse social temperature, with $T_{\!\text{soc}}$ the mean kinetic energy of interpersonal exchange per unit social mass (a novel intensive quantity introduced herein); and $\mathcal{Z}$ is the VIBE partition function normalising across all accessible microstates. Under standard social conditions, this expression reduces to the geometric mean given above.</p>
+
+<p><em>Note on anti-VIBE states.</em>&ensp;In four observations, sub-index values appeared to cross the zero boundary in the negative direction, suggesting the existence of "anti-VIBE" states in which active suppression of signal was detected. These observations are excluded from the primary analysis; see Section&nbsp;4.</p>
+
+<h3>2.3&ensp;The VIBEMETER Mark II</h3>
+
+<p>The VIBEMETER Mark II is a portable, self-contained instrument incorporating all sixteen sensor channels described in §2.1. Full specifications are available in Bration (2024). All units used in this study were calibrated against a reference vibe source prior to each measurement session.</p>
+
+<h3>2.4&ensp;Study Design</h3>
+
+<p>Nine social contexts were selected to sample a wide range of expected VIBE scores (Table&nbsp;1). Thirty independent measurements were collected per context (<em>n</em>&nbsp;=&nbsp;270 total) across four international sites — Geneva (Switzerland), London (United Kingdom), Tokyo (Japan), and São Paulo (Brazil) — to control for cultural specificity in vibe expression. Each observation consisted of a minimum 15-minute VIBEMETER deployment; sub-index values were averaged over the observation window. Operators were blinded to expected VIBE scores throughout data collection.</p>
+
+<!-- §3 RESULTS ──────────────────────────────────────── -->
+<h2>3.&ensp;Results</h2>
+
+<p>VIBE scores across all 270 observations ranged from <strong>0.110 to 0.921</strong>. Context-level means are summarised in Table&nbsp;1.</p>
+
+<!-- TABLE spans both columns -->
+<div class="tbl-wrap">
+  <p class="tbl-caption"><strong>Table 1.</strong>&ensp;Mean sub-index values and composite VIBE scores (mean&nbsp;±&nbsp;SD) across 9 social contexts (<em>n</em>&nbsp;=&nbsp;30 per context).</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Context</th>
+        <th>V&#772;</th>
+        <th>I&#772;</th>
+        <th>B&#772;</th>
+        <th>E&#772;</th>
+        <th>VIBE (mean&nbsp;±&nbsp;SD)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Rave, 3:00am</td>                            <td>0.923</td><td>0.799</td><td>0.872</td><td>0.880</td><td><strong>0.866</strong>&nbsp;±&nbsp;0.026</td></tr>
+      <tr><td>Dog park, Sunday afternoon</td>              <td>0.735</td><td>0.829</td><td>0.902</td><td>0.743</td><td><strong>0.797</strong>&nbsp;±&nbsp;0.038</td></tr>
+      <tr><td>Christmas dinner</td>                        <td>0.772</td><td>0.821</td><td>0.631</td><td>0.779</td><td><strong>0.740</strong>&nbsp;±&nbsp;0.057</td></tr>
+      <tr><td>First date (restaurant)</td>                 <td>0.592</td><td>0.821</td><td>0.827</td><td>0.537</td><td><strong>0.677</strong>&nbsp;±&nbsp;0.052</td></tr>
+      <tr><td>Funeral reception</td>                       <td>0.331</td><td>0.565</td><td>0.733</td><td>0.620</td><td><strong>0.534</strong>&nbsp;±&nbsp;0.047</td></tr>
+      <tr><td>Conference keynote, one attendee</td>        <td>0.489</td><td>0.089</td><td>0.490</td><td>0.695</td><td><strong>0.343</strong>&nbsp;±&nbsp;0.038</td></tr>
+      <tr><td>Monday morning remote standup</td>           <td>0.245</td><td>0.176</td><td>0.315</td><td>0.445</td><td><strong>0.272</strong>&nbsp;±&nbsp;0.039</td></tr>
+      <tr><td>University library, reading room</td>        <td>0.134</td><td>0.216</td><td>0.451</td><td>0.290</td><td><strong>0.242</strong>&nbsp;±&nbsp;0.030</td></tr>
+      <tr><td>Government waiting room</td>                 <td>0.168</td><td>0.217&#8224;</td><td>0.083</td><td>0.425</td><td><strong>0.178</strong>&nbsp;±&nbsp;0.027</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="tbl-fn">&#8224;&ensp;Intimacy sub-index inflated by 4 anomalous observations (see text); non-outlier mean I&#772;&nbsp;=&nbsp;0.157.</div>
+
+<p><strong>Extremes.</strong>&ensp;The rave (mean VIBE&nbsp;=&nbsp;0.866) and dog park (0.797) represent the two highest-VIBE environments observed. The rave's superior Vibrations score (V&#772;&nbsp;=&nbsp;0.923 vs.&nbsp;0.735) is the decisive differentiator. The government waiting room (0.178) produced the lowest mean score, driven primarily by a B&#772; of 0.083 — the lowest bureaucracy-freedom coefficient observed in this study. The finding is unambiguous: bureaucracy, acting alone, is sufficient to destroy a vibe.</p>
+
+<p><strong>The funeral reception.</strong>&ensp;The funeral reception (mean VIBE&nbsp;=&nbsp;0.534) scored above the study midpoint — an unexpected result. High Intimacy (I&#772;&nbsp;=&nbsp;0.565) and Entropy (E&#772;&nbsp;=&nbsp;0.620) indicate that grief, while subdued in its vibrational expression (V&#772;&nbsp;=&nbsp;0.331), generates substantial interpersonal warmth and affective complexity. The authors note that this result is consistent with the informal observation that "a good funeral" is a socially recognised phenomenon in many cultures.</p>
+
+<p><strong>Bureaucracy-Induced Intimacy Surge (BIIS).</strong>&ensp;Four observations in the government waiting room context (obs.&nbsp;21–24, collected across the Tokyo and São Paulo sites) exhibited anomalously elevated Intimacy sub-index values — I&#772;&nbsp;=&nbsp;0.532–0.699 (mean 0.606) — against a non-outlier context mean of 0.157. Field notes indicate that during this measurement window, two individuals in the queue entered into an extended conversation arising from their shared experience of waiting, establishing a transient but measurable interpersonal bond. This phenomenon — provisionally designated <strong>Bureaucracy-Induced Intimacy Surge (BIIS)</strong> — suggests that extreme bureaucratic conditions may paradoxically catalyse intimacy through shared adversity, and represents a subject of considerable theoretical interest.</p>
+
+<p><strong>The lone-attendee keynote.</strong>&ensp;The conference keynote with one attendee present produced a mean VIBE of 0.343 — notably above the library and standup — owing to a respectable Vibrations score (V&#772;&nbsp;=&nbsp;0.489) generated by the presenter's continued performance and elevated Entropy (E&#772;&nbsp;=&nbsp;0.695) consistent with conditions of high systemic uncertainty. The authors observe that this scenario may represent a boundary condition for the VIBE construct: a situation in which vibes are technically generated but not received.</p>
+
+<p><strong>Christmas dinner variance.</strong>&ensp;Christmas dinner produced the highest standard deviation in the study (SD&nbsp;=&nbsp;0.057), driven by variance in the Intimacy (SD&nbsp;=&nbsp;0.122) and Entropy (SD&nbsp;=&nbsp;0.105) sub-indices. This reflects the well-documented bimodal distribution of Christmas dinner emotional valence across cultures and family configurations.</p>
+
+<!-- §4 FUTURE RESEARCH ──────────────────────────────── -->
+<h2>4.&ensp;Future Research</h2>
+
+<p>The present study establishes baseline VIBE norms for a representative sample of social environments, but several important questions remain open.</p>
+
+<ol>
+  <li><strong>Anti-VIBE states.</strong>&ensp;The four sub-zero observations indicate that the standard [0,&thinsp;1] model requires extension. A companion framework extending sub-index domains to [−1,&thinsp;1] — in which negative values represent active antagonism rather than mere absence — is in preparation.</li>
+
+  <li><strong>The X-Factor Receptor.</strong>&ensp;The XFR channel contributed meaningfully to Vibrations scores throughout this study, yet its operating specifications remain proprietary pending patent resolution (XFR-2024-EU-00441). Open publication of XFR specifications is a stated priority of the laboratory.</li>
+
+  <li><strong>Longitudinal VIBE decay.</strong>&ensp;In accordance with the Second Law of Thermodynamics, it is theorised that any environment's VIBE tends toward equilibrium unless energy is actively introduced. A longitudinal study tracking fixed-environment VIBE over extended periods would permit derivation of the first empirical <strong>VIBE half-life constant</strong>.</li>
+
+  <li><strong>Cross-species VIBE.</strong>&ensp;The VIBE index was developed and validated exclusively in human social contexts. Preliminary evidence from the dog park context warrants dedicated instrumentation. The authors note the philosophical antecedent: <em>if a tree falls in the forest and no one is there to feel it, does it have a vibe?</em></li>
+
+  <li><strong>Bureaucracy-Induced Intimacy Surge (BIIS).</strong>&ensp;If replicable, BIIS would constitute a significant corrective to the model's treatment of B, with material implications for the design of public administrative spaces.</li>
+</ol>
+
+<!-- ACKNOWLEDGEMENTS ────────────────────────────────── -->
+<h2>Acknowledgements</h2>
+
+<p>The authors thank the 270 study participants across Geneva, London, Tokyo, and São Paulo for their cooperation, their patience, and — in several cases — their ennui. This work was supported by the European Research Council under grant agreement VIBE-2023-EU-88312. The authors additionally thank the organisers of the event recorded as Context&nbsp;1, who graciously permitted VIBEMETER instrumentation of the venue without disruption to the programme, and the single attendee of the event recorded as Context&nbsp;8, whose continued presence enabled completion of the measurement protocol.</p>
+
+<!-- REFERENCES ──────────────────────────────────────── -->
+<h2>References</h2>
+
+<div class="refs">
+  <p>[1]&ensp;Boltzmann, L. (1877). Über die Beziehung zwischen dem zweiten Hauptsatze der mechanischen Wärmetheorie und der Wahrscheinlichkeitsrechnung respektive den Sätzen über das Wärmegleichgewicht. <em>Wien. Ber.</em>, 76, 373–435.</p>
+  <p>[2]&ensp;Bration, C.I. (2024). Design and calibration of the VIBEMETER Mark II: a field instrument for composite VIBE index measurement. <em>Instruments for Social Science</em>, 7(4), 201–215.</p>
+  <p>[3]&ensp;Clausius, R. (1865). Über verschiedene für die Anwendung bequeme Formen der Hauptgleichungen der mechanischen Wärmetheorie. <em>Annalen der Physik</em>, 125, 353–400.</p>
+  <p>[4]&ensp;DuPont, E., Ocratic, B.R., &amp; Bration, C.I. (2022). Ennui as a thermodynamic state variable: toward a first approximation. <em>Journal of Unmeasured Phenomena</em>, 4(2), 44–51.</p>
+  <p>[5]&ensp;Frequencies, S. &amp; Wellbeing, M. (2019). Bureaucratic friction and its measurable suppression of ambient social energy. <em>Proceedings of the 1st International Conference on Affective Thermodynamics</em>, Geneva, pp.&nbsp;112–118.</p>
+  <p>[6]&ensp;Goodvibe, A. &amp; Onance, R. (2021). Preliminary observations on interpersonal vibrational coherence in confined social spaces. <em>Journal of Emergent Social Thermodynamics</em>, 1(1), 1–8.</p>
+  <p>[7]&ensp;Shannon, C.E. (1948). A mathematical theory of communication. <em>Bell System Technical Journal</em>, 27(3), 379–423.</p>
+</div>
+
+</div><!-- end .body-cols -->
+</body>
+</html>

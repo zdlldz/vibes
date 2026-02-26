@@ -36,14 +36,14 @@ The point is not fantasy art, but plausible fabricated evidence rendered with hi
 │   ├── testyourvibes.com/
 │   ├── vibe-con.org/
 │   ├── vibe-standards.org/
-│   └── vibetube.com/
+│   └── vibetube.art/
 ├── workers/
 │   ├── arxivz.org/
 │   ├── nytimez.art/
 │   ├── testyourvibes.com/
 │   ├── vibe-con.org/
 │   ├── vibe-standards.org/
-│   └── vibetube.com/
+│   └── vibetube.art/
 └── docs/
     ├── knowledge/
     ├── release/
@@ -60,16 +60,27 @@ The point is not fantasy art, but plausible fabricated evidence rendered with hi
 
 ### Media Routing Note
 
-Workers only serve files from each domain's own `www/<domain>/` directory. If new media is dropped into `www/src/`, copy selected files into per-domain folders (for example `www/nytimez.art/media/` and `www/vibetube.com/media/`) before referencing them in HTML.
+Workers only serve files from each domain's own `www/<domain>/` directory. If new media is dropped into `www/src/`, copy selected files into per-domain folders (for example `www/nytimez.art/media/` and `www/vibetube.art/media/`) before referencing them in HTML.
+
+
+### Canonical Media and Video Policy
+
+- Source staging remains `www/src/` (`video/` + `images/` trees).
+- Before referencing assets in HTML, copy them into the target domain folder: `www/<domain>/media/`.
+- Canonical full/editorial hero video URL (external only): `https://edge.vibetube.art/src/TASK2_vibes-news.mp4`.
+- Additional source clips are valid as reusable “news pieces” and may have dedicated flat watch pages (for example under `www/vibetube.art/`).
+- Video embed contract for this project: use `controls` + `playsinline`, do not use `autoplay`, and do **not** use `muted` by default.
+- Exception path (only when explicitly requested): ad-only video units may use autoplay + loop with no controls.
+- Hard rule: never use the full/editorial `TASK2_vibes-news.mp4` file in autoplay contexts; use smaller clips for autoplay units.
 
 ### Domain Path Note
 
-`vibetube.art` is currently deployed from the existing folder paths:
+`vibetube.art` now uses matching folder paths:
 
-- `www/vibetube.com/`
-- `workers/vibetube.com/`
+- `www/vibetube.art/`
+- `workers/vibetube.art/`
 
-Routes are configured for `vibetube.art`.
+Routes remain configured for `vibetube.art`.
 
 ## Prerequisites
 
@@ -106,7 +117,7 @@ cd "workers/nytimez.art" && wrangler dev
 cd "workers/testyourvibes.com" && wrangler dev
 cd "workers/vibe-con.org" && wrangler dev
 cd "workers/vibe-standards.org" && wrangler dev
-cd "workers/vibetube.com" && wrangler dev
+cd "workers/vibetube.art" && wrangler dev
 ```
 
 ### 3) Deploy (per domain)
@@ -129,7 +140,7 @@ cd "workers/nytimez.art" && wrangler deploy
 cd "workers/testyourvibes.com" && wrangler deploy
 cd "workers/vibe-con.org" && wrangler deploy
 cd "workers/vibe-standards.org" && wrangler deploy
-cd "workers/vibetube.com" && wrangler deploy
+cd "workers/vibetube.art" && wrangler deploy
 ```
 
 ### 4) Verify deployed workers
@@ -140,19 +151,28 @@ cd "workers/nytimez.art" && wrangler deployments list
 cd "workers/testyourvibes.com" && wrangler deployments list
 cd "workers/vibe-con.org" && wrangler deployments list
 cd "workers/vibe-standards.org" && wrangler deployments list
-cd "workers/vibetube.com" && wrangler deployments list
+cd "workers/vibetube.art" && wrangler deployments list
 ```
 
 ### 5) Optional batch deploy helper
 
-From repo root:
+Use the repo-root helper script:
 
 ```bash
-for d in arxivz.org nytimez.art testyourvibes.com vibe-con.org vibe-standards.org vibetube.com; do
-  echo "Deploying $d"
-  (cd "workers/$d" && wrangler deploy) || exit 1
-done
+chmod +x deploy-all.sh
+./deploy-all.sh
 ```
+
+`deploy-all.sh` sources root `.env` before entering `workers/<domain>/` so Wrangler keeps a consistent account context for every deploy in a multi-account setup.
+
+Expected root `.env` keys:
+
+```bash
+CLOUDFLARE_ACCOUNT_ID=...
+CLOUDFLARE_API_TOKEN=...
+```
+
+If you deploy from per-domain folders directly, Wrangler may not load root `.env` automatically and can prompt for account selection per deploy.
 
 ## Optional Fast Integrity Checks
 
@@ -217,11 +237,11 @@ Current primary task trail:
 - V2 realism pass completed (desktop-first mimic quality).
 - Basic responsive safety pass completed.
 - Real article content integrated across `arxivz.org`, `nytimez.art`, and `vibe-standards.org`.
-- Randomized staged media integrated into `nytimez.art`, `vibetube.com`, `vibe-con.org`, and `arxivz.org` from `www/src` via per-domain `media/` folders.
+- Randomized staged media integrated into `nytimez.art`, `vibetube.art`, `vibe-con.org`, and `arxivz.org` from `www/src` via per-domain `media/` folders.
 - All domain routes are configured in wrangler for live DNS zones.
 
 ## Next Priority
 
-1. Curate final hero/video selections per page (replace random placements with art-directed picks).
+1. Expand clip watch pages for additional source videos in `vibetube` v2.
 2. Run local worker smoke checks before/after each deploy.
 3. QA typography, poster frames, and mobile crop behavior for each embedded media block.
